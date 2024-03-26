@@ -1,0 +1,146 @@
+---
+cluster: "aces"
+form:
+  - version
+  - env_type
+  - python_module
+  - path_to_virtualenv
+  - conda_module
+  - conda_extensions
+  - conda_env_to_activate
+  - path_to_image_file
+  - extra_jupyter_args
+  - node_type
+  - num_gpus
+  - cpu_num_hours
+  - gpu_num_hours
+  - num_cores
+  - total_memory
+  - bc_account
+  - email
+attributes:
+  version: ""
+  env_type:
+    label: "Type of Environment"
+    widget: select
+    options:
+      - [
+            "Anaconda environment","conda",
+           data-hide-python-module: true,
+           data-hide-path-to-image-file: true,
+           data-hide-path-to-virtualenv: true,
+        ]
+      - [
+            "Python module + virtualenv","pythonvenv",
+           data-hide-path-to-image-file: true,
+           data-hide-conda-module: true,
+           data-hide-conda-env-to-activate: true,
+        ]
+      - [
+            "Containers (Singularity/Charliecloud)","container",
+           data-hide-python-module: true,
+           data-hide-path-to-virtualenv: true,
+           data-hide-conda-module: true,
+           data-hide-conda-env-to-activate: true,
+        ]
+    help: |
+      Select the type of environment in which Jupyter is installed.
+  python_module:
+    label: "Select Python Module Version"
+    widget: select
+    options:
+      - ["Python/3.10.8", "foss/2022b Python/3.10.8"]
+      - ["Python/3.9.6", "foss/2021b Python/3.9.6"]
+  path_to_virtualenv:
+    label: "Optional Python virtualenv to be activated"
+    widget: "text_field"
+    help: |
+      Enter the full path to a python virtual environment "activate" script to be activated.  This field is optional. If used, it will override the default Jupyter.
+
+      E.g. /scratch/user/netid/...path-to-env../bin/activate
+
+      Your optional environment must have been previously built with the Python module selected in the Module option above. It is expected to have a Jupyter package installed.
+  conda_module:
+    label: "Select Anaconda Version"
+    help: "Select a Conda module to load. All modules listed include Python and Jupyter. "
+    widget: select
+    options:
+      - ["Anaconda3/2022.10"]
+      - ["Anaconda3/2022.05"]
+      - ["Anaconda3/2021.11"]
+  conda_extensions: "0"
+  conda_env_to_activate:
+    label: "Optional Conda Environment to be Activated"
+    widget: "text_field"
+    help: |
+      Enter the name of environment to be activated.  This field is optional.
+
+      Your optional environment must have been previously built with the Anaconda module selected in the Module option above.
+
+  path_to_image_file:
+    label: "Path to container image file"
+    widget: "text_field"
+    help: |
+      Enter the full path to an image file.
+      Recommended that this be located in your $SCRATCH directory.
+
+      Singularity images and Charliecloud images are supported. Images should contain the Jupyter app. Charliecloud images should additionally have a /scratch directory. 
+
+  extra_jupyter_args: ""
+
+  bc_account:
+    help: "This field is optional."
+  cpu_num_hours:
+    widget: 'number_field'
+    label: "Number of hours (max 168)"
+    value: 1
+    min: 1
+    max: 168
+  gpu_num_hours:
+    widget: 'number_field'
+    label: "Number of hours (max 48)"
+    value: 1
+    min: 1
+    max: 48
+  num_cores:
+    label: "Number of cores (max 96)"
+    value: 1
+    min: 1
+    max: 96
+
+  node_type:
+    widget: select
+    label: "Node type"
+    options:
+      - [
+            "CPU only", "CPU",
+           data-hide-num-gpus: true,
+           data-hide-gpu-num-hours: true,
+        ]
+      - [
+            "H100 GPU", "h100",
+           data-max-num-gpus: 2,
+           data-hide-cpu-num-hours: true,
+        ]
+      - [
+            "A30 GPU", "a30",
+           data-max-num-gpus: 6,
+           data-hide-cpu-num-hours: true,
+        ]
+    help: |
+      - Select a GPU node for software that supports GPU processing.
+  num_gpus:
+    widget: 'number_field'
+    label: "Number of GPUs"
+    value: 1
+    min: 1
+    max: 2
+  total_memory:
+    widget: "number_field"
+    value: "5"
+    min: "5"
+    max: "485"
+    label: "Total GB memory (max 485)"
+  email:
+    help: "This field is optional."
+

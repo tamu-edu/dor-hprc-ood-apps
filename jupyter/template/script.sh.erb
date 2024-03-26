@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+
+echo SLURM_JOBID: $SLURM_JOBID
+
+# Set working directory to scratch directory
+cd "${SCRATCH}"
+
+#
+# Start Jupyter Notebook Server
+#
+
+# Purge the module environment to avoid conflicts
+module purge
+
+<%# compute which environment to activate -%>
+<%# ############ PYTHONVENV ############# -%>
+<%- if context.env_type== 'pythonvenv' -%>
+    module load <%= context.python_module %>
+
+    <%- if context.path_to_virtualenv.blank? -%>
+        # load IPython which has Jupyter notebook python package
+        <%- if context.python_module =~ /Python\/3.9.6/ -%>
+            module load foss/2021b IPython/7.26.0 SciPy-bundle/2021.10 matplotlib/3.4.3
+        <%- elsif context.python_module =~ /Python\/3.10.8/ -%>
+            # IPython 8+ does not have jupyter need jupyter-server module
+            module load foss/2022b jupyter-server/2.7.0 JupyterNotebook/7.0.3 SciPy-bundle/2023.02 matplotlib/3.7.0
+        <%- end -%>
+    <%- else -%>
+        # Check if virtual environment exists
+        if [[ ! -f "<%= context.path_to_virtualenv %>" ]]; then
+            echo "ERROR; problem with path to environment file."
+            exit 1
+        fi
+        source <%= context.path_to_virtualenv %>
+    <%- end -%>
+
+    # List python packages
+    pip list
+<%# ############## CONDA ################ -%>
+<%- elsif context.env_type== 'conda' -%>
+    module load <%= context.conda_module %>
+
+    <%- unless context.conda_env_to_activate.blank? -%>
+        # activate conda environment
+        source activate <%= context.conda_env_to_activate %>
+        # list conda packages
+        conda list
+
+        # unless jupyter is installed in user local conda, we need PYTHONPATH to allow site-wide jupyter to find the user packages.
+        PYTHONPATH=$(echo ${CONDA_PREFIX}/lib/*/site-packages)
+        [[ -d ${PYTHONPATH} ]] && export PYTHONPATH
+    <%- end -%>
+<%# ############# CONTAINER ############# -%>
+<%- elsif context.env_type== 'container' -%>
+    <%- if context.path_to_image_file.end_with?('sif','img') -%>
+        # Singularity container
+        <%- if  context.node_type != "CPU" -%>
+            # enable gpu support
+            <%- gpu_flag= "--nv " -%>
+        <%- else -%>
+            <%- gpu_flag= "" -%>
+        <%- end -%>
+
+        # check if the image file makes sense
+        echo "Checking image file:"
+        singularity inspect <%= context.path_to_image_file %>
+        retVal=$?
+        if [ $retVal -ne 0 ]; then
+            echo "ERROR: problem with path to image file." 
+            exit $retVal
+        fi
+        # Make sure /scratch and TMPDIR are in the container
+        export SINGULARITYENV_TMPDIR=$TMPDIR
+        export SINGULARITY_BINDPATH="/scratch,$TMPDIR"
+  
+        <%# set up the singularity command -%>
+        <% container_command="singularity exec "+ gpu_flag + context.path_to_image_file + " " -%>
+    <%- elsif context.path_to_image_file.end_with?('sqfs') -%>
+        # Charlicloud container
+        module load charliecloud
+        # check if the image file makes sense
+        echo "Checking image file:"
+        ch-run <%= context.path_to_image_file %> -- whoami
+        retVal=$?
+        if [ $retVal -ne 0 ]; then
+            echo "ERROR: problem with path to image file." 
+            exit $retVal
+        fi
+
+        # --set-env    is used to make sure image variables are set
+        # --home       is used to make sure $HOME is in the container
+        # -b /scratch  is used to make sure /scratch is in the container
+        # -c $SCRATCH  is used to begin with PWD set at $SCRATCH
+        <%# set up the singularity command -%>
+        <% container_command="ch-run  --set-env --home -b /scratch -c $SCRATCH "+ context.path_to_image_file + " -- " -%>
+
+    <%- else -%>
+        echo ERROR: file type not recognized: <%= context.path_to_image_file %> 
+    <%- end -%>
+<%- end -%>
+
+module list
+
+# unset XDG_RUNTIME_DIR. It cause trouble starting jupyter notebook
+unset XDG_RUNTIME_DIR
+
+# Final test if Jupyter exists
+echo "Checking for Jupyter:"
+<%= container_command%>/usr/bin/which jupyter 
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "ERROR: couldn't find Jupyter." 
+    exit $retVal
+fi
+
+# Launch the Jupyter Notebook Server
+set -x
+<%= container_command%>jupyter notebook --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>

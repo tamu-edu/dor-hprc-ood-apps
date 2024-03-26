@@ -1,0 +1,19 @@
+---
+batch_connect:
+  template: "basic"
+script:
+  native:
+    - "--ntasks=<%= num_cores.to_i %>"
+    - "--ntasks-per-node=<%= num_cores.to_i %>"
+    - "--mem=<%= total_memory.to_i %>G"
+    <%- if node_type.eql? "CPU" -%>
+    - "--time=<%= cpu_num_hours.to_i %>:00:00"
+    <%- else -%>
+    - "--gres=gpu:<%= node_type %>:<%= num_gpus.to_i %>"
+    - "--partition=gpu"
+    - "--time=<%= gpu_num_hours.to_i %>:00:00"
+    <%- end -%>
+    <%- unless email.blank? -%>
+    - "--mail-type=ALL"
+    - "--mail-user=<%= email %>"
+    <%- end -%>
