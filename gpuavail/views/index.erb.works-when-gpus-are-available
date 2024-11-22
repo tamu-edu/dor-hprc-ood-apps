@@ -1,0 +1,43 @@
+<h1><%= title %></h1>
+
+<h3>This displays the configuration of installed GPUs and the status of GPUs readily available for jobs.</h3>
+
+<h4>Output generated: <b><%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %></b></h4>
+
+<pre style="width:25%">
+$ gpuavail -c -m
+</pre>
+
+<table class="table table-bordered" style="width:25%; border:3px solid black">
+    <tr>
+        <th colspan=2 style="text-align:center">CONFIGURATION</th>
+    </tr>
+    <tr>
+        <th style="text-align:center">NODE COUNT</th>
+        <th style="text-align:center">NODE TYPE</th>
+    </tr>
+<% @output.each do |app| %>
+
+    <% if app.count =~ /--------/ %>
+</table>
+        <table class="table table-bordered" style="width:25%; border:3px solid black">
+            <tr>
+                <th colspan=2 style="text-align:center">AVAILABILITY</th>
+            </tr>
+    <tr>
+        <th style="text-align:center">NODE COUNT</th>
+        <th style="text-align:center">NODE TYPE</th>
+    </tr>
+    <% else %>
+  <tr>
+    <td align='center'><%= app.count %></td>
+    <td><%= app.node_type %></td>
+  </tr>
+    <% end %>
+
+
+<% end %>
+        </table>
+
+* indicates that other GPUs on the compute node are assigned to other jobs.
+<br><br><br>

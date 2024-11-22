@@ -1,0 +1,74 @@
+<h1><%= title %></h1>
+
+<h4>This displays the CONFIGURATION of installed GPUs and the status of GPUs readily available for jobs.</h4>
+<h4>GPUs not in the AVAILABILITY table are busy with other jobs and will be available after jobs have completed.</h4>
+
+<h4>&nbsp;&nbsp;&nbsp;Output generated: <b><%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %></b></h4>
+
+<pre style="width:72%">
+$ gpuavail
+</pre>
+
+<table><tr valign="top"><td>
+<table class="table table-bordered" style="width:400; border:3px solid black">
+    <tr>
+        <th colspan=6 style="text-align:center">CONFIGURATION</th>
+    </tr>
+    <tr>
+        <th colspan=3 style="text-align:center">NODE TYPE</th>
+        <th colspan=3 style="text-align:center">NODE COUNT</th>
+    </tr>
+<% @output.each do |app| %>
+    <% if app.name =~ /==/ %>
+		<h3>The Slurm controller is under heavy usage resulting in a disruption in querying the nodes.<br> Please wait five minutes and try again.</h3>
+    <% elsif app.gpu_count =~ /job may take a while before starting/ %>
+        <h4>All GPU nodes are currently busy with other jobs.<br>Your submitted job may take a while before starting.</h4>
+    <% elsif app.name =~ /NODE|CONFIGURATION|TYPE|NAME|-------/ %>
+    <% elsif app.name !~ /\w/ %>
+    <% elsif app.name =~ /AVAILABILITY/ %>
+
+</table>
+                </td><td>&nbsp;&nbsp;&nbsp;&nbsp;
+                </td><td>
+        <table class="table table-bordered" style="width:700; border:3px solid black">
+            <tr>
+                <th colspan=6 style="text-align:center">AVAILABILITY</th>
+            </tr>
+    <tr>
+        <th style="text-align:center">NODE NAME</th>
+        <th style="text-align:center">GPU TYPE</th>
+        <th style="text-align:center">GPU COUNT</th>
+        <th style="text-align:center">GPU AVAIL</th>
+        <th style="text-align:center">CPU AVAIL</th>
+        <th style="text-align:center">GB MEM AVAIL</th>
+    </tr>
+    <% else %>
+<% if app.mem_avail =~ /reserved/ %>
+<% reserved = 'reserved' %>
+<tr style="background-color: #E8E8E8">
+<% else %>
+<% reserved = '' %>
+  <tr>
+<% end %>
+    <% if app.mem_avail !~ /\w/ %>
+        <td colspan=3 align='center'><%= app.name %></td>
+        <td align='center'><%= app.gpu_type %></td>
+    <% else %>
+        <td align='center'><%= app.name %> <%= reserved %></td>
+        <td align='center'><%= app.gpu_type %></td>
+        <td align='center'><%= app.gpu_count %></td>
+        <td align='center'><b><%= app.gpu_avail %></b></td>
+        <td align='center'><%= app.cpu_avail %></td>
+        <td align='center'><%= app.mem_avail.gsub('(reserved)', '') %></td>
+    <% end %>
+  </tr>
+    <% end %>
+
+
+<% end %>
+        </table>
+                </td>
+</table>
+
+<br><br><br>
+

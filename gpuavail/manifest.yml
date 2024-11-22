@@ -1,0 +1,5 @@
+category: Utilities
+name: gpuavail
+icon: fa://gears
+url: https://portal-aces.hprc.tamu.edu/pun/sys/gpuavail
+description: Display current GPU resource availability
