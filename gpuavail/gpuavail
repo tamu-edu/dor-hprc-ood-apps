@@ -1,0 +1,210 @@
+#!/usr/bin/env perl
+#================================================================================
+#         FILE: gpuavail
+#
+#  DESCRIPTION: shows current config and available GPUs, CPUs and GB mem per node
+#
+#      OPTIONS:  -c -m -h
+#         BUGS: ---
+#        NOTES: requires Gres= assigned in slurm.conf
+#       AUTHOR: Michael Dickens cmdickens@tamu.edu
+# ORGANIZATION: Texas A&M University | High Performance Research Computing
+#      VERSION: 1.1
+# LAST UPDATED: 02/04/2025
+#     REVISION: 1
+#================================================================================
+
+use strict;
+use Getopt::Long qw(:config no_ignore_case gnu_getopt);
+
+my $help;
+my $show_config = 0;
+my $show_merged_avail = 0;
+my $usage = qq{
+Synopsis:
+    Will show the configuration and availability status of the GPU nodes including how many GPUs, CPUs and GB of memory are available per node
+    If a GPU node is in the CONFIGURATION table but not in the AVAILABILITY table that just means that that node is
+      fully allocated to currently running jobs and will be available when the jobs on that node end and release resources back for new jobs.
+
+Options:
+    -c|--config     show only config
+    -m|--merged     show only concise table of merged available GPUs
+    -h|--help       show usage
+
+Required config:
+    Slurm configuration for GPU nodes must use the Gres parameter
+
+};
+
+GetOptions (
+    "c|config" => \$show_config,
+    "m|merged" => \$show_merged_avail,
+    "h|help"   => \$help,
+);
+
+if (defined $help) {
+    print "$usage\n";
+    exit;
+}
+
+my %node;
+my %node_count;
+my %reserved;
+my $scontrol_line = qx(scontrol show node -o);
+my @scontrol_line = split(/\s/, $scontrol_line);
+
+foreach (split(/\n/, $scontrol_line)) {
+    my $node_line = $_;
+
+    # skip non-GPU node
+    next if $node_line =~ /Gres=\(null\)/;
+
+    my $node_name = $1 if $node_line =~ /NodeName=(\S+) /;
+
+    # Gres=gpu:t4:4
+    if ($node_line =~ / Gres=(gpu:\w+:\d+)/ && $node_line !~ /INVALID_REG/) {
+        # count the nodes before skipping on next line to show what GPUs are attached but may be unavailable due to State=DOWN,DRAIN,NOT_RESPONDING
+        $node_count{$1} += 1;
+    }
+
+    # skip node as avail since it is part of cluster config but not part of available resources at this time
+    # State=DOWN+DRAIN+NOT_RESPONDING
+    if ($node_line =~ /(DOWN|DRAIN|NOT_RESPONDING|PLANNED)/) {
+        next;
+    }
+
+    if ($node_line =~ /RESERVED/) {
+        $reserved{$node_name} = 1;
+    }
+
+    if ($node_line =~ / Gres=gpu:(\w+):(\d+)/) {
+        $node{$node_name}{GPUTYPE} = $1;
+        $node{$node_name}{GPUTOTAL} = $2;
+    }
+
+    if ($node_line =~ /CPUTot=(\d+) /) {
+        $node{$node_name}{CPUTOTAL} = $1;
+    }
+
+    # RealMemory=256000 AllocMem=0
+    if ($node_line =~ /RealMemory=(\d+) AllocMem=(\d+) /) {
+        my ($real_memory, $alloc_memory) = ($1,$2);
+        my $memory_avail = ($real_memory - $alloc_memory);
+        if ($alloc_memory == 0) {
+            $node{$node_name}{MEMAVAIL} = int($real_memory / 1024);
+        }
+        else {
+            $memory_avail = int($memory_avail / 1024);
+            $node{$node_name}{MEMAVAIL} = $memory_avail;
+        }
+    }
+
+    # check allocated resources; example formats:
+    # AllocTRES=cpu=48,mem=360G,gres/gpu=4,gres/gpu:t4=4
+    # AllocTRES=cpu=2,mem=11G,gres/gpu=2,gres/gpu:rtx=2
+    # AllocTRES=cpu=2,mem=2.50G,gres/gpu=2,gres/gpu:a100=2
+    # AllocTRES=cpu=48,mem=350G
+    # AllocTRES=
+    if ($node_line =~ /AllocTRES=cpu=(\d+),mem=(\S+)G?,gres\/gpu=(\d+),gres\/gpu:(\S+)=(\d+) /) {
+        $node{$node_name}{CPUALLOC} = $1;
+        $node{$node_name}{GPUALLOC} = $5;
+        $node{$node_name}{CPUAVAIL} = $node{$node_name}{CPUTOTAL} - $node{$node_name}{CPUALLOC};
+        $node{$node_name}{GPUAVAIL} = $node{$node_name}{GPUTOTAL} - $node{$node_name}{GPUALLOC};
+    }
+    elsif ($node_line =~ /AllocTRES=cpu=(\d+),mem=(\S+)G? /) {
+        # example where job requested -g gpu without using --gres=gpu:type:num
+        $node{$node_name}{CPUALLOC} = $1;
+        $node{$node_name}{GPUALLOC} = 0;
+        $node{$node_name}{CPUAVAIL} = $node{$node_name}{CPUTOTAL} - $node{$node_name}{CPUALLOC};
+        $node{$node_name}{GPUAVAIL} = $node{$node_name}{GPUTOTAL};
+    }
+    elsif ($node_line =~ /AllocTRES= /) {
+        $node{$node_name}{CPUAVAIL} = $node{$node_name}{CPUTOTAL};
+        $node{$node_name}{CPUALLOC} = 0;
+        $node{$node_name}{GPUALLOC} = 0;
+        $node{$node_name}{GPUAVAIL} = $node{$node_name}{GPUTOTAL};
+    }
+    else {
+        next;
+        print "MISSED SOMETHING (possibly state value): $node_line\n"; exit;
+    }
+
+    # mark node as unavailable if CPUAVAIL == 0 or MEMAVAIL == 0
+    if ($node{$node_name}{CPUAVAIL} == 0 || $node{$node_name}{MEMAVAIL} == 0) {
+        $node{$node_name}{GPUAVAIL} = 0;
+    }
+}
+
+# exit if error resulting in either slurm.conf not being configured to support gpuavail (config example: Gres=gpu:a30:2)
+#   or "slurm_load_node error: Socket timed out on send/recv operation" due to heavy scheduler usage
+if (keys %node_count < 1) {
+    print "\n== Either the required Gres parameter in the slurm.conf file is not configured for gpuavail or the Slurm controller is under heavy usage resulting in a disruption in querying the nodes.\n\n";
+    exit;
+}
+
+if ($show_config == 1 || $show_merged_avail == 1) {
+    print "\n";
+    if ($show_config == 1) {
+        foreach my $node_type (sort { $node_count{$b} <=> $node_count{$a} } keys %node_count) {
+            $node_type =~ s/^gpu://;
+            my $node_display = uc($node_type);
+            printf "  %-3s%4s\n", $node_count{"gpu:$node_type"}, " x  $node_display ";
+        }
+        print "\n";
+    }
+    if ($show_merged_avail == 1) {
+        print "\n--------\n" if $show_config;
+        my %node_avail_list;
+        my $nodes_avail = 0;
+        my $some_gpus_on_node_not_avail = 0;
+        foreach my $name (sort keys %node) {
+            if ($node{$name}{GPUAVAIL} > 0) {
+                $node_avail_list{"$node{$name}{GPUTYPE}:$node{$name}{GPUAVAIL}"} += 1;
+                $nodes_avail++;
+            }
+        }
+        foreach my $name (sort {$node_avail_list{$b} <=> $node_avail_list{$a}} keys %node_avail_list) {
+            my $node_display = uc($name);
+            if (! exists $node_count{"gpu:$name"}) {
+                $node_display .= "*";   # this asterisk is used to indicate that a node has at least 1 GPU in use and at least 1 available
+                $some_gpus_on_node_not_avail = 1;
+            }
+            printf "  %-3s%4s\n", $node_avail_list{$name}, " x  $node_display";
+        }
+        unless ($nodes_avail) {
+            print "\n\n\n  * Currently there are no GPU nodes available for immediate use.\n    Your submitted job may take a while before starting.\n\n";
+        }
+        else {
+            print "\n  * Indicates that other GPUs on this node type are occupied with other jobs\n\n";
+        }
+    }
+}
+else {
+    print "\n      CONFIGURATION\n";
+    printf "%-18s%5s%10s\n", "  NODE", "NODE";
+    printf "%-18s%5s%11s\n", "  TYPE", "COUNT";
+    print "  ---------------------\n";
+    foreach my $node_type (sort { $node_count{$b} <=> $node_count{$a} } keys %node_count) {
+        my $gpu_type = $1 if $node_type =~ /gpu:(\S+):\d+/;
+        printf "%-18s%3s\n",  "  $node_type", $node_count{$node_type};
+    }
+
+    print "\n\n                  AVAILABILITY\n";
+    printf "  %-8s%-8s%-8s%-8s%-8s%-8s%-8s\n", "NODE","GPU","GPU", "GPUs","CPUs", "GB MEM";
+    printf "  %-8s%-8s%-8s%-8s%-8s%-8s%-8s\n", "NAME","TYPE","COUNT", "AVAIL","AVAIL", "AVAIL";
+    print "  ----------------------------------------------\n";
+    my $nodes_avail = 0;
+    foreach my $name (sort keys %node) {
+        if ($node{$name}{GPUAVAIL} > 0) {
+            my $flag = $reserved{$name} ? "* " : " ";
+            my $tag = $reserved{$name} ? " (reserved)" : "";
+            printf " $flag%-8s%-8s%-8s%-8s%-8s%-8s%-8s", "$name","$node{$name}{GPUTYPE}","$node{$name}{GPUTOTAL}",
+                   "$node{$name}{GPUAVAIL}","$node{$name}{CPUAVAIL}", "$node{$name}{MEMAVAIL}$tag";
+            print "\n";
+            $nodes_avail++;
+        }
+    }
+    unless ($nodes_avail) {
+        print "\n\n\n  * Currently there are no GPU nodes available for immediate use.\n    Your submitted job may take a while before starting.\n\n";
+    }
+}
