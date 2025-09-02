@@ -1,0 +1,7 @@
+---
+name: Hugging (Inter)Face
+category: Interactive Apps
+subcategory: TEST_HPRC_ONLY
+role: batch_connect
+description: This app will allow users to search and download models and datasets directly from Hugging Face. Users will need to provide Hugging Face credentials.
+icon: 'icon.png'

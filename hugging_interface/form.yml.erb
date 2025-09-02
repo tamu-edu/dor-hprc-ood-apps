@@ -1,0 +1,16 @@
+---
+cluster: "aces"
+form:
+  - num_hours
+  - bc_account
+  - email
+attributes:
+  num_hours:
+    widget: 'number_field'
+    label: "Number of hours (max 12)"
+    value: 1
+    min: 1
+    max: 12
+  bc_account:
+  email:
+    help: "This field is optional."

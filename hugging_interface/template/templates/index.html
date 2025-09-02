@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hugging Face Resource Browser</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+<!-- Top banners -->
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center">
+      <div style="flex: 0 0 auto; margin-right: 10px;">
+          <img src="{{ prefix }}/static/assets/HPRC.png" alt="HPRC Logo" style="max-height:100px;">
+      </div>
+      <div style="flex: 0 0 auto; margin-left: 10px;">
+          <img src="{{ prefix }}/static/assets/hugging-face-logo.png" alt="Hugging Face Logo" style="max-height:100px;">
+      </div>
+  </div>
+</div>
+
+<div class="container py-4">
+
+    <!-- Model Search -->
+    <div class="p-4 rounded mb-4" style="background-color:#500000; color:white;">
+        <h1 class="mb-4">Browse Hugging Face Models</h1>
+        <a href="{{ prefix }}{{ url_for('set_credentials') }}" class="btn btn-primary mb-3">Set Hugging Face Credentials</a>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+    <div id="ajax-error" class="alert alert-danger" style="display:none;"></div>
+
+        <form method="POST" class="row g-3 align-items-end">
+            <input type="hidden" name="search_type" value="model">
+            <div class="col-md-4">
+                <label>Model name contains:</label>
+                <input type="text" name="model_name" value="{{ selected_model_name or '' }}" class="form-control" placeholder="e.g., bert">
+            </div>
+            <div class="col-md-2">
+                <label>Task:</label>
+                <input list="pipeline_tags" name="task" value="{{ selected_task or '' }}" class="form-control">
+                <datalist id="pipeline_tags">
+                    {% for tag in pipeline_tags %}<option value="{{ tag }}">{% endfor %}
+                </datalist>
+            </div>
+            <div class="col-md-2">
+                <label>Library:</label>
+                <input list="libraries" name="library" value="{{ selected_library or '' }}" class="form-control">
+                <datalist id="libraries">
+                    {% for lib in libraries %}<option value="{{ lib }}">{% endfor %}
+                </datalist>
+            </div>
+            <div class="col-md-2">
+                <label>Sort by:</label>
+                <select name="sort" class="form-select">
+                    <option value="">None</option>
+                    <option value="downloads" {% if selected_sort == 'downloads' %}selected{% endif %}>Downloads</option>
+                    <option value="likes" {% if selected_sort == 'likes' %}selected{% endif %}>Likes</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label>Limit:</label>
+                <input type="number" name="limit" value="{{ selected_limit or 10 }}" min="1" max="100" class="form-control">
+            </div>
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+    <h2>Model Results:</h2>
+
+    {% if models %}
+    <div class="list-group mb-5">
+    {% for model in models %}
+        <div class="list-group-item">
+            <strong>{{ model.modelId }}</strong><br>
+            Size: {{ model.size }}<br>
+            Likes: {{ model.get("likes", 0) }} | Downloads: {{ model.get("downloads", 0) }}<br>
+
+            <select id="model-dir-{{ loop.index }}" class="form-select my-2" style="max-width: 400px;">
+                {% for dir in allowed_dirs %}
+                  <option value="{{ dir }}">{{ dir }}</option>
+                {% endfor %}
+            </select>
+
+            <button class="btn btn-primary btn-sm" onclick="startModelDownload('{{ model.modelId }}', '{{ loop.index }}')">Download</button>
+
+            <div class="progress my-2" style="height: 20px; display:none;" id="model-progress-{{ loop.index }}">
+                <div class="progress-bar" style="width:0%" id="model-bar-{{ loop.index }}">0%</div>
+            </div>
+            <div id="model-status-{{ loop.index }}" class="text-muted small"></div>
+            <button style="display:none;" id="model-cancel-{{ loop.index }}" class="btn btn-warning btn-sm" onclick="cancelDownload('{{ loop.index }}', 'model')">Cancel</button>
+        </div>
+    {% endfor %}
+    </div>
+    {% else %}
+        <p class="text-muted">No model results yet.</p>
+    {% endif %}
+
+    <!-- Dataset Search -->
+    <div class="p-4 rounded mb-4" style="background-color:#500000; color:white;">
+        <h1>Browse Hugging Face Datasets</h1>
+        <form method="POST" class="row g-3 align-items-end">
+            <input type="hidden" name="search_type" value="dataset">
+            <div class="col-md-8">
+                <label>Dataset name contains:</label>
+                <input type="text" name="dataset_name" class="form-control" placeholder="e.g., imdb">
+            </div>
+            <div class="col-md-2">
+                <label>Limit:</label>
+                <input type="number" name="dataset_limit" value="10" min="1" max="100" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+    <h2>Dataset Results:</h2>
+
+    {% if datasets %}
+    <div class="list-group mb-5">
+    {% for ds in datasets %}
+        <div class="list-group-item">
+            <strong>{{ ds.id }}</strong><br>
+            Size: {{ ds.size }}<br>
+
+            <select id="dataset-dir-{{ loop.index }}" class="form-select my-2" style="max-width: 400px;">
+                {% for dir in allowed_dirs %}
+                  <option value="{{ dir }}">{{ dir }}</option>
+                {% endfor %}
+            </select>
+
+            <button class="btn btn-primary btn-sm" onclick="startDatasetDownload('{{ ds.id }}', '{{ loop.index }}')">Download</button>
+
+            <div class="progress my-2" style="height: 20px; display:none;" id="dataset-progress-{{ loop.index }}">
+                <div class="progress-bar" style="width:0%" id="dataset-bar-{{ loop.index }}">0%</div>
+            </div>
+            <div id="dataset-status-{{ loop.index }}" class="text-muted small"></div>
+            <button style="display:none;" id="dataset-cancel-{{ loop.index }}" class="btn btn-warning btn-sm" onclick="cancelDownload('{{ loop.index }}', 'dataset')">Cancel</button>
+        </div>
+    {% endfor %}
+    </div>
+    {% else %}
+        <p class="text-muted">No dataset results yet.</p>
+    {% endif %}
+
+</div>
+
+<script>
+  let activeJobs = {{ active_jobs | tojson | safe }};
+
+  window.onload = function() {
+      for (const key in activeJobs) {
+          const jobId = activeJobs[key];
+          const [type, index] = key.split("-");
+          let barId = `${type}-bar-${index}`;
+          let statusId = `${type}-status-${index}`;
+          let cancelId = `${type}-cancel-${index}`;
+          let progressId = `${type}-progress-${index}`;
+          document.getElementById(progressId).style.display = "block";
+          document.getElementById(cancelId).style.display = "inline-block";
+          pollProgress(jobId, barId, statusId, cancelId);
+      }
+  };
+
+  function showAjaxError(message) {
+    let errBox = document.getElementById('ajax-error');
+    errBox.style.display = "block";
+    errBox.textContent = message;
+    if (!message.includes("No Hugging Face token")) {
+        setTimeout(() => { errBox.style.display = "none"; }, 5000);
+    }
+  }
+
+  function startModelDownload(modelId, index) {
+      let dir = document.getElementById(`model-dir-${index}`).value;
+      fetch("{{ prefix }}{{ url_for('start_download_model') }}", {
+          method: "POST",
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `model_id=${modelId}&target_dir=${encodeURIComponent(dir)}&index=${index}`
+      })
+      .then(r => r.json())
+      .then(d => {
+          if (d.job_id) {
+              document.getElementById('ajax-error').style.display = "none";
+              activeJobs[`model-${index}`] = d.job_id;
+              document.getElementById(`model-progress-${index}`).style.display = "block";
+              document.getElementById(`model-cancel-${index}`).style.display = "inline-block";
+              pollProgress(d.job_id, `model-bar-${index}`, `model-status-${index}`, `model-cancel-${index}`);
+          } else {
+              showAjaxError(d.error || "Failed to start download.");
+          }
+      });
+  }
+
+  function startDatasetDownload(datasetId, index) {
+      let dir = document.getElementById(`dataset-dir-${index}`).value;
+      fetch("{{ prefix }}{{ url_for('start_download_dataset') }}", {
+          method: "POST",
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `dataset_id=${datasetId}&target_dir=${encodeURIComponent(dir)}&index=${index}`
+      })
+      .then(r => r.json())
+      .then(d => {
+          if (d.job_id) {
+              document.getElementById('ajax-error').style.display = "none";
+              activeJobs[`dataset-${index}`] = d.job_id;
+              document.getElementById(`dataset-progress-${index}`).style.display = "block";
+              document.getElementById(`dataset-cancel-${index}`).style.display = "inline-block";
+              pollProgress(d.job_id, `dataset-bar-${index}`, `dataset-status-${index}`, `dataset-cancel-${index}`);
+          } else {
+              showAjaxError(d.error || "Failed to start download.");
+          }
+      });
+  }
+
+  function pollProgress(jobId, barId, statusId, cancelId) {
+    fetch("{{ prefix }}{{ url_for('download_progress', job_id='') }}" + jobId)
+      .then(r => r.json())
+      .then(data => {
+        let percent = data.progress || 0;
+        let status = data.status || "Unknown";
+        let bar = document.getElementById(barId);
+        let statusBox = document.getElementById(statusId);
+
+        bar.style.width = percent + "%";
+        bar.textContent = percent + "%";
+        statusBox.textContent = status;
+
+        if (status === "Complete" || status.startsWith("Error") || status === "Cancelled") {
+            document.getElementById(cancelId).style.display = "none";
+            if (status === "Complete") bar.classList.add("bg-success");
+            if (status === "Cancelled") bar.classList.add("bg-secondary");
+            if (status.startsWith("Error")) bar.classList.add("bg-danger");
+        } else {
+            setTimeout(() => pollProgress(jobId, barId, statusId, cancelId), 2000);
+        }
+    });
+  }
+
+  function cancelDownload(index, type) {
+    let jobKey = `${type}-${index}`;
+    let jobId = activeJobs[jobKey];
+    if (jobId) {
+        fetch("{{ prefix }}{{ url_for('cancel_download', job_id='') }}" + jobId, { method: "POST" });
+    }
+  }
+
+</script>
+
+</body>
+</html>

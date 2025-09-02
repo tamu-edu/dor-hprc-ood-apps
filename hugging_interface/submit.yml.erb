@@ -1,0 +1,15 @@
+---
+batch_connect:
+  template: "basic"
+script:
+  native:
+    - "--ntasks=1"
+    - "--ntasks-per-node=1"
+    - "--mem=5G"
+    - "--partition=cpu"
+    - "--time=<%= num_hours.to_i %>:00:00"
+    <%- unless email.blank? -%>
+    - "--mail-type=ALL"
+    - "--mail-user=<%= email %>"
+    <%- end -%>
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "SLURM_JOBID: $SLURM_JOBID"
+echo "TIMING - Starting Flask app at: $(date)"
+export OOD_PWD_PREFIX="/node/$(hostname -s)/$port"
+
+# Save original launch directory
+ood_dir=$(pwd)
+
+# Load necessary modules
+module purge
+module load WebProxy GCCcore/13.2.0 Python/3.11.5
+
+# Activate python venv
+source /scratch/data/uv_envs/hugging_interface/bin/activate
+
+# Start Flask app (using full python call for stability)
+/scratch/data/uv_envs/hugging_interface/bin/python3 -m flask run --host=0.0.0.0 --port=$port
+
