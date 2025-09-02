@@ -1,0 +1,8 @@
+Many changes to this repository by Richard Lawrence 
+last updated 4/5/20
+
+The bulk of the new code is now contained in form.js
+especially a large "case" statement that encodes information about
+module and virtualenv compatibility. Doing it this way allows 
+the form to report these facts back to the user as they 
+are selecting their software.  

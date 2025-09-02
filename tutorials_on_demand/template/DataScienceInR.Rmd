@@ -1,0 +1,1371 @@
+---
+title: "Introduction to Data Science in R"
+output: learnr::tutorial
+author: "Texas A&M University HPRC"
+runtime: shiny_prerendered
+---
+  
+```{r setup, include=FALSE}
+library(learnr)
+library(ggplot2)
+library(ggfortify)
+library(tidyverse)
+library(readxl)
+library(AER)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+
+## **Data Structures**
+
+R has numerous data structures, many of which are commonly used or encountered in data science applications or workflows. Here we provide a brief overview of the data structures that we will be using in this notebook and some of the common methods used when working with them.
+
+Data Structure    |   Description
+------------------|-----------------------------------------------
+Vector            | A 'list' or array of elements of the same fundamental data type (e.g., logical, numeric, character).
+List              | A collection of elements of different data types.
+Matrix            | A group of elements of the same data type (just like vectors) arranged into a set number of rows and columns.
+Data Frame        | A group of elements arranged as a table or two-dimensional array that can contain heterogeneous data.
+Tibble            | A 'modern' re-formatted version of the data frame structure (see below).
+
+
+```{r data_structure_prepare}
+heights = c(1.78, 2.04, 1.65, 1.56, 1.86, 1.45, 1.67, 1.74, 1.81)
+week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+df_mt = mtcars
+tb_mt = as_tibble(mtcars)
+```
+
+### **Viewing Data Objects**
+
+Many common operations and functions are shared between different data structures. The functions `print()`, `head()`, and `str()` allow us to examine the contents of a given object. Use the code chunk below to see how these built-in functions work. We will be using some built-in data sets and previously generated data objects for this exercise.
+
+```{r data_structures_1, exercise = TRUE, exercise.lines = 10, exercise.setup = 'data_structure_prepare'}
+
+# Identify the structure of the 'heights' object
+str(iris)
+
+# Display the first components of the 'heights' object
+head(iris)
+
+# Print all of the elements within the 'heights' object
+print(iris)
+
+```
+
+***Independent Exercise***
+
+Use the code chunk below to try the built-in functions we just learned on the built-in data set `mtcars`.
+
+```{r data_structures_2, exercise = TRUE, exercise.lines = 10}
+```
+
+```{r data_structures_2-solution}
+# Identify the structure of the 'mtcars'
+str(mtcars)
+
+# Display the first components of 'mtcars'
+head(mtcars)
+
+# Print all of the elements within 'the 'heights' object'mtcars'
+print(mtcars)
+
+```
+
+### **Vectors**
+
+Vectors are one of the most fundamental data structures in R. They are a data object that contains a collection of elements of the same type.
+
+Here are four of the main vector types in R:
+
+Type        | Examples
+------------|-----------------
+logical     | TRUE, FALSE
+integer     | 1L, 23L
+numeric     | 1.5, 23 
+character   | "Launch", "ACES"
+
+Vectors can be created in R with several different methods, including the `c()` function or by subsetting part of a matrix, data frame, or tibble. Take a look at the code chunk below which creates a new vector using the `c()` function, saves it to a variable named `num_vec`, and then examines the structure of the vector with `str()`.
+
+```{r data_structures_3, exercise = TRUE}
+
+num_vec = c(29, 23, 46, 15, 31, 19, 54, 42)
+str(num_vec)
+
+```
+
+***Independent Exercise***
+
+Use the code chunk below to create a new character vector that contains the days of the week. Save the vector as a variable named `week` and examine the structure using `str()`
+
+```{r data_structures_4, exercise = TRUE, exercise.lines = 6}
+
+```
+
+```{r data_structures_4-solution}
+week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+str(week)
+```
+
+### **Subsetting Vectors**
+
+When using vectors in R, you may need to access only certain elements. Let's take a look at different ways to subset elements from a vector.
+
+One way to select elements from a vector is to use square brackets `[]`. To select the first element of a vector, you would simply type the name of the vector, followed by `[1]`. For the second element, you will just need to replace `[1]` with `[2]`. Take a look at the code below.
+
+```{r data_structures_5, exercise = TRUE, exercise.lines = 8, exercise.setup = 'data_structure_prepare'}
+
+print(week)
+print(week[1])
+
+```
+
+
+We can also select multiple elements at once. For example, if you'd like to select the first three elements of list, you would use the vector `c(1,2,3)` between the square brackets. You can also select a range of elements within the vector using `:`.
+
+
+**Independent Exercise**
+
+In the code chunk below, first print elements 1-3 of the `week` vector using the `c()` function. Next, print elements 4-7 using the `:` operator.
+
+
+```{r data_structures_6, exercise = TRUE, exercise.lines = 8, exercise.setup = 'data_structure_prepare'}
+
+```
+
+```{r data_structures_6-solution}
+print(week[c(1,2,3)])
+print(week[4:7])
+```
+
+We can use similar functions to drop elements of a vector. In order to do this, we place `-` in front of the elements we wish to omit. 
+
+Take a look at the code chunk below. 
+
+```{r data_structures_7, exercise = TRUE, exercise.lines = 4, exercise.setup = 'data_structure_prepare'}
+
+weekend = week[c(-2,-3,-4,-5,-6)]
+print(weekend)
+
+```
+
+### **Subsetting Data Frames**
+
+Just like we can subset part of a vector, it is possible to select or subset part of a data frame.
+
+For example, we can use `df_name[2,4]` to select the data frame element that is in the second row, fourth column.
+
+To select a range of elements, we can use `df_name[1:2,5:6]` to select the elements from rows 1 and 2 that are in columns 5 and 6. To select everything in rows 1 and 2 the space after the comma can be left blank (but you still need the comma!): `df_name[1:2,]`. The same will work for selecting all of the elements of multiple columns.
+
+We can also select entire columns from a data frame using the `$` operator: `df_name$column_name`.
+
+***Independent Exercise***
+
+In the code chunk below, use the built-in data frame `mtcars` to complete the following steps:
+
+  1) Look at the structure and first few rows of the `mtcars` data frame.
+  2) Select the first two rows of the `mtcars` data frame and save it as a new variable `mazda`. Print the contents of the new variable.
+  3) Select the 1st and 2nd elements of rows 4 and 5. Save the output to the variable `hornet` and print the contents.
+  4) Calculate the overall average miles per gallon (`mpg`) using the `$` operator. Is it higher than the median miles per gallon?
+
+```{r data_structures_8, exercise = TRUE, exercise.lines = 10}
+
+```
+
+```{r data_structures_8-solution}
+# Step 1
+str(mtcars)
+head(mtcars)
+
+# Step 2
+mazda = mtcars[1:2,]
+print(mazda)
+
+# Step 3
+hornet = mtcars[4:5,1:2]
+print(hornet)
+
+# Step 4
+mean(mtcars$mpg)
+mean(mtcars$mpg) > median(mtcars$mpg)
+
+```
+
+#### **subset()**
+
+There is yet another way to subset data frames in R: `subset()`. This function allows us to select a portion of the data for which a given condition is meant. For example, if we wanted to select all of the flowers in `iris` with sepal lengths greater than 5.0 we could use `subset(iris, Sepal.Length > 5.0)`. If we wanted to pull out all of the flowers belonging to the species virginica, we could use `subset(iris, Species == 'virginica')`.
+
+**Independent Exercise**
+
+Create a new data frame by selecting all of the cars in the `mtcars` data frame that have six cylinders `cyl`. Next, create another data frame of all of the cars with at least 250 horsepower `hp`.
+
+```{r data_structures_9, exercise = TRUE, exercise.lines = 10}
+
+```
+
+```{r data_structures_9-solution}
+six_cyl = subset(mtcars, cyl == 6)
+print(six_cyl)
+
+high_hp = subset(mtcars, hp >= 250)
+print(high_hp)
+```
+
+### **Tibbles vs. Data Frames**
+
+Tibbles are considered to be a cleaner, more 'opinionated' re-imagining of data frames. Tibbles are used in the highly popular `tidyverse` suite of packages (e.g. `dplyr, ggplot2, tidyr`). Data frames and tibbles are very similar, but there are some key differences:
+
+  * Using the `print()` function will only display the first ten rows of a tibble, whereas all of the rows of a data frame will be displayed.
+  * Tibbles are more explicit and will not conduct partial matching when subsetting.
+  * Subsetting with `[]` on tibbles always returns a tibble, even if only a single column is selected.
+  * Tibbles do not alter input types.
+  * Tibbles only recycle vectors with a length of 1.
+  * Tibbles cannot generate the names of rows.
+  
+Let's convert the `mtcars` data frame to a tibble and examine how the two structures differ.
+
+```{r data_structures_10, exercise = TRUE, exercise.lines = 10}
+# We'll save the mtcars data frame to a new variable to make the comparisons easier
+df_mt = mtcars
+
+# Next, let's convert the mtcars data frame to a tibble and save it to a different variable
+tb_mt = as_tibble(mtcars)
+
+# Now we'll print both objects. The tibble object will only display the first ten rows while the entire data frame will be displayed.
+print(tb_mt)
+print(df_mt)
+```
+
+Let's look at differences between subsetting tibbles and data frames.
+
+```{r data_structures_11, exercise = TRUE, exercise.setup = 'data_structure_prepare'}
+
+print(df_mt[1:4,1:6])
+str(df_mt[1:4,1:6])
+
+print(tb_mt[1:4,1:6])
+str(tb_mt[1:4,1:6])
+
+```  
+
+
+```{r data_structures_12, exercise = TRUE, exercise.setup = 'data_structure_prepare'}
+
+print(df_mt[1:6,1])
+str(df_mt[1:6,1])
+
+print(tb_mt[1:6,1])
+str(tb_mt[1:6,1])
+
+```  
+
+```{r data_structures_13, exercise = TRUE, exercise.setup = 'data_structure_prepare'}
+
+print(df_mt$mp)
+
+print(tb_mt$mp)
+
+```
+
+### **Mathematical Functions with Data Objects**
+
+* Addition: `+` 
+* Subtraction: `-` 
+* Multiplication: `*` 
+* Division: `/` 
+* Exponentation: `^` 
+* Modulo: `%%` 
+
+***Independent Exercise***
+
+Use the code chunk below to become familiar with R's mathematical operators. Try using the code chunk as you would a calculator, as well as trying the operators on the `heights` vector.
+
+```{r data_structures_14, exercise = TRUE, exercise.lines = 6, exercise.setup = 'data_structure_prepare'}
+```
+
+*Mathematical Operations with Multiple Vectors*
+
+You found in the previous exercise that conducting a mathematical operation on a vector performs that function on each element of the vector. For example, multiplying the `heights` vector by two changed the vector from `1.78 2.04 1.65 1.56 1.86 1.45 1.67 1.74 1.81` to `3.56 4.08 3.30 3.12 3.72 2.90 3.34 3.48 3.62`. But what happens if we perform these operations using two vectors? 
+
+***Independent Exercise***
+
+Use the code chunk below to complete the following steps:
+
+  1) Create a numeric vector named `num_vec_1` with the numbers `1, 2, 3, 4, 5, 6`.
+  2) Create another numeric vector named `num_vec_2` with the numbers `7, 8, 9, 10, 11, 12`.
+  3) Multiply the two vectors together and examine the results.
+  4) Remove the last three elements from `num_vec_2` and multiply the vectors again. 
+  5) Remove the last element from `num_vec_1` and multiply the vectors one last time.
+  
+```{r data_structures_15, exercise = TRUE, exercise.lines = 12}
+
+```
+
+```{r data_structures_15-solution}
+
+num_vec_1 = c(1, 2, 3, 4, 5, 6)
+num_vec_2 = c(7, 8, 9, 10, 11, 12)
+
+print(num_vec_1)
+print(num_vec_2)
+print(num_vec_1 * num_vec_2)
+
+# Removing last three elements of new_vec_2 and multiplying again
+num_vec_2 = num_vec_2[c(-4, -5, -6)]
+print(num_vec_1)
+print(num_vec_2)
+print(num_vec_1 * num_vec_2)
+
+# Removing last element of new_vec_1 and multiplying again
+num_vec_1 = num_vec_1[c(-6)]
+print(num_vec_1)
+print(num_vec_2)
+print(num_vec_1 * num_vec_2)
+```
+
+
+#### **More Built-in Mathematical Functions and Values**
+
+R has many built-in numeric functions and values. Below is a (non-exhaustive) list of these functions and their descriptions.
+
+Function            | Description
+--------------------|-------------------------------------
+`mean(x)`           | Returns the average value of vector x
+`var(x)`            | Returns the variance of vector x
+`median(x)`         | Returns the median of vector x
+`abs(x)`            | Returns the absolute value of x
+`sqrt(x)`           | Returns the square root of x
+`exp(x)`            | Returns the exponential value of x
+`sin(x), asin(x)`   | Returns the sine of x
+`cos(x)`            | Returns the cosine of x
+`tan(x)`            | Returns the tangent of x
+`pi`                | You know, pi
+`Inf`               | Infinity
+
+***Independent Exercise***
+
+Use the code chunk below to test R's built-in numeric functions on the `heights` vector.
+
+```{r data_structures_16, exercise = TRUE, exercise.lines = 8, exercise.setup = 'data_structure_prepare'}
+
+```
+
+Use the code chunk below to convert the `heights` vector from meters to inches and save it as a new variable named `inches`. Calculate the mean and variance of the new vector
+
+```{r data_structures_17, exercise = TRUE, exercise.lines = 8, exercise.setup = 'data_structure_prepare'}
+
+```
+
+```{r data_structures_17-solution}
+
+inches = (heights * 100) / 2.54 
+mean(inches)
+var(inches)
+
+```
+
+
+
+## dplyr
+
+
+The package `dplyr` is referred to as a "grammar of data manipulation". This package provides many functions for working with data sets that can be easily combined to provide a powerful set of tools for data manipulation. The functions are intuitively named such that if you think of how you want to manipulate the data, the `dplyr` function will likely be the verb you use to describe the action. The `dplyr` package is also highly efficient and can often outpace base R functions that perform similar tasks. 
+
+The main data object of `dplyr` is the tibble. Tibbles are defined as "a modern re-imagining of data frames". Essentially, tibbles are considered 'lazy', 'surly', and 'opinionated' data frames. They do not allow users to change variable names, variable types (e.g. can't change from character to factor), and they do not create row names. The tibble syntax is more strict than is the data frame syntax, and can therefore result in what is considered cleaner code.
+
+
+#### **The `%>%` operator**
+
+The `dplyr` package commonly uses the "pipe"-like operator `%>%` from the package `magrittr`. This operator works as a pipe, feeding the data on the left side to the first argument on the right, so that `f(x)` can be written `x %>% f()`.  It is especially useful when chaining together several functions. We will use the data set `starwars` to examine how this operator works.
+
+```{r dpylr_1, exercise = TRUE}
+# This line of code:
+head(starwars)
+
+# Is equivalent to this:
+starwars %>% head()
+
+```
+
+Using the `%>%` operator above is not especially beneficial, but once we chain together several functions it helps produce code that is easier to read and interpret. Take a look at the code chunk below to see an example of this.
+
+
+```{r dplyr_2, exercise = TRUE}
+# This section of code:
+
+setosa_mean_sepal = round(summarise(subset(iris, Species == 'setosa'), mean_sepal_length = mean(Sepal.Length)), 2)
+
+print(setosa_mean_sepal)
+
+# Is equivalent to this:
+
+setosa_mean_sepal = iris %>%
+  subset(Species == 'setosa') %>%
+  summarise(mean_sepal_length = mean(Sepal.Length)) %>%
+  round(2)
+
+print(setosa_mean_sepal)
+
+
+```
+
+&nbsp;
+&nbsp;
+
+### `dplyr` functions
+
+Now that you are familiar with how the `%>%` operator works, let's look at some of the functions provided by the `dplyr` package. Below is a list of some of the functions that will be covered in this tutorial, based on the `dplyr` documentation at https://dplyr.tidyverse.org/. 
+
+
+Function        |   Description
+----------------|--------------------------------------------------------------
+arrange()       | changes the order of the rows
+filter()        | picks cases based on their values
+mutate()        | adds new variables that are functions of existing variables
+select()        | picks variables based on their names
+summarize()     | reduces multiple values down to a single summary
+
+Let's go through these functions to see how each one works.
+
+&nbsp;
+
+**arrange( )**
+
+This function will order the rows of a tibble/data frame by the values in a column selected by the user.
+
+```{r dplyr_3, exercise = TRUE}
+print(starwars)
+print(arrange(starwars, height))
+```
+
+&nbsp;
+&nbsp;
+
+**filter( )**
+
+This function is similar to `subset()`; it can be used subset a data frame or tibble by keeping all or the rows that satisfy a user-defined condition.
+
+```{r dplyr_4, exercise = TRUE}
+head(filter(starwars, species == 'Gungan'))
+```
+
+&nbsp;
+&nbsp;
+
+**mutate( )**
+
+The `mutate()` function allows users to create new variables that are calculated using the values from existing variables in a tibble or data frame. 
+
+```{r dplyr_5, exercise = TRUE}
+head(mutate(starwars, bmi = mass/(height/100)^2))
+```
+
+&nbsp;
+&nbsp;
+
+**select( )**
+
+This function allows users to select certain variables or columns from a data frame or tibble. This method returns a tibble or a data frame, even if only a single variable is selected. 
+
+```{r dplyr_6, exercise = TRUE}
+head(select(starwars, species))
+```
+
+We can select multiple variables or columns using several methods:
+
+```{r dplyr_7, exercise = TRUE, exercise.lines = 22}
+
+# Selecting multiple columns with c()
+head(select(starwars, c(height, mass, species)))
+
+# Selecting multiple columns with the ':' operator
+head(select(starwars, 1:5))
+
+# Selecting columns with 'ends_with'
+head(select(starwars, ends_with('color')))
+
+# Selecting columns with 'starts_with'
+head(select(starwars, starts_with('s')))
+
+# Removing columns with '!' operator
+head(select(starwars, !ends_with('color')))
+
+# Getting the union of two selections
+head(select(starwars, starts_with('s') | ends_with ('s')))
+
+# Getting the intersection of two selections
+head(select(starwars, starts_with('s') & ends_with ('s')))
+```
+
+&nbsp;
+&nbsp;
+
+**summarize( )**
+
+The `summarize()` (or `summarise()`) function returns a data frame for each combination of grouping variables requested by the user. 
+
+```{r dplyr_8, exercise = TRUE, exercise.lines = 12}
+
+# Data frame consisting of the average sepal length of the iris data set
+summarize(iris, sepal_length_mean = mean(Sepal.Length))
+
+# Data frame consisting of the average sepal length and sepal width of the iris data set
+summarize(iris, sepal_length_mean = mean(Sepal.Length), sepal_width_mean = mean(Sepal.Width))
+
+# Data frame consisting of the average sepal length and sepal width of the iris data set with the number of observations
+summarize(iris, sepal_length_mean = mean(Sepal.Length), sepal_width_mean = mean(Sepal.Width), n = n())
+```
+
+
+&nbsp;
+
+#### Here are some useful functions that work well with `summarize()`:
+
+Function     | Description
+-------------|---------------------------------------------------------------------
+`mean()`     | returns the average of a group of observations
+`median()`   | returns the value in the middle of a group of observations
+`sd()`       | returns the standard deviation of a group of observations
+`IQR()`      | returns the interquartile range for a group of observations
+`min()`      | returns the smallest value in a group of observations
+`max()`      | returns the largest value in a group of observations
+`first()`    | returns the first observation from a group of observations
+`last()`     | returns the last observation from a group of observations
+`nth()`      | returns the nth observation from a group of observations
+`n()`        | gives the total number of elements within a group of observations
+
+
+&nbsp;
+
+**group_by( )**
+
+All of these functions work with with the `group_by()` function, which can group cases/observations based on user-defined values. Take a look at the code chunk below to see how the `group_by()` function works.
+
+```{r dplyr_9, exercise = TRUE, exercise.lines = 5}
+str(iris)
+iris_by_species = group_by(iris, Species)
+str(iris_by_species)
+```
+
+This code chunk shows that not much changes when we use the `group_by()` function alone. The variables and observations of the original data frame `iris` are maintained in `iris_by_species`, as are the data dimensions. The only difference is that `iris_by_species` is now a grouped data frame with a "groups" attribute. We can use this attribute when performing other functions provided by `dplyr`:
+
+
+```{r dplyr_10, exercise = TRUE}
+
+iris %>% 
+  group_by(Species) %>%
+  summarize(sepal_length_mean = mean(Sepal.Length),
+            sepal_witdth_mean = mean(Sepal.Width),
+            max_sepal_length = max(Sepal.Length),
+            max_sepal_width = max(Sepal.Width))
+
+```
+
+&nbsp;
+
+***Independent Exercise***
+
+In the code chunk below, create a new variable converting the `mass` from kg to lbs, group the data frame by species, and then use the `summarize()` function to print out average of the new variable you created.
+
+```{r dplyr_11, exercise = TRUE, exercise.lines = 8}
+```
+
+```{r dplyr_11-solution}
+starwars %>%
+  mutate(mass_lbs = mass*2.2) %>%
+  group_by(species) %>%
+  summarize(mass_lbs_mean = round(mean(mass_lbs)))
+```
+
+***Bonus: Removing missing values***
+
+The output above contains a lot of values that do not contain data. If we want to remove those from the final data set, we can use the `na.omit()` function.
+
+```{r dplyr_12, exercise = TRUE, exercise.lines = 10}
+starwars %>%
+  na.omit() %>%
+  mutate(mass_lbs = mass*2.2) %>%
+  group_by(species) %>%
+  summarize(mass_lbs_mean = round(mean(mass_lbs)))
+```
+
+**Independent Exercise**
+
+Take a look at the built-in data set `mpg` using `head()` or `print()`. Next, look at the data again but arrange the order of the data set by `cty`. Filter this data set to only include cars with a manual transmission and summarize the average `cty`  and `hwy` values based on the `class`.
+
+```{r dplyr_13, exercise = TRUE, exercise.lines = 10}
+
+```
+
+```{r dplyr_13-solution}
+head(mpg)
+
+print(arrange(mpg, cty))
+
+mpg %>% 
+  group_by(class) %>% 
+  filter(trans == "manual(m5)" | trans == "manual(m6)") %>% 
+  summarize(
+    mean_cty = mean(cty),
+    mean_hwy = mean(hwy))
+```
+
+
+## **Importing and Exporting Data**
+
+You will undoubtedly need to import your own data when working in R. There are many functions that allow us to import data in a number of different formats. The first step is to make sure we can find where the data are stored on our computer. We can use the `getwd()` and `list.files()` commands to help us with this. The`getwd()` command can be run directly in the console and returns the path of the directory your current R session is using (This should be the same folder from which you launched this notebook). The `list.files()` command will list all of the files that are present in your current working directory (or whichever directory you provide as an argument). 
+
+**Independent Exercise**
+
+Use the code chunk below to try out the `getwd()` and `list.files()` commands. Try running `list.files()` on different directories on your computer. 
+
+```{r importing_data_1, exercise = TRUE, exercise.lines = 6}
+
+```
+
+
+You can use the `setwd()` command to change your current directory from the one in which you opened your R project, but this is considered poor practice as it changes the R environment and can result in problems when trying to share scripts with others or re-running old analyses. 
+
+When reading in data from other directories it is best practice to use explicit paths. The current workbook has a directory named `data` which contains files we will use in exercises going forward. We will start learning how to read in data using the `read.csv()` function.
+
+Take a look at the pseudo-code below to see how reading in a csv-formatted file is done in R.
+
+```{r importing_data_pseudo, exercise = TRUE, eval = FALSE}
+
+# my_data_directory <- "/Path/To/Data"
+# my_data <- read.csv(file.path(my_data_directory, 'my_data.csv'))
+
+```
+
+**Independent Exercise**
+Use the code chunk below to read in the "carnivores.csv" file from the "data" directory. Use the `head()` and `str()` functions to examine the data once you have imported it.
+
+```{r importing_data_2, exercise = TRUE, exercise.lines = 6}
+
+```
+
+### **Importing excel files with readxl**
+
+**Independent Exercise**
+
+The `readxl` library from the `tidyverse` package is really useful for importing data. Use the code chunk get help with the `read_xls()` (`?read_xls()`) function and then import the excel file "carnivores.xlsx" from the data folder. What type of data structure does using `read_excel()` result in?
+
+```{r importing_data_3, exercise = TRUE, exercise.lines = 6}
+
+```
+
+
+You can import only portions of the xlsx file by specifying which cells to read in. Take a look at the code chunk below to see how this works:
+
+```{r importing_data_4, exercise = TRUE}
+# Import only certain cell rows:
+carnivores_by_rows<-read_excel('carnivores.xlsx', range  = cell_rows(1:36))
+
+# Import only certain cell columns
+carnivores_by_cols <- read_excel('carnivores.xlsx', range  = cell_cols("A:E"))
+
+# Import by cell range
+carnivores_by_cell_range <- read_excel('carnivores.xlsx', range  ="A12:C40")
+```
+
+
+**Independent Exercise**
+
+Data that we import may contain observations with missing values. We can use the `na.omit()` function to remove them from the data set. Re-import the 'carnivores.xlsx' data sheet and save it as a variable named `carnivores`. Create a new variable named `carnivores_naRemoved` to store the results of running `na.omit(carnivores)`. How does the new data set compare to the original? 
+
+```{r importing_data_5, exercise = TRUE, exercise.lines = 6}
+
+```
+
+```{r importing_data_5-solution}
+carnivores = read_excel("carnivores.xlsx")
+str(carnivores)
+carnivores_naRemoved = na.omit(carnivores)
+str(carnivores_naRemoved)
+```
+
+You can see we removed all rows that contained any missing data, greatly reducing the overall size of our data set. We may want to remove rows that are missing data in only a certain column. We can use the `filter()` or `drop_na()` functions for these cases:
+
+```{r importing_data_6, exercise = TRUE, exercise.lines = 14}
+
+# Read in the original data set
+carnivores = read_excel("carnivores.xlsx")
+
+# Remove rows where the EarLength measurement is missing using filter()
+carnivores_missingEarRemoved = carnivores %>%
+  filter(!is.na(EarLength))
+
+str(carnivores_missingEarRemoved)  
+
+# Remove
+carnivores_missingDistrictRemoved = carnivores %>%
+  drop_na(District)
+  
+str(carnivores_missingDistrictRemoved)
+```
+
+### **Exporting data from R**
+
+There are several functions available to export data from R. We will practice using the `write.csv()` function, but there are other libraries available that allow users to export directly to "xls" or "xlsx" format (e.g. the package xlsx). The syntax for these is very similar to the base functions, so you will be able to incorporate these additinal libraries with ease if you wish to do so.
+
+Take a look at the code chunk below to see how to use `write.csv()`.
+
+```{r export_data_1, exercise = TRUE, eval = FALSE}
+
+write.csv(some_data, file = "/Path/And/File_Name.csv", row.names = FALSE)
+
+```
+
+**Independent Exercise**
+
+Use the code chunk below to save the `carnivores_naRemoved` object to a csv file in the 'data' folder. 
+
+```{r export_data_2, exercise = TRUE, exercise.lines = 4}
+
+```
+
+
+## Regression
+
+Let's go through a 'real-world' example of importing data from an excel spreadsheet, cleaning it up, and then running some analyses. This section will use a lot of what we have covered previously, but will also introduce some new techniques for working with imported data. 
+
+Excel documents are often organized into multiple sheets. The `sheet` flag in `read_excel` allows us to read in specific sheets from an Excel document:
+
+```{r example_data_1_1, exercise = TRUE, exercise.lines = 5}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+str(sec)
+```
+
+This data set contains batting statistics for some college baseball players in the SEC. The table below provides definitions of all of the variables (columns).
+
+Variable          |   Description
+------------------|----------------------------------------------------------
+Player            | Player name
+POS               | Player position (e.g. CF = Center Field, DH = Designated Hitter)
+AB                | At Bats (the number of batting attempts for each player)
+R                 | Runs (the number of runs scored by each player as a baserunner)
+H                 | Hits (the total number of times a player has hit the ball and reached a base)
+2B                | Doubles (the number of times a player has hit the ball and reached second base)
+3B                | Triples (the number of times a player has hit the ball and reached third base)
+HR                | Home runs
+RBI               | Runs Batted In (the number of runs scored as a result of the player hitting the ball)
+HBP               | Hit by Pitch (the number of times a player has been hit by the pitcher)
+BB                | Bases on Balls (the number of times a player was 'walked')
+K                 | Strikeouts (the number of times a players has been called out on strikes)
+
+
+***Independent Exercise***
+
+Use the code chunk below to import the `ACC` sheet from the same Excel file as above. Save the data to a variable named `acc` and print the contents to screen.
+
+```{r example_data_1-setup}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+```
+
+
+```{r example_data_1_2, exercise = TRUE, exercise.lines = 5}
+
+```
+
+```{r example_data_1_2-solution}
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+print(acc)
+```
+
+You can see these data sets contain the same statistics, but for a different group of players. Let's combine the two data sets for analysis. We can use the `rbind()` function since the columns of both tibbles are identical. 
+
+```{r example_data_1_3, exercise = TRUE, exercise.lines = 5, exercise.setup = 'example_data_1-setup'}
+ncaa = rbind(sec, acc)
+print(ncaa)
+
+```
+
+
+If you are familiar with baseball, you have probably noticed some key statistics are missing. Let's generate those examples and add them to our data object using `dplyr`'s `mutate()` function.
+
+The first statistic we want to add is the batting average. This is calculated by dividing a player's number of hits (H) with the number of times they were at bat (AB). Take a look at the code chunk below as a reminder on how to use the `mutate()` function.
+
+```{r example_data_1_4, exercise = TRUE, exercise.setup = 'example_data_1-setup'}
+
+ncaa %>%
+  mutate(
+    BA = H/AB
+    )
+
+str(ncaa)
+```
+
+We can see that the result added our `BA` variable, but did not save it to the data object. In order to save it to `ncaa` we'll need to assign the result of `mutate()` back to `ncaa`. Let's also clean it up a bit by rounding the results.
+
+```{r example_data_1_5, exercise = TRUE, exercise.setup = 'example_data_1-setup'}
+
+ncaa = ncaa %>%
+  mutate(
+    BA = round(H/AB, 3)
+    )
+
+str(ncaa)
+head(ncaa)
+```
+
+```{r example_data_1-setup_2}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+```
+
+Let's take a closer look at this data set. Try running the code chunk below.
+
+```{r example_data_1_6, exercise = TRUE, exercise.lines = 3, exercise.setup = 'example_data_1-setup_2'}
+
+ncaa$2B
+
+```
+
+It looks like R doesn't like that our column name starts with a number. We can still use the `$` operator by adding quotes around `2B`, or we can re-name the column to something that starts with a letter. The code chunk below renames the `2B` column `DBL`.
+
+```{r example_data_1_7, exercise = TRUE, exercise.lines = 3, exercise.setup = 'example_data_1-setup_2'}
+
+ncaa = rename(ncaa, DBL = '2B')
+print(ncaa)
+
+```
+
+```{r example_data_1-setup_3}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+ncaa = rename(ncaa, DBL = '2B')
+```
+
+
+***Independent Exercise***
+
+Use the code chunk below to make the following changes to the `ncaa` data set.
+
+  1) Rename the column `3B` to `TRP`.
+  2) Add a new column containing the total number of singles each player hit (SNL = H - DBL - TRP - HR).
+  3) Add a new column containing the statistic Slugging Percentage (SLG).
+      (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB
+  4) Generate a summary of the new data set calculating the mean batting average (BA), RBIs, and slugging percentage (SLG) for each team.
+
+
+```{r example_data_1_8, exercise = TRUE, exercise.lines = 12, exercise.setup = 'example_data_1-setup_3'}
+
+
+```
+
+```{r example_data_1_8-solution}
+
+# Step 1
+ncaa = rename(ncaa, TRP = '3B')
+
+# Step 2
+ncaa = ncaa %>%
+  mutate(
+    SNL = H - DBL - TRP - HR
+    )
+
+# Step 3
+ncaa = ncaa %>%
+  mutate(
+    SLG = (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB
+  )
+
+# Step 4
+ncaa_by_team = ncaa %>%
+  group_by(Team) %>%
+   summarize(mean_BA = round(mean(BA)),
+            mean_RBIs = round(mean(RBI)),
+            mean_SLG = round(mean(SLG)))
+
+print(ncaa_by_team)
+```
+
+#### Linear Regression
+
+```{r ncaa_linear_regression-setup}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+ncaa = rename(ncaa, DBL = '2B', TRP = '3B')
+ncaa = ncaa %>% mutate(SNL = H - DBL - TRP - HR)
+ncaa = ncaa %>% mutate(SLG = (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB)
+```
+
+You have probably already noticed that many of the variables in the `ncaa` data set are highly correlated. If we plot some of the observations this pattern becomes very clear. Take a look at the code chunk below that uses R's base plotting function to examine the relationship between batting average (BA) and RBIs.
+
+```{r linear_regression_1, exercise = TRUE, exercise.setup = 'ncaa_linear_regression-setup'}
+plot(ncaa$BA, ncaa$RBI, xlab = "Batting Average", ylab = "RBIs")
+```
+
+*Note: The base plotting functions in R are great for exploring data but are limited in terms of generating high-quality figures. Most researchers that use R will employ packages like `ggplot2` to allow for more custom visualizations.*
+
+We can also use the `pairs()` function to quickly examine the relationships between all of the numeric observations in our data set:
+
+```{r linear_regression_2, exercise = TRUE, exercise.setup = 'ncaa_linear_regression-setup'}
+toPlot = ncaa[c("AB", "R", "H", "RBI", "SLG")]
+pairs(toPlot)
+```
+
+It appears that all of the variables we plotted are highly correlated. If we use these data to build a linear model, it seems like it would be possible to predict the likely value of one of these variables based on other observations for a player not included in our data set. A linear regression model would be well suited for this task.
+
+Linear regression in R is accomplished using the `lm()` function:
+
+```{r linear_regression_3, exercise = TRUE, exercise.setup = 'ncaa_linear_regression-setup'}
+
+rbi_model = lm(RBI ~ SLG, data = ncaa)
+summary(rbi_model)
+
+```
+
+The `summary()` function provides an overview of the model we generated and some key results:
+
+**Call:**  *(Formula used by R to fit the data)*
+
+lm(formula = ncaa\$RBI ~ ncaa\$SLG) 
+
+**Residuals:** *(Summary of the differences between values predicted by the model and actual values)*
+
+Min      |    1Q  |   Median    |     3Q |     Max 
+---------|--------|-------------|--------|--------------
+-22.201  | -6.519 |  -1.014     |  6.090 |  38.772 
+
+
+**Coefficients:** 
+
+Coef        | Estimate    | Std. Error    | t value   | Pr( > \| t \| )
+------------|-------------|---------------|-----------|----------------
+Intercept   | -14.960     | 2.98          | -5.007    | 1.14e-06 \*\*\*  
+SLG         | 111.379     | 5.79          | 19.236    | < 2e-16 \*\*\*
+
+Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 9.979 on 218 degrees of freedom
+Multiple R-squared:  0.6293,	Adjusted R-squared:  0.6276 
+F-statistic:   370 on 1 and 218 DF,  p-value: < 2.2e-16
+
+
+#### **Testing the model**
+
+```{r ncaa_linear_regression-setup-2}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+ncaa = rename(ncaa, DBL = '2B', TRP = '3B')
+ncaa = ncaa %>% mutate(SNL = H - DBL - TRP - HR)
+ncaa = ncaa %>% mutate(SLG = (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB)
+rbi_model = lm(RBI ~ SLG, data = ncaa)
+test_data = read_excel("datascience.xlsx", sheet = 'test')
+```
+
+***Guided Exercise***
+
+Now that we have a model to predict a player's RBIs based on SLG, let's test it with some data that wasn't included in the original `ncaa` object. First, read in the new data set (Excel sheet named 'test' in the same file used previously). Save it to a new variable named `test_data` and examine the contents.
+
+```{r linear_regression_4, exercise = TRUE, exercise.lines = 4, exercise.setup = 'ncaa_linear_regression-setup-2'}
+
+```
+
+```{r linear_regression_4-solution}
+test_data = read_excel("datascience.xlsx", sheet = 'test')
+str(test_data)
+```
+
+Next, let's generate the predicted RBI values for the new data set and store it as a new variable in `test_data`. We can use the `predict()` function and our `rbi_model` along with `mutate()` to achieve this.
+
+*Note: the `predict()` function requires the input be in a data frame.*
+
+
+```{r linear_regression_5, exercise = TRUE, exercise.lines = 4, exercise.setup = 'ncaa_linear_regression-setup-2'}
+test_data = test_data %>% 
+  mutate(
+    PRED_RBI = predict(rbi_model, data.frame(SLG = test_data$SLG))
+  )
+```
+
+Now we can use the `PRED_RBI` and `RBI` variables to calculate the standard error.
+
+```{r ncaa_linear_regression-setup-3}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+ncaa = rename(ncaa, DBL = '2B', TRP = '3B')
+ncaa = ncaa %>% mutate(SNL = H - DBL - TRP - HR)
+ncaa = ncaa %>% mutate(SLG = (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB)
+rbi_model = lm(RBI ~ SLG, data = ncaa)
+test_data = read_excel("datascience.xlsx", sheet = 'test')
+test_data = test_data %>% 
+  mutate(
+    PRED_RBI = predict(rbi_model, data.frame(SLG = test_data$SLG))
+  )
+```
+
+
+```{r linear_regression_6, exercise = TRUE, exercise.lines = 4, exercise.setup = 'ncaa_linear_regression-setup-3'}
+sqrt(sum(test_data$RBI - test_data$PRED_RBI)^2/nrow(test_data))
+```
+
+A little bit higher than our residual standard error predicted earlier. Maybe it would be worth doing some additional modeling to come up with a better predictor for the number of RBIs a player will generate.
+
+```{r ncaa_linear_regression-setup-4}
+sec = read_excel("datascience.xlsx", sheet = 'SEC')
+acc = read_excel("datascience.xlsx", sheet = 'ACC')
+ncaa = rbind(sec, acc)
+ncaa = ncaa %>% mutate(BA = round(H/AB, 3))
+ncaa = rename(ncaa, DBL = '2B', TRP = '3B')
+ncaa = ncaa %>% mutate(SNL = H - DBL - TRP - HR)
+ncaa = ncaa %>% mutate(SLG = (SNL + 2 * DBL + 3 * TRP + 4 * HR)/AB)
+test_data = read_excel("datascience.xlsx", sheet = 'test')
+```
+
+
+
+#### **Multivariate Regression**
+
+For simple linear regression with multiple variables, we can simply call the same `lm()` function and add variables to the response. Below is our original linear regression call:
+
+```rbi_model = lm(RBI ~ SLG, data = ncaa)```
+
+We can try to improve our model by adding any additional variables:
+
+```new_rbi_model = lm(RBI ~ SLG + HR + AB + ..., data = ncaa)````
+
+**Independent Exercise**
+
+Use the code chunk below to attempt to identify a better model for predicting RBIs. Let's call the new model `mv_rbi_model`. Make sure to get a summary of your model to check for the significance of each variable and the overall fit.
+
+```{r linear_regression_7, exercise = TRUE, exercise.lines = 4, exercise.setup = 'ncaa_linear_regression-setup-4'}
+
+```
+
+```{r linear_regression_7-solution}
+
+mv_rbi_model = lm(RBI ~ AB + BA + HR, data = ncaa)
+summary(mv_rbi_model)
+
+
+```
+
+
+Use the code chunk below to try out your new model on the `test_-_data` data set and check the standard error against the actual RBI values.
+
+```{r linear_regression_8, exercise = TRUE, exercise.lines = 8, exercise.setup = 'ncaa_linear_regression-setup-4'}
+
+
+```
+
+```{r linear_regression_8-solution}
+
+test_data = test_data %>%
+  mutate(
+    PRED_RBI = predict(mv_rbi_model, data.frame(AB = test_data$AB, BA = test_data$BA, HR = test_data$HR))
+    )
+
+sqrt(sum(test_data$RBI - test_data$PRED_RBI)^2/nrow(test_data))
+
+```
+
+
+
+## **Principal Component Analysis**
+
+Principal component analyses (PCA) allow us to easily summarize large data sets with a high number of dimensions or observations per sample. The variance within the data set is described in a reduced set of dimensions that can be easily visualized and analyzed. There are a few things we need to consider before deciding to complete a principal component analysis on our data set:
+
+  1) The variables within the data set should be correlated.
+  2) Data should be centered and scaled to reduce residuals.
+  3) PCA is sensitive to outlying data points.
+
+```{r example_data_2-setup}
+rodents =  read_excel('datascience.xlsx', sheet = 'rodents')
+```
+
+A new data object named `rodents` has already been imported from the `datascience.xlsx` spreadsheet. We will need to create a new object that contains only the numeric variables. Use the code chunk below to examine the `rodents` data object and create a new data frame that contains only the numeric columns. Save the new data frame as `rodent_num`.
+
+```{r example_data_2_1, exercise = TRUE, exercise.lines = 6, exercise.setup = 'example_data_2-setup'}
+
+```
+
+```{r example_data_2_1-solution}
+# Methods to examine the data
+glimpse(rodents)
+str(rodents)
+head(rodents)
+print(rodents)
+
+#  Methods to create a new data frame
+
+rodent_num = as.data.frame(rodents[5:9])
+
+# or
+
+rodent_num = as.data.frame(rodents[which(sapply(rodents, is.numeric))])
+```
+
+We will need to log transform the data to ensure it is appropriate for the PCA:
+
+```{r example_data_2-setup-2}
+rodents =  read_excel('datascience.xlsx', sheet = 'rodents')
+rodent_num = as.data.frame(rodents[5:9])
+rodent_numlog = log(rodent_num)
+rodent_pca = prcomp(rodent_numlog)
+```
+
+```{r example_data_2_2, exercise = TRUE, exercise.setup = 'example_data_2-setup-2'}
+head(rodent_num)
+rodent_numlog = log(rodent_num)
+head(rodent_numlog)
+```
+
+We can now run our PCA on the `rodent_numlog` data set with the `prcomp()` function:
+
+```{r example_data_2_3, exercise = TRUE, exercise.setup = 'example_data_2-setup-2'}
+rodent_pca = prcomp(rodent_numlog)
+summary(rodent_pca)
+```
+
+We can use the `autoplot()` function from `ggplot2` along with the package `ggfortify` to easily plot the PCA results:
+```{r example_data_2_4, exercise = TRUE, exercise.setup = 'example_data_2-setup-2'}
+
+autoplot(rodent_pca, data = rodents, colour = 'Species')
+
+```
+
+## **Data Visualization with ggplot2**
+*sources:* 
+
+* *"R for Data Science" - Hadley Wickham & Garrett Grolemund https://r4ds.had.co.nz/index.html*
+* *http://sape.inf.usi.ch/quick-reference/ggplot2*
+* *https://ggplot2.tidyverse.org*
+
+The base plotting functions in R are good for initially exploring data sets, but are limited when users wish to product publication-quality figures. The package `ggplot2` is one of the most commonly used packages to produce graphs and plots.
+
+`ggplot2` builds plots layer-by-layer. To customize our plots, we can extend the `ggplot()` call by adding additional layers. 
+
+*Note: The package we are using is `ggplot2`, but the actual function to begin plotting is `ggplot()`.
+
+Let's start off by creating a similar plot to what we started with when looking at the base plotting functions in R.
+
+```{r data_vis_11, exercise = TRUE}
+ggplot(mpg, aes(x = displ, y = cty)) +
+  geom_point()
+```
+
+The first function in this code `ggplot()` sets up the initial empty graph space that we can add layers to. Without the rest of the code, this `ggplot(mpg, aes(x = displ, y = cty))` would just produce an empty plot.
+
+>ggplot() initializes a ggplot object. It can be used to declare the input data frame for a graphic and to specify the set of plot aesthetics intended to be common throughout all subsequent layers unless specifically overridden.
+
+ To add another layer, we ended the first line of code with `+` and called another function on the next line. The `geom_point()` function creates the scatterplot with the supplied variables. The `geom_point()` function is one of many "geom functions" available in `ggplot2`. Each "geom function" in `ggplot2` requires a mapping argument, and each mapping argument is paired with `aes()`.  
+
+>Aesthetic mappings describe how variables in the data are mapped to visual properties (aesthetics) of geoms. Aesthetic mappings can be set in ggplot() and in individual layers.
+
+The `aes()` function can be written within the `ggplot()` call, or within the `geom_point()` call.
+
+If it is specified within the `ggplot()` function, then all of the "geom functions" inherit the plot aesthetics. If `aes()` is specified within the "geom functions" (in our case `geom_point()`), then it only applies to that layer.
+
+Within the `aes()` function, we supply the x and y arguments which are the variables to be plotted. In our case, it was the `displ` and `cty` variables from the `mpg` data frame.
+
+**Independent Exercise**
+
+Create another scatterplot using different variables from the `mpg` data frame.
+
+```{r data_vis_12, exercise = TRUE, exercise.lines = 6}
+
+```
+
+
+### **Aesthetics in ggplot2**
+
+We can change look of our plot by changing the values of the aesthetics (e.g. color, size, shape of the points). Let's take a look at how we can change some of these aesthetics to customize our plot.
+
+From the help page:
+
+`geom_point()` understands the following aesthetics (required aesthetics are in bold)
+
+* **x**
+* **y**
+* alpha
+* color
+* fill
+* group
+* shape
+* size
+* stroke
+
+Take a look at the code chunk below to see how you can customize the aesthetics of a scatterplot.
+
+```{r data_vis_13, exercise = TRUE}
+ggplot(mpg) +
+  geom_point(aes(x = displ, y = hwy), color = 'black', size = 2, shape = 21, fill = "red", stroke = 3)
+
+```
+
+#### **Shapes**
+
+Here are some shapes that are available to use when plotting. These shapes can be set using a name (e.g. "circle", "diamond open") or with their corresponding number. Shapes numbered 21-25 can use the `stroke` and `fill` aesthetics. 
+
+```{r shapes, echo = FALSE}
+# modified from http://sape.inf.usi.ch/quick-reference/ggplot2/shape 
+d=data.frame(p=c(0:25))
+ggplot() +
+scale_y_continuous(name="") +
+scale_x_continuous(name="") +
+scale_shape_identity() +
+geom_point(data=d, mapping=aes(x=p%%7, y=p%/%7, shape=p), size=5, fill="red") +
+geom_text(data=d, mapping=aes(x=p%%7, y=p%/%7+0.35, label=p), size=3)
+```
+
+**Independent Exercise**
+
+Use the code chunk below to try using the different shapes mapping the `displ` and `hwy` values from the `mpg` data frame. Make sure to try out shapes 21-25 in order to change the `fill`, and `stroke`. 
+
+```{r data_vis_14, exercise = TRUE, exercise.lines = 4}
+
+```
+
+
+### **Plot titles and labels**
+
+Adding plot titles and axis labels can be accomplished using `ggtitle()`, `xlab()`, and `ylab()`. Let's took a look at the code chunk below.
+
+```{r data_vis_15, exercise = TRUE, exercise.lines = 8}
+
+ggplot(mpg, aes(x = displ, y = cty)) +
+  geom_point() +
+  ggtitle("Estimated city MPG by Engine Size") +
+  xlab("Engine Size (in liters)") +
+  ylab("Miles per gallon")
+
+```
+
+**Independent Exercise**
+
+Create a new scatterplot using `cty` and `hwy` from `mpg`. Add a title and labels for the x and y axes. Use a shape that can take the `stroke` and `fill` arguments, and adjust the size of your points to a value of your choice.
+
+```{r data_vis_16, exercise = TRUE, exercise.lines = 8}
+
+```
+
+### **Adding plot labels**
+
+The `geom_text()` and `geom_label()` functions can be used to label the points of a plot. Let's start off by looking at a subset of the `mpg` data and adding point labels using `geom_text()`.
+
+
+```{r data_vis_17, exercise = TRUE}
+# Create a smaller data frame to plot
+data <- subset(mpg, subset = trans == "manual(m6)")
+
+# Plot the new data frame with point labels
+ggplot(data, aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_text(aes(label = model))
+
+```
+
+**Independent Exercise**
+
+Those labels don't look very good, do they? Let's take a look at the arguments for `ggplot()` and `geom_text()` and see if we can clean them up. It might also be worth looking at `xlim()` and `ylim()`.
+
+```{r data_vis_18, exercise = TRUE, exercise.lines = 10}
+# Create a smaller data frame to plot
+data <- subset(mpg, subset = trans == "manual(m6)")
+
+# Plot 'data' with point labels - include additional arguments
+
+```
+
+
+**Independent Exercise**
+
+The `geom_label()` function is very similar to `geom_text()`. Use the code chunk below to test it out. Use `?geom_label` if you need to get help with this function.
+
+```{r data_vis_19, exercise = TRUE, exercise.lines = 10}
+# Create a smaller data frame to plot
+data <- subset(mpg, subset = trans == "manual(m6)")
+
+# Plot 'data' adding a layer with geom_label()
+
+```
+
+
+### **Plotting Multiple Layers and Variables**
+
+#### **Adding aesthetics mapped to different variables**
+
+It is possible to add an additional variable to the scatterplot by mapping it to an aesthetic. In the example below, we can change the color of the points based on another variable within the `mpg` data frame.
+
+*Note: when we set an aesthetic to a variable we include it within the* `aes()` *call*
+
+```{r data_vis_20, exercise = TRUE}
+ggplot(mpg, aes(x = displ, y = cty, color = class)) +
+  geom_point()
+```
+
+**Independent Exercise**
+
+Let's add yet another aesthetic mapped to a variable to our plot. In the code chunk below, plot `displ` and `cty` setting the color to `class` and shape to `drv`.  
+
+
+```{r data_vis_21, exercise = TRUE, exercise.lines = 4}
+
+```
+
+### **Adding more layers to a plot**
+
+We can add more layers to a plot by adding additional "geom functions". Look at the code below where we create a new scatterplot of the `displ` and `hwy` data from `mpg` and added the "geom function" `geom_smooth()` to the new plot. 
+
+```{r data_vis_22, exercise = TRUE}
+ggplot(mpg, aes(displ, hwy))+
+   geom_point() +
+   geom_smooth()
+```
+
+**Independent Exercise**
+
+`geom_smooth()` helps us visualize patterns in the data by estimating the conditional means and showing confidence levels of the estimates. We can set `se = FALSE` to remove the confidence intervals. Try setting this option in the code chunk below.
+
+```{r data_vis_23, exercise = TRUE, exercise.lines = 5}
+
+```
+
+
+### **Histograms with ggplot**
+
+Let's take a look at creating a histogram using ggplot2.
+
+```{r data_vis_24, exercise = TRUE}
+ggplot(mpg, aes(hwy)) +
+  geom_histogram()
+```
+
+Did you see the message produced when we generated the histogram? Let's try adjusting the `binwidth` for our plot.
+
+```{r data_vis_25, exercise = TRUE}
+ggplot(mpg, aes(hwy)) +
+  geom_histogram(binwidth = 2)
+
+```
+
+
+
+Change the orientation of the plot by setting the `aes(y = hwy)` and also try adding a plot title and axis labels.
+
+```{r data_vis_26, exercise = TRUE, exercise.lines = 8}
+
+```
+
+**Independent Exercise**
+
+Just like we did with scatterplots, we can map aesthetics of the plot to different values in the `mpg` data. In the code chunk below, recreate our first histogram, but in `aes()` add `fill = class`.
+
+```{r data_vis_27, exercise = TRUE, exercise.lines = 6}
+
+```

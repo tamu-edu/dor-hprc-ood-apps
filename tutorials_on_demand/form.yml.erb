@@ -1,0 +1,25 @@
+cluster: "aces"
+form:
+  - tutorial
+  - num_hours
+  - bc_account
+  - email
+attributes:
+  tutorial:
+    widget: select
+    label: "What tutorial would you like to access?"
+    options:
+        - ["Introduction to Python"]
+        - ["Fundamentals of R"]
+        - ["Data Science in R"]
+        - ["Introduction to Julia"]
+  num_hours:
+    widget: 'number_field'
+    label: "Number of hours (max 10)"
+    value: 1
+    min: 1
+    max: 10
+  bc_account:
+  email:
+    help: "This field is optional."
+

@@ -1,0 +1,926 @@
+﻿MuseumAbbreviation,CatalogNumber,SpecimenID,CurrentIdentification,CommonName,Family,Country,Province,District,CentroidLatitude,CentroidLongitude,Sex,Weight,TotalLength,TailLength,HindFoot,EarLength
+USNM,606111,USNM606111,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Clallam,,,Male,100000,910,,,
+USNM,606112,USNM606112,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,90000,890,,,
+USNM,606113,USNM606113,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Pacific,,,Female,85000,800,,,
+USNM,606114,USNM606114,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,132000,1020,,,
+USNM,606115,USNM606115,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Female,11000,910,,,
+USNM,606116,USNM606116,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,81000,860,,,
+USNM,606117,USNM606117,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Female,89000,840,,,
+USNM,606118,USNM606118,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,80000,820,,,
+USNM,606119,USNM606119,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,85000,900,,,
+USNM,606120,USNM606120,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Female,100000,880,,,
+USNM,606121,USNM606121,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Female,85000,900,,,
+USNM,606122,USNM606122,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,80000,800,,,
+USNM,606123,USNM606123,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,100000,960,,,
+USNM,606124,USNM606124,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,115000,950,,,
+USNM,606125,USNM606125,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Female,100000,900,,,
+USNM,606126,USNM606126,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Grays Harbor,,,Male,120000,1000,,,
+USNM,606136,USNM606136,Arctocephalus townsendi,Guadalupe Fur Seal,Otariidae,United States,Washington,Pacific,,,Male,110000,970,,,
+USNM,550090,USNM550090,Arctocephalus tropicalis,Subantarctic Fur Seal,Otariidae,South Shetland Islands,,,,,Female,36000,1300,,,
+USNM,550091,USNM550091,Arctocephalus tropicalis,Subantarctic Fur Seal,Otariidae,South Shetland Islands,,,,,Male,54000,1710,,,
+USNM,113069,USNM113069,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Kepulauan Riau,,,,Male,2500,1050,535,,
+USNM,122920,USNM122920,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Riau,,0.66405,103.466,Male,3000,970,485,,
+USNM,124172,USNM124172,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,11.5583,98.2709,Female,1930,1020,545,,
+USNM,124984,USNM124984,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Kepulauan Bangka Belitung,,-2.61591,108.042,Female,1020,875,435,75,
+USNM,144120,USNM144120,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Riau,,1.02927,102.214,Male,3740,1116,590,103,
+USNM,144324,USNM144324,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Riau,,0.878472,102.935,Male,2000,955,490,85,
+USNM,151875,USNM151875,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Indonesia,Kalimantan Selatan,,-2.9639,116.226,Female,1000,932,495,80,
+USNM,489392,USNM489392,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.32,101.75,Female,576,755,410,69,35
+USNM,489393,USNM489393,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Pahang,Pekan District,2.8917,103.28,Female,1250,1072,600,89,41
+USNM,489394,USNM489394,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Selangor,Klang District,3.18,101.48,Female,2500,520,575,88,42
+USNM,489395,USNM489395,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.23,101.63,Female,1750,965,503,88,43
+USNM,489396,USNM489396,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Pahang,Bentong District,3.33,101.87,Male,1169,1035,575,85,43
+USNM,489397,USNM489397,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Sabah,,6,116.68,Male,795,788,425,69,46
+USNM,489398,USNM489398,Arctogalidia trivirgata,Small-toothed Palm Civet,Viverridae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.28,101.75,Female,2191,1068,555,88,41
+USNM,463357,USNM463357,Atilax paludinosus,Marsh Mongoose,Herpestidae,Sierra Leone,Eastern Province,Kailahun District,7.98,-10.95,Male,3632,857,294,99,40
+USNM,467665,USNM467665,Atilax paludinosus,Marsh Mongoose,Herpestidae,Cote d'Ivoire,,,7,-7.05,Male,907,735,295,101,35
+USNM,467666,USNM467666,Atilax paludinosus,Marsh Mongoose,Herpestidae,Cote d'Ivoire,,,5.35,-7.37,Male,1361,726,298,95,32
+USNM,469880,USNM469880,Atilax paludinosus,Marsh Mongoose,Herpestidae,South Africa,Western Cape,,-32.48,18.53,Female,1928,767,315,100,32
+USNM,469881,USNM469881,Atilax paludinosus,Marsh Mongoose,Herpestidae,South Africa,Western Cape,Montagu District,-33.78,20.12,Female,2495,837,355,106,35
+USNM,481993,USNM481993,Atilax paludinosus,Marsh Mongoose,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Male,1700,712,298,98,28
+USNM,541412,USNM541412,Atilax paludinosus,Marsh Mongoose,Herpestidae,,,,,,Male,3400,,329,112,37
+USNM,545835,USNM545835,Atilax paludinosus,Marsh Mongoose,Herpestidae,Sierra Leone,Eastern Province,,7.9,-10.97,Female,2000,730,275,96,34
+USNM,217333,USNM217333,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,27000,1020,,,
+USNM,217334,USNM217334,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,33800,1210,,,
+USNM,217335,USNM217335,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,28000,1120,,,
+USNM,217336,USNM217336,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,34000,1110,,,
+USNM,217337,USNM217337,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,44000,1170,,,
+USNM,217338,USNM217338,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,,34000,1230,,,
+USNM,237277,USNM237277,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,54000,1490,,,
+USNM,285521,USNM285521,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,66000,1990,,,
+USNM,285522,USNM285522,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,72000,2020,,,
+USNM,285523,USNM285523,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,66000,1960,,,
+USNM,285524,USNM285524,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,57000,1850,,,
+USNM,285525,USNM285525,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,71000,1730,,,
+USNM,285526,USNM285526,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,56000,1730,,,
+USNM,285527,USNM285527,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,48900,1876,,,
+USNM,285528,USNM285528,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,75000,2130,,,
+USNM,285678,USNM285678,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,69000,1920,,,
+USNM,285680,USNM285680,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,67000,1560,,,
+USNM,285682,USNM285682,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,54000,1260,,,
+USNM,285688,USNM285688,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,49500,1130,,,
+USNM,285711,USNM285711,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,30000,720,,,
+USNM,285717,USNM285717,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,53000,1240,,,
+USNM,285718,USNM285718,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,49890,1180,,,
+USNM,286015,USNM286015,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Male,81000,1890,,,
+USNM,286019,USNM286019,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,32000,970,,,
+USNM,286020,USNM286020,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,45000,1050,,,
+USNM,286022,USNM286022,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,47525,1020,,,
+USNM,286023,USNM286023,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,35000,990,,,
+USNM,286024,USNM286024,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,48800,1100,,,
+USNM,286025,USNM286025,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,44000,1000,,,
+USNM,286027,USNM286027,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,54000,1120,,,
+USNM,286028,USNM286028,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,53500,1090,,,
+USNM,286029,USNM286029,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,56000,1120,,,
+USNM,286030,USNM286030,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Pribilof Islands,,,Female,54500,1050,,,
+USNM,286035,USNM286035,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Sitka,,,Female,64000,1280,,,
+USNM,286036,USNM286036,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Sitka,,,Female,65500,1260,,,
+USNM,286037,USNM286037,Callorhinus ursinus,Northern Fur Seal,Otariidae,United States,Alaska,Sitka,,,Female,66000,1270,,,
+USNM,286271,USNM286271,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Male,62000,1170,,,
+USNM,286272,USNM286272,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Miyagi Prefecture,,,,Female,67000,1220,,,
+USNM,286273,USNM286273,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,70000,1280,,,
+USNM,286274,USNM286274,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,68700,1190,,,
+USNM,286275,USNM286275,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,66500,1140,,,
+USNM,286276,USNM286276,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Male,72000,1210,,,
+USNM,286277,USNM286277,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,76500,1350,,,
+USNM,286278,USNM286278,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,35000,990,,,
+USNM,286279,USNM286279,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,54000,1280,,,
+USNM,286280,USNM286280,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,52500,1220,,,
+USNM,286281,USNM286281,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Iwate Prefecture,,,,Female,49000,1130,,,
+USNM,286282,USNM286282,Callorhinus ursinus,Northern Fur Seal,Otariidae,Japan,Miyagi Prefecture,,,,Female,77500,1300,,,
+USNM,470130,USNM470130,Canis adustus,Side-striped Jackal,Canidae,Botswana,,,-18.53,21.07,Male,6804,1015,365,177,83
+USNM,470131,USNM470131,Canis adustus,Side-striped Jackal,Canidae,Botswana,,,-18.53,21.07,Female,10886,1070,360,174,87
+USNM,470132,USNM470132,Canis adustus,Side-striped Jackal,Canidae,Botswana,,,-18.53,21.07,Male,9639,1140,390,190,90
+USNM,470518,USNM470518,Canis adustus,Side-striped Jackal,Canidae,Zimbabwe,Harare,,-17.83,31.05,Female,9979,1039,350,166,84
+USNM,470519,USNM470519,Canis adustus,Side-striped Jackal,Canidae,Zimbabwe,Harare,,-17.83,31.05,Male,8051,1075,360,170,92
+USNM,470520,USNM470520,Canis adustus,Side-striped Jackal,Canidae,Zimbabwe,Harare,,-17.83,31.05,Female,7711,1050,375,165,87
+USNM,470521,USNM470521,Canis adustus,Side-striped Jackal,Canidae,Zimbabwe,Harare,,-17.83,31.05,Female,9185,1040,378,175,87
+USNM,470522,USNM470522,Canis adustus,Side-striped Jackal,Canidae,Zimbabwe,,,,,Female,8165,1050,340,166,86
+USNM,476032,USNM476032,Canis aureus,Golden Jackal,Canidae,Morocco,Fes,,33.05,-4.12,Male,2700,682,184,125,89
+USNM,476033,USNM476033,Canis aureus,Golden Jackal,Canidae,Morocco,Fes,,33.05,-4.12,Female,2600,692,142,128,89
+USNM,476034,USNM476034,Canis aureus,Golden Jackal,Canidae,Morocco,Fes,,33.05,-4.12,Male,9000,1017,272,175,103
+USNM,476856,USNM476856,Canis aureus,Golden Jackal,Canidae,Morocco,Fes,,33,-4.12,Female,7800,988,270,160,100
+USNM,476030,USNM476030,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.48,-10.2,Male,7300,942,223,155,96
+USNM,476031,USNM476031,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,29.55,-9.32,Female,8900,965,268,161,102
+USNM,483160,USNM483160,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.77,-10.23,Male,1200,523,141,96,62
+USNM,486165,USNM486165,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.77,-10.23,Male,4700,952,265,141,106
+USNM,486166,USNM486166,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.77,-10.23,Male,1200,497,127,89,54
+USNM,486167,USNM486167,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.77,-10.23,Female,5500,960,254,156,95
+USNM,597868,USNM597868,Canis aureus,Golden Jackal,Canidae,Morocco,Agadir,,28.77,-10.23,Male,2800,759,212,128,91
+USNM,570897,USNM570897,Canis latrans,Coyote,Canidae,United States,Pennsylvania,,,,Male,16275,1317,395,210,105
+USNM,158228,USNM158228,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.1667,-108.917,Female,9100,1125,320,185,
+USNM,158229,USNM158229,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.309,-108.997,Male,12200,1180,360,185,
+USNM,158231,USNM158231,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.309,-108.997,Female,10700,1075,325,173,
+USNM,158232,USNM158232,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.309,-108.997,Female,11800,1150,330,193,
+USNM,158233,USNM158233,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.309,-108.997,Male,11600,1082,294,200,
+USNM,158234,USNM158234,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.7401,-108.398,Female,10700,1085,315,175,
+USNM,158235,USNM158235,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.7401,-108.398,Male,11600,1180,385,195,
+USNM,158965,USNM158965,Canis latrans,Coyote,Canidae,United States,New Mexico,San Juan County,36.7233,-107.829,Male,8600,1205,380,193,
+USNM,161603,USNM161603,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Female,10000,,310,185,
+USNM,161604,USNM161604,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Female,11800,1240,400,205,
+USNM,161605,USNM161605,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Female,9300,1080,290,187,
+USNM,161607,USNM161607,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.3352,-112.115,Male,11200,1090,300,190,
+USNM,161608,USNM161608,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.3352,-112.115,Male,6600,1040,325,165,
+USNM,161611,USNM161611,Canis latrans,Coyote,Canidae,United States,Arizona,Mohave County,36.3414,-113.143,Female,11300,1140,300,190,
+USNM,161612,USNM161612,Canis latrans,Coyote,Canidae,United States,Arizona,Mohave County,36.7689,-112.876,Male,12200,1215,372,200,
+USNM,161615,USNM161615,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Female,7700,1115,350,185,
+USNM,161616,USNM161616,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Male,9500,1220,380,210,
+USNM,161617,USNM161617,Canis latrans,Coyote,Canidae,United States,Arizona,Coconino County,36.1289,-111.239,Male,7000,1190,380,187,
+USNM,525526,USNM525526,Canis latrans,Coyote,Canidae,Mexico,Baja California Sur,,,,Female,8000,960,290,165,110
+USNM,530149,USNM530149,Canis latrans,Coyote,Canidae,Mexico,Baja California,,,,Male,10500,1150,330,187,120
+USNM,569589,USNM569589,Canis latrans,Coyote,Canidae,United States,Virginia,Prince William County,,,Female,12000,1150,285,109,95
+USNM,569590,USNM569590,Canis latrans,Coyote,Canidae,United States,Maryland,Frederick County,,,Female,16000,1310,385,209,113
+USNM,587612,USNM587612,Canis lupus,Wolf,Canidae,United States,Minnesota,Itasca County,47.272,-93.643,Female,30670,1580,430,290,120
+USNM,592897,USNM592897,Canis lupus,Wolf,Canidae,United States,Minnesota,Lake County,,,Male,36180,1672,41,27,13
+USNM,592898,USNM592898,Canis lupus,Wolf,Canidae,United States,Minnesota,Saint Louis County,,,Female,24960,1050,40,26,13
+USNM,529676,USNM529676,Canis lupus,Wolf,Canidae,,,,,,Male,24300,1440,425,240,120
+USNM,529677,USNM529677,Canis lupus,Wolf,Canidae,,,,,,Male,29000,1480,435,241,122
+USNM,529678,USNM529678,Canis lupus,Wolf,Canidae,,,,,,Male,26000,1400,390,230,115
+USNM,529679,USNM529679,Canis lupus,Wolf,Canidae,,,,,,Male,27500,1340,395,240,110
+USNM,529680,USNM529680,Canis lupus,Wolf,Canidae,,,,,,Male,29500,1470,430,245,120
+USNM,529681,USNM529681,Canis lupus,Wolf,Canidae,,,,,,Male,30250,1410,400,250,120
+USNM,180281,USNM180281,Canis lupus,Wolf,Canidae,Canada,Nunavut,Keewatin District,,,Male,46000,1720,519,323,848
+USNM,243327,USNM243327,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Male,30000,1570,480,280,
+USNM,243328,USNM243328,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Male,37000,1604,438,286,
+USNM,243329,USNM243329,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Male,44000,1683,492,292,
+USNM,243330,USNM243330,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Female,28000,1495,410,270,
+USNM,243331,USNM243331,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Female,33000,1584,435,280,
+USNM,243332,USNM243332,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Male,41000,1650,454,298,
+USNM,243333,USNM243333,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Male,41000,1670,461,301,
+USNM,243334,USNM243334,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Female,34000,1240,431,269,
+USNM,243335,USNM243335,Canis lupus,Wolf,Canidae,United States,Alaska,,,,Female,33000,1500,394,280,
+USNM,243323,USNM243323,Canis lupus,Wolf,Canidae,United States,Alaska,Alexander Archipelago,,,Male,41000,1736,476,299,
+USNM,470138,USNM470138,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,,,Female,66900,910,305,149,99
+USNM,470133,USNM470133,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,-22,27.17,Male,6804,965,290,160,115
+USNM,470134,USNM470134,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,-22,27.17,Male,7031,1020,335,170,105
+USNM,470135,USNM470135,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,-21.88,27.27,Female,7257,945,295,158,96
+USNM,470136,USNM470136,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,-21.88,27.27,Male,9242,1085,330,165,104
+USNM,470137,USNM470137,Canis mesomelas,Black-backed Jackal,Canidae,Botswana,,,-21.88,27.27,Female,8165,1000,330,165,104
+USNM,470523,USNM470523,Canis mesomelas,Black-backed Jackal,Canidae,Zimbabwe,Matabeleland,,-20.3,25.93,Male,5613,985,315,165,105
+USNM,470524,USNM470524,Canis mesomelas,Black-backed Jackal,Canidae,Zimbabwe,Matabeleland,,-20.3,28.93,Female,4763,1040,320,170,107
+USNM,470525,USNM470525,Canis mesomelas,Black-backed Jackal,Canidae,Zimbabwe,Matabeleland,,-20.3,28.93,Male,2495,980,310,165,104
+USNM,470526,USNM470526,Canis mesomelas,Black-backed Jackal,Canidae,Zimbabwe,Matabeleland,,-20.3,28.93,Male,9525,1075,315,169,107
+USNM,243308,USNM243308,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Pulaski County,,,Male,23000,1520,410,130,
+USNM,243309,USNM243309,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Pulaski County,,,Male,23000,1520,410,164,
+USNM,243310,USNM243310,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Garland County,,,Female,18000,1270,330,180,
+USNM,243314,USNM243314,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Marion County,,,Male,31410,1600,410,110,
+USNM,243315,USNM243315,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Marion County,,,Male,,970,292,180,
+USNM,243423,USNM243423,Canis rufus,Red Wolf,Canidae,United States,Arkansas,,,,Female,29000,1500,,,
+USNM,243424,USNM243424,Canis rufus,Red Wolf,Canidae,United States,Arkansas,,,,Female,23000,1450,,,
+USNM,243431,USNM243431,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Scott County,,,Female,20000,1500,410,155,
+USNM,243432,USNM243432,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Scott County,,,Male,21000,1450,380,120,
+USNM,243433,USNM243433,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Scott County,,,Female,24000,1500,380,135,
+USNM,243434,USNM243434,Canis rufus,Red Wolf,Canidae,United States,Arkansas,Scott County,,,Male,21000,1450,380,158,
+USNM,243593,USNM243593,Canis rufus,Red Wolf,Canidae,United States,Arkansas,,,,Male,33000,1630,,,
+USNM,243594,USNM243594,Canis rufus,Red Wolf,Canidae,United States,Arkansas,,,,Female,23000,1370,,,
+USNM,372839,USNM372839,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Trujillo,,9.53,-70.67,Male,5000,871,243,137,73
+USNM,374833,USNM374833,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Monagas,,9.32,-62.93,Male,3632,915,277,140,75
+USNM,388226,USNM388226,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Miranda,,10.32,-65.97,Female,5000,875,260,139,65
+USNM,388228,USNM388228,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Miranda,,10.32,-65.97,Female,3640,902,266,137,65
+USNM,388230,USNM388230,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Bolivar,,6.95,-63.48,Male,5000,935,300,144,69
+USNM,388231,USNM388231,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Bolivar,,6.82,-63.48,Female,5000,910,309,135,43
+USNM,388312,USNM388312,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Bolivar,,6.82,-63.48,Female,4100,925,335,135,68
+USNM,388313,USNM388313,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Bolivar,,6.92,-63.5,Male,5500,710,136,135,42
+USNM,406803,USNM406803,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Monagas,,10.2,-63.53,Male,1218,560,180,90,60
+USNM,406806,USNM406806,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Falcon,,11.27,-68.63,Male,4700,832,235,132,75
+USNM,406809,USNM406809,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.3,-66.22,Male,4130,1015,293,165,72
+USNM,406811,USNM406811,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.4,-67.65,Female,5910,1015,340,155,75
+USNM,406813,USNM406813,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.45,-67.62,Female,5450,1000,320,145,78
+USNM,406814,USNM406814,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.45,-67.62,Female,6360,1020,305,158,70
+USNM,406816,USNM406816,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.45,-67.62,Male,6820,1060,305,160,78
+USNM,406818,USNM406818,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.45,-67.62,Male,5448,1000,325,150,76
+USNM,406819,USNM406819,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Amazonas,,5.55,-67.6,Male,7950,1100,335,170,83
+USNM,443267,USNM443267,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Monagas,,9.32,-62.93,Male,5221,910,260,145,75
+USNM,443268,USNM443268,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Falcon,,11.12,-70.77,Male,3860,880,280,125,72
+USNM,443505,USNM443505,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Falcon,,11.07,-68.35,Male,5300,893,281,141,74
+USNM,443506,USNM443506,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Carabobo,,10.2,-68.33,Male,4770,900,295,132,74
+USNM,443509,USNM443509,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Carabobo,,10.2,-68.33,Male,4550,865,250,139,74
+USNM,443510,USNM443510,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Carabobo,,10.2,-68.33,Male,2730,800,235,135,68
+USNM,443511,USNM443511,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Carabobo,,10.2,-68.33,Male,5230,860,280,135,73
+USNM,443512,USNM443512,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Apure,,7.32,-71.95,Female,5450,930,275,152,78
+USNM,443513,USNM443513,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Apure,,7.32,-71.95,Male,5910,900,275,145,78
+USNM,443515,USNM443515,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Apure,,7.32,-71.95,Male,6360,970,300,140,80
+USNM,443516,USNM443516,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Apure,,7.32,-71.95,Female,5450,980,257,142,78
+USNM,443518,USNM443518,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Zulia,,9.18,-72.7,Female,5000,900,270,140,77
+USNM,443674,USNM443674,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Lara,,9.88,-69.78,Male,4550,940,280,135,70
+USNM,443678,USNM443678,Cerdocyon thous,Crab-eating Fox,Canidae,Venezuela,Lara,,9.88,-69.78,Female,4090,920,250,130,73
+USNM,450452,USNM450452,Civettictis civetta,African Civet,Viverridae,Cote d'Ivoire,,,5.32,-4.13,Female,10900,1280,480,140,55
+USNM,477342,USNM477342,Civettictis civetta,African Civet,Viverridae,Cote d'Ivoire,,,5.82,-6.75,Female,3700,970,355,110,51
+USNM,481987,USNM481987,Civettictis civetta,African Civet,Viverridae,Liberia,Grand Gedeh,,6.22,-8.13,Female,9200,1230,435,130,52
+USNM,481988,USNM481988,Civettictis civetta,African Civet,Viverridae,Liberia,Grand Gedeh,,6.22,-8.13,Male,4700,993,375,125,52
+USNM,443285,USNM443285,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,2050,670,245,76,31
+USNM,443286,USNM443286,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,2730,605,190,75,30
+USNM,443289,USNM443289,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,2140,660,250,75,28
+USNM,443290,USNM443290,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Male,2730,670,220,80,32
+USNM,443291,USNM443291,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Male,3180,720,230,88,33
+USNM,443293,USNM443293,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,2409,710,250,78,31
+USNM,443294,USNM443294,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,2045,620,250,80,32
+USNM,443295,USNM443295,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,1816,610,220,73,32
+USNM,443296,USNM443296,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.17,-70.62,Female,1952,605,215,82,31
+USNM,443414,USNM443414,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Falcon,,11.83,-69.98,Female,1532,575,202,70,28
+USNM,443576,USNM443576,Conepatus semistriatus,Striped Hog-nosed Skunk,Mephitidae,Venezuela,Zulia,,9.18,-72.7,Male,3410,750,250,85,35
+USNM,467657,USNM467657,Crossarchus obscurus,Common Kusimanse,Herpestidae,Cote d'Ivoire,,,7.43,-3.47,Female,700,484,167,66,22
+USNM,467660,USNM467660,Crossarchus obscurus,Common Kusimanse,Herpestidae,Cote d'Ivoire,,,7.05,-5.62,Female,454,440,148,64,23
+USNM,467661,USNM467661,Crossarchus obscurus,Common Kusimanse,Herpestidae,Cote d'Ivoire,,,9.42,-7.52,Female,454,513,183,68,24
+USNM,467662,USNM467662,Crossarchus obscurus,Common Kusimanse,Herpestidae,Cote d'Ivoire,,,7.43,-3.47,Female,600,531,177,64,25
+USNM,467663,USNM467663,Crossarchus obscurus,Common Kusimanse,Herpestidae,Cote d'Ivoire,,,7.43,-3.47,Male,1000,480,162,66,24
+USNM,467664,USNM467664,Crossarchus obscurus,Common Kusimanse,Herpestidae,Ghana,Ashanti,,6.08,-1.77,Male,1000,503,174,70,24
+USNM,481994,USNM481994,Crossarchus obscurus,Common Kusimanse,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,760,495,170,66,22
+USNM,481995,USNM481995,Crossarchus obscurus,Common Kusimanse,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,1000,555,188,72,24
+USNM,481996,USNM481996,Crossarchus obscurus,Common Kusimanse,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Male,800,531,170,68,25
+USNM,588444,USNM588444,Crossarchus obscurus,Common Kusimanse,Herpestidae,,,,,,Female,970,475,141,69,24
+USNM,588445,USNM588445,Crossarchus obscurus,Common Kusimanse,Herpestidae,,,,,,Male,725,490,160,72,25
+USNM,583894,USNM583894,Crossarchus obscurus,Common Kusimanse,Herpestidae,,,,,,Female,703,330,,63,24
+USNM,469882,USNM469882,Cynictis penicillata,Yellow Mongoose,Herpestidae,South Africa,Mpumalanga,Ermelo District,-26.45,29.67,Female,542,517,211,67,38
+USNM,469883,USNM469883,Cynictis penicillata,Yellow Mongoose,Herpestidae,South Africa,Northern Cape,Calvinia District,-31.47,19.9,Male,907,626,77,85,35
+USNM,469884,USNM469884,Cynictis penicillata,Yellow Mongoose,Herpestidae,South Africa,Western Cape,Montagu District,-33.78,20.12,Female,1021,641,292,81,37
+USNM,470157,USNM470157,Cynictis penicillata,Yellow Mongoose,Herpestidae,Botswana,,,-21.88,27.27,Female,440,530,235,66,29
+USNM,550377,USNM550377,Cystophora cristata,Hooded Seal,Phocidae,United States,Maine,Lincoln County,44,-69.67,Male,17000,920,,,
+USNM,550444,USNM550444,Cystophora cristata,Hooded Seal,Phocidae,United States,Florida,Broward County,26.13,-80.07,Male,41000,113,,,
+USNM,550317,USNM550317,Cystophora cristata,Hooded Seal,Phocidae,United States,Massachusetts,Plymouth County,,,Male,106000,169,,,
+USNM,546105,USNM546105,Eira barbara,Tayra,Mustelidae,Brazil,Para,,-1.85,-48.48,Female,2000,900,400,100,35
+USNM,406838,USNM406838,Eira barbara,Tayra,Mustelidae,Venezuela,Amazonas,,5.4,-67.65,Female,4550,1090,430,115,41
+USNM,442899,USNM442899,Eira barbara,Tayra,Mustelidae,Venezuela,Falcon,,11.18,-68.68,Female,,966,387,111,41
+USNM,443483,USNM443483,Eira barbara,Tayra,Mustelidae,Venezuela,Apure,,7.32,-71.95,Male,7050,1220,430,90,30
+USNM,443485,USNM443485,Eira barbara,Tayra,Mustelidae,Venezuela,Zulia,,9.2,-72.63,Male,5680,1130,430,111,41
+USNM,443575,USNM443575,Eira barbara,Tayra,Mustelidae,Venezuela,Zulia,,9.2,-72.63,Female,2730,1060,430,180,42
+USNM,443577,USNM443577,Eira barbara,Tayra,Mustelidae,Venezuela,Barinas,,8.83,-70.5,Male,3180,920,350,115,38
+USNM,544644,USNM544644,Eira barbara,Tayra,Mustelidae,Brazil,Para,,-4,-54.67,Female,3430,980,380,105,37
+USNM,605310,USNM605310,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.6,-149.57,Female,190000,2175,,,
+USNM,605665,USNM605665,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.43,-146.33,Male,265000,2380,,,
+USNM,605664,USNM605664,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.68,-152.48,Female,292000,2320,,,
+USNM,605666,USNM605666,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,55.77,-155.65,Male,147000,1880,,,
+USNM,605675,USNM605675,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.72,-146.72,Female,220000,2310,,,
+USNM,605676,USNM605676,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.72,-146.72,Female,268000,2335,,,
+USNM,605677,USNM605677,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.78,-146.5,Female,202000,2170,,,
+USNM,605678,USNM605678,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.78,-146.5,Female,160000,2110,,,
+USNM,605679,USNM605679,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.78,-146.5,Female,215000,2153,,,
+USNM,605680,USNM605680,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.78,-146.5,Female,254000,2220,,,
+USNM,605681,USNM605681,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.23,-148,Female,262000,2268,,,
+USNM,605682,USNM605682,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.35,-150.4,Female,269000,2305,,,
+USNM,605683,USNM605683,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.35,-150.4,Male,162000,1907,,,
+USNM,605684,USNM605684,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.35,-150.4,Male,490000,2765,,,
+USNM,605685,USNM605685,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,59.35,-150.4,Female,282000,2378,,,
+USNM,605686,USNM605686,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,Kenai Peninsula Borough,59.7,-149.52,Female,165000,2025,,,
+USNM,605687,USNM605687,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,Kenai Peninsula Borough,59.7,-149.52,Female,208000,2075,,,
+USNM,605688,USNM605688,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Female,248000,2195,,,
+USNM,605689,USNM605689,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.52,-152.22,Male,245000,2205,,,
+USNM,605690,USNM605690,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.88,-152.03,Male,820000,2870,,,
+USNM,605691,USNM605691,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Female,290000,2290,,,
+USNM,605692,USNM605692,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.68,-152.48,Female,228000,2105,,,
+USNM,605693,USNM605693,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.23,-151.78,Female,261000,2395,,,
+USNM,605694,USNM605694,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.23,-151.78,Female,219000,2370,,,
+USNM,605695,USNM605695,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,58.23,-151.78,Female,218000,2190,,,
+USNM,605696,USNM605696,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.85,-147.13,Female,265000,2295,,,
+USNM,605698,USNM605698,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.23,-148,Male,290000,2397,,,
+USNM,605699,USNM605699,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,282000,2345,,,
+USNM,605700,USNM605700,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.72,-146.72,Male,255000,2215,,,
+USNM,605701,USNM605701,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.58,-147.57,Male,174000,2115,,,
+USNM,605704,USNM605704,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,60.58,-147.57,Female,130000,1845,,,
+USNM,605707,USNM605707,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Female,280000,2280,,,
+USNM,605708,USNM605708,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Female,237000,2250,,,
+USNM,605710,USNM605710,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,175000,1970,,,
+USNM,605711,USNM605711,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,335000,2260,,,
+USNM,605712,USNM605712,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,320000,2340,,,
+USNM,605713,USNM605713,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,56.32,-168.522,Female,297700,2971,,,
+USNM,605714,USNM605714,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,56.32,-168.522,Male,109000,1089,,,
+USNM,605724,USNM605724,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Female,280000,2295,,,
+USNM,605725,USNM605725,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,305000,2270,,,
+USNM,605726,USNM605726,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,240000,2180,,,
+USNM,605727,USNM605727,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,,,Male,370000,2360,,,
+USNM,605728,USNM605728,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,56.08,-168.548,Male,335000,2440,,,
+USNM,605729,USNM605729,Eumetopias jubatus,Steller Sea Lion,Otariidae,United States,Alaska,,56.0567,-168.57,Male,426000,2660,,,
+USNM,396392,USNM396392,Felis catus,Domestic Cat,Felidae,United States,District of Columbia,,,,Male,5000,861,304,133,61
+USNM,602628,USNM602628,Felis catus,Domestic Cat,Felidae,Djibouti,Djibouti Region,,11.5422,43.1667,Female,4000,841,245,109,58
+USNM,602627,USNM602627,Felis catus,Domestic Cat,Felidae,Djibouti,Tadjoura Region,,11.7849,42.6452,Male,2700,700,280,115,65
+USNM,452463,USNM452463,Felis nigripes,Black-footed Cat,Felidae,South Africa,Northern Cape,,-30.55,25.97,Female,700,455,140,86,48
+USNM,452464,USNM452464,Felis nigripes,Black-footed Cat,Felidae,South Africa,Northern Cape,,-28.9,23.77,Female,700,473,153,80,4
+USNM,469888,USNM469888,Felis silvestris,Wildcat,Felidae,South Africa,Northern Cape,,-30.5,25.97,Male,2381,743,281,136,70
+USNM,469889,USNM469889,Felis silvestris,Wildcat,Felidae,South Africa,Northern Cape,,-30.5,25.97,Male,3175,774,320,135,60
+USNM,469890,USNM469890,Felis silvestris,Wildcat,Felidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Female,1474,637,252,115,66
+USNM,470165,USNM470165,Felis silvestris,Wildcat,Felidae,Botswana,,,-18.83,22.25,Male,4763,910,330,150,70
+USNM,470166,USNM470166,Felis silvestris,Wildcat,Felidae,Botswana,,,-18.73,21.75,Female,2495,740,293,137,70
+USNM,470167,USNM470167,Felis silvestris,Wildcat,Felidae,Botswana,,,-18.35,21.87,Male,4196,895,352,155,73
+USNM,470168,USNM470168,Felis silvestris,Wildcat,Felidae,Botswana,,,-18.35,21.87,Male,4649,920,360,150,72
+USNM,470169,USNM470169,Felis silvestris,Wildcat,Felidae,Botswana,,,-20.03,21.47,Male,5670,960,320,165,70
+USNM,470170,USNM470170,Felis silvestris,Wildcat,Felidae,Botswana,,,-19.42,22.27,Female,3289,783,410,148,70
+USNM,470171,USNM470171,Felis silvestris,Wildcat,Felidae,Botswana,,,-19.42,22.27,Male,2495,760,310,145,70
+USNM,470172,USNM470172,Felis silvestris,Wildcat,Felidae,Botswana,,,-19.42,22.27,Female,3856,795,305,148,74
+USNM,470173,USNM470173,Felis silvestris,Wildcat,Felidae,Botswana,,,-21.88,27.27,Male,4196,860,330,145,68
+USNM,469867,USNM469867,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,907,681,311,76,31
+USNM,469868,USNM469868,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,680,658,311,72,31
+USNM,469869,USNM469869,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,680,640,296,70,31
+USNM,469870,USNM469870,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Female,454,630,309,65,30
+USNM,469871,USNM469871,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Northern Cape,,-31.03,19.45,Female,680,634,287,65,30
+USNM,469872,USNM469872,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,,-32.48,19.53,Male,964,648,297,68,30
+USNM,469873,USNM469873,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,Clanwilliam District,-32.13,19,Male,907,605,308,85,45
+USNM,469874,USNM469874,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,,-31.03,18.28,Female,794,656,365,60,30
+USNM,469875,USNM469875,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,,-31.03,18.28,Male,1021,675,296,79,34
+USNM,469876,USNM469876,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,Laingsburg District,-33.42,20.75,Male,907,565,253,70,29
+USNM,469877,USNM469877,Galerella pulverulenta,Cape Gray Mongoose,Herpestidae,South Africa,Western Cape,Laingsburg District,-33.42,20.75,Female,794,635,310,65,30
+USNM,465678,USNM465678,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Burkina Faso,,,12.9,-3.88,Female,279,532,271,54,26
+USNM,467667,USNM467667,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,,,9.42,-7.52,Female,460,580,275,56,27
+USNM,467668,USNM467668,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,,,9.42,-7.52,Male,423,585,280,60,27
+USNM,467669,USNM467669,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,Odienné,Denguélé,9.42,-7.52,Male,545,566,260,59,26
+USNM,467670,USNM467670,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,,,9.6,-6.3,Male,458,573,270,26,59
+USNM,467671,USNM467671,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,,,9.6,-6.3,Male,412,568,280,62,25
+USNM,467672,USNM467672,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Cote d'Ivoire,,,7.93,-6.13,Female,484,605,290,57,29
+USNM,467673,USNM467673,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Ghana,Ashanti,,6.08,-1.77,Male,600,593,263,61,28
+USNM,469878,USNM469878,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,South Africa,Gauteng,Vereeniging District,-26.57,28.02,Female,399,526,250,61,21
+USNM,469879,USNM469879,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,South Africa,Northern Province,,-24.67,27.37,Female,165,432,208,48,22
+USNM,539732,USNM539732,Galerella sanguinea,Commone Slender Mongoose,Herpestidae,Sierra Leone,Eastern Province,Kailahun District,7.98,-10.95,Male,490,630,283,64,27
+USNM,469855,USNM469855,Genetta genetta,Common Genet,Viverridae,South Africa,Free State,,-30.63,25.55,Female,1247,904,423,87,53
+USNM,469856,USNM469856,Genetta genetta,Common Genet,Viverridae,South Africa,Northern Cape,Hopetown District,-29.62,24.08,Male,1474,856,412,82,49
+USNM,469857,USNM469857,Genetta genetta,Common Genet,Viverridae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,2041,948,455,91,55
+USNM,469858,USNM469858,Genetta genetta,Common Genet,Viverridae,South Africa,Northern Cape,,-30.37,17.52,Male,1814,948,466,92,56
+USNM,470152,USNM470152,Genetta genetta,Common Genet,Viverridae,Botswana,,,-21.88,27.27,Female,794,705,360,76,51
+USNM,470153,USNM470153,Genetta genetta,Common Genet,Viverridae,Botswana,,,-21.28,27.27,Female,1134,840,410,82,52
+USNM,470154,USNM470154,Genetta genetta,Common Genet,Viverridae,Botswana,,,-22.28,27.12,Male,1474,940,460,86,54
+USNM,470527,USNM470527,Genetta genetta,Common Genet,Viverridae,Zimbabwe,Matabeleland,,-20.3,28.93,Female,3629,928,425,89,57
+USNM,465677,USNM465677,Genetta genetta,Common Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Female,1000,846,423,86,46
+USNM,467584,USNM467584,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,Sassandra,,7,-7.05,Female,2268,960,410,85,44
+USNM,467585,USNM467585,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,Sassandra,,7,-7.05,Female,530,620,283,63,37
+USNM,467586,USNM467586,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,6.92,-7.62,Female,1814,985,450,95,45
+USNM,467587,USNM467587,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,9.42,-7.52,Female,1361,890,420,88,45
+USNM,467588,USNM467588,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,5.52,-5.25,Female,1600,868,389,88,45
+USNM,467589,USNM467589,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,5.82,-6.75,Female,1800,905,430,90,42
+USNM,467590,USNM467590,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,7.43,-3.47,Female,1500,865,390,94,41
+USNM,467591,USNM467591,Genetta maculata,Rusty-spotted Genet,Viverridae,Ghana,Ashanti,,6.08,-1.77,Female,2800,965,432,99,45
+USNM,467592,USNM467592,Genetta maculata,Rusty-spotted Genet,Viverridae,Cote d'Ivoire,,,9.6,-6.3,Male,1814,1025,460,92,50
+USNM,467613,USNM467613,Genetta maculata,Rusty-spotted Genet,Viverridae,Burkina Faso,,,11.8,-2.13,Female,1700,868,407,83,40
+USNM,467618,USNM467618,Genetta maculata,Rusty-spotted Genet,Viverridae,Burkina Faso,,,11.88,-4.52,Male,1800,930,443,91,46
+USNM,469859,USNM469859,Genetta maculata,Rusty-spotted Genet,Viverridae,South Africa,North-West Province,,-25.42,26.33,Female,1588,880,423,85,50
+USNM,469860,USNM469860,Genetta maculata,Rusty-spotted Genet,Viverridae,South Africa,Mpumalanga,,-25.43,31.93,Female,2041,1042,532,95,48
+USNM,470528,USNM470528,Genetta maculata,Rusty-spotted Genet,Viverridae,Zimbabwe,Masvingo,Masvingo District,-21.67,31.75,Male,5897,1018,502,91,54
+USNM,470529,USNM470529,Genetta maculata,Rusty-spotted Genet,Viverridae,Zimbabwe,Matabeleland,,-20.3,28.93,Female,4990,880,405,84,45
+USNM,477343,USNM477343,Genetta maculata,Rusty-spotted Genet,Viverridae,Ghana,Ashanti,,6.08,-1.77,Female,4260,980,435,100,43
+USNM,481984,USNM481984,Genetta maculata,Rusty-spotted Genet,Viverridae,Liberia,Grand Gedeh,,6.22,-8.13,Female,2200,920,403,93,45
+USNM,481985,USNM481985,Genetta maculata,Rusty-spotted Genet,Viverridae,Liberia,Grand Gedeh,,6.22,-8.13,Female,1800,845,390,90,42
+USNM,481986,USNM481986,Genetta maculata,Rusty-spotted Genet,Viverridae,Liberia,Grand Gedeh,,6.22,-8.13,Female,2400,970,430,93,43
+USNM,537887,USNM537887,Genetta maculata,Rusty-spotted Genet,Viverridae,"Congo, Democratic Rep. Of",Equateur,,3.03,19.35,Female,550,636,298,70,14
+USNM,465659,USNM465659,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.93,-6.13,Female,907,760,307,75,41
+USNM,465660,USNM465660,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.25,0.27,Female,907,754,381,79,34
+USNM,465661,USNM465661,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.25,0.27,Male,1810,822,396,79,42
+USNM,465662,USNM465662,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.17,0.93,Female,1100,796,391,78,44
+USNM,465663,USNM465663,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.9,-2.97,Female,1200,825,410,80,41
+USNM,465668,USNM465668,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.9,-2.97,Female,1000,805,402,78,44
+USNM,465669,USNM465669,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Male,1100,785,373,75,43
+USNM,465670,USNM465670,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Female,800,763,398,77,41
+USNM,465671,USNM465671,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Male,1300,858,415,85,42
+USNM,465672,USNM465672,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Male,1200,893,457,83,45
+USNM,465673,USNM465673,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Male,900,747,354,80,42
+USNM,465674,USNM465674,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,12.9,-3.88,Male,1200,860,439,79,42
+USNM,465675,USNM465675,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.5,-4,Female,1400,820,395,81,41
+USNM,465676,USNM465676,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.45,-3.23,Female,1400,835,400,76,43
+USNM,467593,USNM467593,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.05,-5.62,Female,907,814,404,73,38
+USNM,467594,USNM467594,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.42,-7.52,Female,907,820,389,75,39
+USNM,467595,USNM467595,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.6,-6.3,Male,500,670,320,72,40
+USNM,467596,USNM467596,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.6,-6.3,Male,454,845,405,75,41
+USNM,467597,USNM467597,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.6,-6.3,Female,454,829,412,80,39
+USNM,467598,USNM467598,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.6,-6.3,Male,907,927,467,73,42
+USNM,467599,USNM467599,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,8.23,-7.4,Female,454,764,364,63,39
+USNM,467600,USNM467600,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,8.23,-7.4,Female,454,793,375,74,41
+USNM,467601,USNM467601,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.42,-7.52,Male,454,305,390,72,41
+USNM,467602,USNM467602,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.42,-7.52,Female,907,811,404,74,40
+USNM,467603,USNM467603,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.93,-6.13,Female,276,487,235,55,40
+USNM,467604,USNM467604,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.93,-6.13,Female,907,844,430,75,44
+USNM,467605,USNM467605,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.93,-6.13,Male,1361,845,385,80,40
+USNM,467606,USNM467606,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.93,-6.13,Male,907,879,453,77,42
+USNM,467607,USNM467607,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.15,-4.62,Male,907,930,456,84,40
+USNM,467608,USNM467608,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,9.27,-3,Female,1400,905,446,85,44
+USNM,467609,USNM467609,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.82,-4.68,Female,1000,783,386,75,38
+USNM,467610,USNM467610,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,,,7.82,-4.68,Female,1200,795,386,75,40
+USNM,467611,USNM467611,Genetta thierryi,Hausa Genet,Viverridae,Cote d'Ivoire,Gbêkê,Vallée du Bandama,7.82,-4.68,Female,1200,877,436,79,41
+USNM,467612,USNM467612,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.8,-2.13,Male,1500,839,420,77,45
+USNM,467614,USNM467614,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.8,-2.13,Male,1300,814,408,78,44
+USNM,467615,USNM467615,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.8,-2.13,Male,1400,843,417,81,45
+USNM,467616,USNM467616,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.88,-4.52,Male,1100,770,411,80,45
+USNM,467617,USNM467617,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.88,-4.52,Female,1100,778,403,78,38
+USNM,467619,USNM467619,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.88,-4.52,Female,1000,772,402,76,44
+USNM,467620,USNM467620,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.88,-4.52,Female,1100,807,420,78,42
+USNM,467621,USNM467621,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.07,-4.68,Female,1400,808,383,79,42
+USNM,467622,USNM467622,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,11.07,-4.68,Female,1400,805,400,78,40
+USNM,467623,USNM467623,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,10.32,-4.88,Female,226,517,260,61,38
+USNM,467624,USNM467624,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,10.32,-4.88,Female,1800,850,431,80,45
+USNM,467625,USNM467625,Genetta thierryi,Hausa Genet,Viverridae,Burkina Faso,,,10.93,-3.12,Male,209,462,227,54,35
+USNM,485837,USNM485837,Halichoerus grypus,Grey Seal,Phocidae,United States,New Jersey,Ocean County,,,Male,21000,1020,,,
+USNM,594174,USNM594174,Halichoerus grypus,Grey Seal,Phocidae,United States,Massachusetts,Barnstable,41.7506,-70.193,,88300,1741,,,
+USNM,594199,USNM594199,Halichoerus grypus,Grey Seal,Phocidae,United States,Massachusetts,Barnstable,41.654,-70.1273,,122200,1850,,,
+USNM,594203,USNM594203,Halichoerus grypus,Grey Seal,Phocidae,United States,Massachusetts,Barnstable,41.6763,-69.9402,,109800,1923,,,
+USNM,594204,USNM594204,Halichoerus grypus,Grey Seal,Phocidae,United States,Massachusetts,Barnstable,41.6518,-70.1554,,126200,1855,,,
+USNM,594208,USNM594208,Halichoerus grypus,Grey Seal,Phocidae,United States,Massachusetts,Barnstable,41.9298,-70.05,,224000,1954,,,
+USNM,489406,USNM489406,Hemigalus derbyanus,Branded Palm Civet,Viverridae,Malaysia,Sabah,,6.13,116.87,Female,1909,862,337,76,36
+USNM,489417,USNM489417,Herpestes brachyurus,Short-tailed Mongoose,Herpestidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,1391,650,200,85,30
+USNM,489418,USNM489418,Herpestes brachyurus,Short-tailed Mongoose,Herpestidae,Malaysia,Selangor,Klang District,2.92,101.57,Female,1188,625,205,79,28
+USNM,489419,USNM489419,Herpestes brachyurus,Short-tailed Mongoose,Herpestidae,Malaysia,Selangor,Klang District,2.92,101.57,Female,1493,668,215,82,32
+USNM,590300,USNM590300,Herpestes brachyurus,Short-tailed Mongoose,Herpestidae,Malaysia,Sarawak,Bintulu Division,,,Male,3500,615,210,87,30
+USNM,467675,USNM467675,Herpestes ichneumon,Egyptian Mongoose,Herpestidae,Cote d'Ivoire,,,9.15,-4.62,Female,1814,1020,500,92,36
+USNM,537890,USNM537890,Herpestes ichneumon,Egyptian Mongoose,Herpestidae,"Congo, Democratic Rep. Of",Equateur,Bumba Zone,2.58,21.85,Female,1150,745,370,87,35
+USNM,489407,USNM489407,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,698,620,270,62,26
+USNM,489408,USNM489408,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,623,622,267,60,24
+USNM,489409,USNM489409,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Male,430,525,210,60,24
+USNM,489410,USNM489410,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,665,585,250,58,22
+USNM,489411,USNM489411,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Male,1218,725,310,70,30
+USNM,489412,USNM489412,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,501,625,270,60,24
+USNM,489413,USNM489413,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,516,525,225,55,26
+USNM,489414,USNM489414,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,801,465,105,61,25
+USNM,489415,USNM489415,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Female,718,600,250,57,30
+USNM,489416,USNM489416,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Malaysia,Kedah,Kota Setar District,6.08,100.37,Male,553,510,115,64,20
+USNM,522014,USNM522014,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Indonesia,,,,,Female,500,594,254,63,19
+USNM,570866,USNM570866,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Hawaiian Islands,Hawaii,,,,Male,630,555,247,64,25
+USNM,570867,USNM570867,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Hawaiian Islands,Hawaii,,,,Female,430,559,253,54,23
+USNM,570894,USNM570894,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Iraq,,,,,Male,380,522,241,55,14
+USNM,603484,USNM603484,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.8997,Male,430,522,220,60,14
+USNM,603481,USNM603481,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.9971,Female,470,556,253,59,12
+USNM,603482,USNM603482,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.8998,Male,544,552,250,62,21
+USNM,603483,USNM603483,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.8997,Male,625,640,294,64,22
+USNM,603480,USNM603480,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.8997,Female,205,398,181,50,15
+USNM,603485,USNM603485,Herpestes javanicus,Small Asian Mongoose,Herpestidae,Virgin Islands (U.S.),,,17.6779,-64.8997,Female,388,541,260,57,14
+USNM,275205,USNM275205,Hydrurga leptonyx,Leopard Seal,Phocidae,Antarctica,,,-66.72,-111.6,Female,420000,2300,,,
+USNM,550084,USNM550084,Hydrurga leptonyx,Leopard Seal,Phocidae,Antarctica,,,-71.88,-31.32,Male,207000,2200,,,
+USNM,550085,USNM550085,Hydrurga leptonyx,Leopard Seal,Phocidae,Antarctica,,,-77.43,-32,Female,533000,3170,,,
+USNM,550086,USNM550086,Hydrurga leptonyx,Leopard Seal,Phocidae,Antarctica,,,-77.7433,-32.23,Female,465000,2820,,,
+USNM,550087,USNM550087,Hydrurga leptonyx,Leopard Seal,Phocidae,Antarctica,,,,,Female,569000,3010,,,
+USNM,550360,USNM550360,Hydrurga leptonyx,Leopard Seal,Phocidae,Australia,New South Wales,,,,Male,276000,2710,,,
+USNM,467674,USNM467674,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Cote d'Ivoire,,,9.6,-6.3,Male,1814,970,445,130,42
+USNM,470531,USNM470531,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Zimbabwe,Matabeleland,,-20.3,28.93,Male,6804,990,435,132,45
+USNM,470532,USNM470532,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Zimbabwe,Matabeleland,,-20.3,28.93,Female,5443,907,365,132,47
+USNM,602617,USNM602617,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Tadjoura Region,,,,Female,2700,1047,487,123,42
+USNM,602618,USNM602618,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Tadjoura Region,,11.7849,42.6452,Male,2340,1017,423,121,40
+USNM,602629,USNM602629,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Djibouti Region,,11.5422,43.1667,Female,2000,910,450,115,39
+USNM,602626,USNM602626,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Tadjoura Region,,11.7849,42.6452,Female,3500,995,413,107,42
+USNM,602630,USNM602630,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Arta Region,,11.5167,43.0667,Male,2420,1026,510,120,45
+USNM,602631,USNM602631,Ichneumia albicauda,White-tailed Mongoose,Herpestidae,Djibouti,Djibouti Region,,11.5331,43.1701,Male,2800,1026,443,126,45
+USNM,476028,USNM476028,Ictonyx libyca,Saharan Striped Polecat,Mustelidae,Morocco,Ouarzazate,,30.07,-6.88,Male,235,366,140,36,18
+USNM,469845,USNM469845,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Free State,Harrismith District,-28.45,29.13,Female,408,431,168,58,30
+USNM,469846,USNM469846,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Free State,Harrismith District,-28.45,29.13,Male,567,528,190,57,30
+USNM,469847,USNM469847,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Female,555,545,243,57,29
+USNM,469848,USNM469848,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,567,524,228,60,31
+USNM,469849,USNM469849,Ictonyx striatus,Striped Polecat,Mustelidae,Namibia,,,-31.47,19.9,Female,462,529,245,56,31
+USNM,469850,USNM469850,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Northern Cape,Calvinia District,-31.47,19.9,Female,520,529,239,53,30
+USNM,469851,USNM469851,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Northern Cape,,-30.37,17.52,Male,454,527,217,56,30
+USNM,469852,USNM469852,Ictonyx striatus,Striped Polecat,Mustelidae,South Africa,Northern Cape,Carnarvon District,-30.95,22.13,Female,457,493,220,52,29
+USNM,372860,USNM372860,Leopardus pardalis,Ocelot,Felidae,Venezuela,Apure,,6.55,-67.22,Male,11350,1220,410,165,65
+USNM,374854,USNM374854,Leopardus pardalis,Ocelot,Felidae,Venezuela,Bolivar,,7,-62.25,Male,10896,1255,380,170,65
+USNM,388317,USNM388317,Leopardus pardalis,Ocelot,Felidae,Venezuela,Bolivar,,6.82,-63.48,Male,10500,1168,385,162,64
+USNM,406841,USNM406841,Leopardus pardalis,Ocelot,Felidae,Venezuela,Amazonas,,3.17,-65.82,Male,10000,1041,351,152,54
+USNM,406842,USNM406842,Leopardus pardalis,Ocelot,Felidae,Venezuela,Amazonas,,3.17,-65.82,Male,5450,1160,377,160,59
+USNM,406843,USNM406843,Leopardus pardalis,Ocelot,Felidae,Venezuela,Amazonas,,2.62,-66.32,Female,6600,920,345,149,56
+USNM,406844,USNM406844,Leopardus pardalis,Ocelot,Felidae,Venezuela,Amazonas,,3.17,-65.82,Female,9988,1362,369,59,65
+USNM,374851,USNM374851,Leopardus pardalis,Ocelot,Felidae,Venezuela,Carabobo,,10.53,-68.38,Male,9988,1110,342,154,55
+USNM,388253,USNM388253,Leopardus pardalis,Ocelot,Felidae,Venezuela,Amazonas,,3.65,-65.77,Male,10600,1350,395,65,57
+USNM,443489,USNM443489,Leopardus pardalis,Ocelot,Felidae,Venezuela,Zulia,,9.2,-72.63,Female,6590,1120,340,150,64
+USNM,443579,USNM443579,Leopardus pardalis,Ocelot,Felidae,Venezuela,Zulia,,9.2,-72.63,Male,10910,1185,375,175,70
+USNM,481997,USNM481997,Liberiictis kuhni,Liberian Mongoose,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Male,2300,620,197,88,30
+USNM,481998,USNM481998,Liberiictis kuhni,Liberian Mongoose,Herpestidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,504,382,120,69,25
+USNM,275204,USNM275204,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-68.07,-101.5,Male,103000,1770,,,
+USNM,504682,USNM504682,Lobodon carcinophaga,Crabeater Seal,Phocidae,South Shetland Islands,,,-62.8,-60.6,Male,113000,1680,,,
+USNM,550077,USNM550077,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,Anvers Island,,-73.33,-35.03,Female,223000,2590,,,
+USNM,550078,USNM550078,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-73.33,-35.03,Female,150000,1940,,,
+USNM,550079,USNM550079,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-77.03,-38.77,Female,245000,2310,,,
+USNM,550080,USNM550080,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-77.08,-35.07,Female,172000,1990,,,
+USNM,550081,USNM550081,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-73.3267,-32.03,Female,177000,2030,,,
+USNM,550082,USNM550082,Lobodon carcinophaga,Crabeater Seal,Phocidae,Antarctica,,,-75.6,-29.8,Male,159000,2200,,,
+USNM,170125,USNM170125,Lontra canadensis,North American River Otter,Mustelidae,United States,Michigan,Chippewa County,46.5746,-85.1824,Female,7500,1040,413,123,
+USNM,484794,USNM484794,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Bullock County,,,Male,8000,1122,420,122,28
+USNM,484801,USNM484801,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Pike County,,,Male,6000,1032,365,111,24
+USNM,484802,USNM484802,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Pike County,,,Male,8000,1090,375,110,26
+USNM,484804,USNM484804,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Bullock County,,,Female,3900,960,330,100,24
+USNM,484805,USNM484805,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Bullock County,,,Male,7500,1000,370,112,25
+USNM,484809,USNM484809,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Barbour County,,,Male,8000,1080,362,115,27
+USNM,484812,USNM484812,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Pike County,,,Male,7000,1040,380,113,23
+USNM,484813,USNM484813,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Russell County,,,Male,8800,1110,380,118,23
+USNM,484823,USNM484823,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Barbour County,,,Male,8000,1038,400,126,26
+USNM,484824,USNM484824,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Russell County,,,Male,8000,1110,360,110,28
+USNM,484837,USNM484837,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Barbour County,,,Female,5000,970,320,105,25
+USNM,484838,USNM484838,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Barbour County,,,Male,5200,1000,360,,
+USNM,484847,USNM484847,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Bullock County,,,Male,8000,1105,400,105,26
+USNM,484852,USNM484852,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Barbour County,,,Female,5700,1010,330,100,25
+USNM,484864,USNM484864,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Russell County,,,Female,6000,1015,350,103,25
+USNM,484869,USNM484869,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,Russell County,,,Female,5000,1100,375,110,26
+USNM,484874,USNM484874,Lontra canadensis,North American River Otter,Mustelidae,United States,Alabama,,,,Female,7000,990,370,105,25
+USNM,570889,USNM570889,Lontra canadensis,North American River Otter,Mustelidae,United States,Virginia,Virginia Beach City,,,Male,11600,1200,430,129,25
+USNM,608918,USNM608918,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Aberdeen,,,Male,9700,1160,,,
+USNM,608919,USNM608919,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Forks,,,Male,11000,1090,,,
+USNM,608920,USNM608920,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Forks,,,Male,10000,1070,,,
+USNM,608921,USNM608921,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Forks,,,Female,8200,1030,,,
+USNM,608923,USNM608923,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Forks,,,Male,11100,1140,,,
+USNM,608924,USNM608924,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Aberdeen,,,Male,10800,1220,,,
+USNM,608925,USNM608925,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Aberdeen,,,Female,7300,1120,,,
+USNM,608926,USNM608926,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Aberdeen,,,Female,8600,1160,,,
+USNM,608927,USNM608927,Lontra canadensis,North American River Otter,Mustelidae,United States,Washington,Aberdeen,,,Female,8800,1140,,,
+USNM,470142,USNM470142,Lycaon pictus,African Wild Dog,Canidae,Botswana,,,-20.75,22.52,Male,24948,1360,360,250,142
+USNM,470143,USNM470143,Lycaon pictus,African Wild Dog,Canidae,Botswana,,,-24.13,22.28,Male,20865,1320,400,345,150
+USNM,470144,USNM470144,Lycaon pictus,African Wild Dog,Canidae,Botswana,,,-24.13,22.28,Male,21319,1335,390,245,150
+USNM,543126,USNM543126,Lynx rufus,Bobcat,Felidae,,,,,,Male,9600,840,125,172,65
+USNM,244250,USNM244250,Lynx rufus,Bobcat,Felidae,United States,Missouri,,,,Male,10000,860,180,150,
+USNM,592888,USNM592888,Lynx rufus,Bobcat,Felidae,United States,Minnesota,Saint Louis County,,,Male,15600,1040,172,,
+USNM,592892,USNM592892,Lynx rufus,Bobcat,Felidae,United States,Minnesota,Saint Louis County,,,Male,12480,888,143,,
+USNM,592945,USNM592945,Lynx rufus,Bobcat,Felidae,United States,Minnesota,Saint Louis County,,,Female,3320,689,125,,
+USNM,600579,USNM600579,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Female,506,515,155,75,39
+USNM,600580,USNM600580,Martes americana,American Marten,Mustelidae,United States,New Hampshire,,,,Female,397,520,170,65,
+USNM,600581,USNM600581,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,813,564,167,90,43
+USNM,600582,USNM600582,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,844,544,150,84,44
+USNM,600583,USNM600583,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,813,564,167,90,43
+USNM,600584,USNM600584,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,695,560,168,83,40
+USNM,600585,USNM600585,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,747,514,145,77,41
+USNM,600588,USNM600588,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,710,585,163,90,44
+USNM,600589,USNM600589,Martes americana,American Marten,Mustelidae,United States,New Hampshire,Coos County,,,Male,760,562,165,87,38
+USNM,592895,USNM592895,Martes americana,American Marten,Mustelidae,United States,Minnesota,Saint Louis County,,,,550,50,15,8,
+USNM,592943,USNM592943,Martes americana,American Marten,Mustelidae,United States,Minnesota,Lake County,,,Male,880,55,17,9,
+USNM,112170,USNM112170,Martes americana,American Marten,Mustelidae,United States,Colorado,Rio Blanco County,,,Female,570,612,210,76,
+USNM,489388,USNM489388,Martes flavigula,Yellow-throated Marten,Mustelidae,Malaysia,Selangor,Klang District,2.92,101.57,Female,1568,810,370,93,34
+USNM,489387,USNM489387,Martes flavigula,Yellow-throated Marten,Mustelidae,Malaysia,Sabah,,6,116.68,Female,1373,808,345,91,28
+USNM,592960,USNM592960,Martes pennanti,Fisher,Mustelidae,United States,Minnesota,Saint Louis County,,,Male,4940,93,33,12,6
+USNM,592961,USNM592961,Martes pennanti,Fisher,Mustelidae,United States,Minnesota,Saint Louis County,,,Male,4400,99,34,12,6
+USNM,534226,USNM534226,Meles meles,European Badger,Mustelidae,Netherlands,,,,,Female,9848,793,182,104,47
+USNM,534227,USNM534227,Meles meles,European Badger,Mustelidae,Netherlands,,,,,Female,1203,895,169,116,44
+USNM,470151,USNM470151,Mellivora capensis,Honey Badger,Mustelidae,Botswana,,,-18.83,22.25,Male,3629,630,150,100,34
+USNM,522008,USNM522008,Melogale orientalis,Javan Ferret-badger,Mustelidae,Indonesia,Jawa Barat,,-6.75,107.02,Male,700,504,155,61,28
+USNM,522009,USNM522009,Melogale orientalis,Javan Ferret-badger,Mustelidae,Indonesia,Jawa Barat,,-6.75,107.02,Male,1000,590,182,67,27
+USNM,522010,USNM522010,Melogale orientalis,Javan Ferret-badger,Mustelidae,Indonesia,Jawa Barat,,-6.75,107.02,Male,1100,529,152,68,29
+USNM,522011,USNM522011,Melogale orientalis,Javan Ferret-badger,Mustelidae,Indonesia,Jawa Barat,,-6.75,107.02,Female,800,590,240,65,27
+USNM,522012,USNM522012,Melogale orientalis,Javan Ferret-badger,Mustelidae,Indonesia,Jawa Barat,,-6.75,107.02,Male,770,520,163,62,29
+USNM,158960,USNM158960,Mephitis mephitis,Striped Skunk,Mephitidae,United States,New Mexico,San Juan County,36.7401,-108.398,Male,1800,651,291,75,
+USNM,158961,USNM158961,Mephitis mephitis,Striped Skunk,Mephitidae,United States,New Mexico,San Juan County,36.7401,-108.398,Male,1400,627,287,64,
+USNM,158962,USNM158962,Mephitis mephitis,Striped Skunk,Mephitidae,United States,New Mexico,San Juan County,36.7401,-108.398,Male,2700,600,270,74,
+USNM,158963,USNM158963,Mephitis mephitis,Striped Skunk,Mephitidae,United States,New Mexico,San Juan County,36.7401,-108.398,Male,2700,670,291,74,
+USNM,530286,USNM530286,Mephitis mephitis,Striped Skunk,Mephitidae,United States,Virginia,Arlington County,,,Male,3200,640,210,67,30
+USNM,467652,USNM467652,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,9.6,-6.3,Female,454,558,218,70,22
+USNM,467653,USNM467653,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,Tchologo,Savanes,9.15,-4.62,Female,907,595,220,72,26
+USNM,467654,USNM467654,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,Tchologo,Savanes,9.15,-4.62,Male,907,590,225,75,25
+USNM,467655,USNM467655,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,9.15,-4.62,Male,454,568,203,72,23
+USNM,467656,USNM467656,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,9.15,-4.62,Female,454,576,215,72,23
+USNM,467658,USNM467658,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,7.43,-3.47,Male,2000,557,207,70,23
+USNM,467659,USNM467659,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,9.6,-6.3,Female,454,368,195,68,21
+USNM,536722,USNM536722,Mungos gambianus,Gambian Mongoose,Herpestidae,Cote d'Ivoire,,,9.42,-7.52,Female,494,441,175,68,21
+USNM,570936,USNM570936,Mustela erminea,Stoat,Mustelidae,United States,Wisconsin,Lincoln County,,,Female,61,242,62,30,15
+USNM,571000,USNM571000,Mustela erminea,Stoat,Mustelidae,United States,Wisconsin,Sheboygan County,,,Female,53,225,56,31,15
+USNM,600018,USNM600018,Mustela erminea,Stoat,Mustelidae,United States,Wisconsin,Douglas County,,,Male,143,311,89,44,19
+USNM,600758,USNM600758,Mustela erminea,Stoat,Mustelidae,United States,Wisconsin,Portage County,44.3136,-89.3538,Male,108,300,83,41,17
+USNM,557693,USNM557693,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Linn County,,,Female,40,202,52,23,14
+USNM,558104,USNM558104,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,,,Female,79,235,60,30,14
+USNM,559035,USNM559035,Mustela erminea,Stoat,Mustelidae,United States,Washington,Skamania County,,,Female,79,207,55,23,14
+USNM,559036,USNM559036,Mustela erminea,Stoat,Mustelidae,United States,Washington,Skamania County,,,,40,212,45,21,13
+USNM,559037,USNM559037,Mustela erminea,Stoat,Mustelidae,United States,Washington,Skamania County,,,Male,64,250,68,33,16
+USNM,559038,USNM559038,Mustela erminea,Stoat,Mustelidae,United States,Washington,Skamania County,,,,51,247,59,29,15
+USNM,561854,USNM561854,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Benton County,44.6194,-123.886,Female,36,200,53,25,14
+USNM,561855,USNM561855,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.1453,-123.769,Female,43,222,62,25,16
+USNM,561856,USNM561856,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.1461,-123.785,Female,53,211,57,26,17
+USNM,561857,USNM561857,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.1461,-123.785,Male,87,260,76,32,19
+USNM,561858,USNM561858,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.1492,-123.519,Female,45,217,57,24,15
+USNM,561859,USNM561859,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.135,-123.518,Male,75,260,78,31,14
+USNM,561860,USNM561860,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Lane County,43.135,-123.518,Male,70,254,68,33,16
+USNM,561861,USNM561861,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Douglas County,43.6692,-123.11,Male,60,240,74,32,15
+USNM,561863,USNM561863,Mustela erminea,Stoat,Mustelidae,United States,Oregon,Coos County,43.2056,-123.126,Male,71,240,60,30,16
+USNM,415201,USNM415201,Mustela frenata,Long-tailed Weasel,Mustelidae,Venezuela,Monagas,,10.2,-63.53,Male,153,342,120,46,21
+USNM,560817,USNM560817,Mustela frenata,Long-tailed Weasel,Mustelidae,Venezuela,Amazonas,,,,Male,313,470,180,55,23
+USNM,547924,USNM547924,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,Nebraska,Sioux County,,,Male,162,364,126,39,22
+USNM,415200,USNM415200,Mustela frenata,Long-tailed Weasel,Mustelidae,Venezuela,Monagas,,10.2,-63.53,Male,138,354,109,49,23
+USNM,415202,USNM415202,Mustela frenata,Long-tailed Weasel,Mustelidae,Venezuela,Monagas,,10.2,-63.53,Male,350,466,181,56,25
+USNM,415203,USNM415203,Mustela frenata,Long-tailed Weasel,Mustelidae,Venezuela,Monagas,,10.2,-63.53,Male,273,437,167,49,22
+USNM,612207,USNM612207,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,California,San Diego County,33.0978,-117.026,Female,225,375,145,38,17
+USNM,612206,USNM612206,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,California,San Diego County,,,Female,139,380,132,38,23
+USNM,612205,USNM612205,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,California,San Diego County,33.2422,-117.379,Male,364,427,156,39,16
+USNM,612421,USNM612421,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,California,San Diego County,33.0503,-116.855,Male,420,468,169,42,26
+USNM,544979,USNM544979,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,Colorado,Gunnison County,,,Male,326,440,140,48,25
+USNM,600759,USNM600759,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,Wisconsin,Portage County,,,Male,218,396,127,46,17
+USNM,602016,USNM602016,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,West Virginia,Pocahontas County,,,Female,80,290,94,34,20
+USNM,602263,USNM602263,Mustela frenata,Long-tailed Weasel,Mustelidae,United States,Maine,Somerset County,,,Male,115,284,74,40,23
+USNM,588202,USNM588202,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,110,220,33,23,12
+USNM,588204,USNM588204,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,70,200,33,22,12
+USNM,588205,USNM588205,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,121,265,47,39,16
+USNM,588206,USNM588206,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Female,742,470,120,55,29
+USNM,588439,USNM588439,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Female,345,443,86,50,28
+USNM,588440,USNM588440,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,452,402,85,50,30
+USNM,588441,USNM588441,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,472,454,89,51,25
+USNM,588442,USNM588442,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,476,425,94,56,31
+USNM,588443,USNM588443,Mustela nigripes,Black-footed Ferret,Mustelidae,,,,,,Male,538,399,82,49,24
+USNM,591474,USNM591474,Mustela nivalis,Least Weasel,Mustelidae,United States,West Virginia,Greenbrier County,,,Female,41,189,32,21,13
+USNM,476025,USNM476025,Mustela nivalis,Least Weasel,Mustelidae,Morocco,Kenitra,,33.95,-6.45,Female,115,219,79,36,18
+USNM,476026,USNM476026,Mustela nivalis,Least Weasel,Mustelidae,Morocco,Tetouan,,35.03,-6.05,Male,234,365,109,43,20
+USNM,476027,USNM476027,Mustela nivalis,Least Weasel,Mustelidae,Morocco,Al Hoceima,,35.2,-3.88,Female,109,278,72,34,17
+USNM,482111,USNM482111,Mustela nivalis,Least Weasel,Mustelidae,Morocco,Ouarzazate,,30.3,-5.93,Male,97,273,65,36,18
+USNM,489385,USNM489385,Mustela nudipes,Malayan Weasel,Mustelidae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.23,101.63,Male,740,575,205,53,23
+USNM,489386,USNM489386,Mustela nudipes,Malayan Weasel,Mustelidae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.23,101.63,Male,365,625,252,58,25
+USNM,535020,USNM535020,Mustela putorius,European Polecat,Mustelidae,,,,,,Male,370,364,87,49,22
+USNM,478278,USNM478278,Mydaus marchei,Palawan Stink Badger,Mephitidae,Philippines,,,10.05,119.18,Male,909,361,31,51,23
+USNM,478279,USNM478279,Mydaus marchei,Palawan Stink Badger,Mephitidae,Philippines,,,10.05,119.18,Male,893,370,33,58,23
+USNM,467626,USNM467626,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7,-7.05,Female,1361,1035,555,85,43
+USNM,467627,USNM467627,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7,-7.05,Male,2268,990,520,85,43
+USNM,467628,USNM467628,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7,-7.05,Male,1814,990,512,87,40
+USNM,467629,USNM467629,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7,-7.05,Male,1814,980,522,90,41
+USNM,467630,USNM467630,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,9.42,-7.52,Male,1361,1015,545,85,42
+USNM,467631,USNM467631,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,Odienné,Denguélé,9.42,-7.52,Female,454,1000,542,85,37
+USNM,467632,USNM467632,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,9.6,-6.3,Female,454,888,492,82,40
+USNM,467633,USNM467633,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,9.6,-6.3,Male,907,987,531,90,41
+USNM,467634,USNM467634,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7.93,-6.13,Male,1361,870,430,85,40
+USNM,467635,USNM467635,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,7.93,-6.13,Male,2722,1092,572,96,42
+USNM,467636,USNM467636,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,5.52,-5.25,Female,2000,991,535,88,37
+USNM,467637,USNM467637,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,5.52,-5.25,Female,2000,965,510,90,37
+USNM,467638,USNM467638,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,,,5.52,-5.25,Male,2700,1045,557,96,42
+USNM,467639,USNM467639,Nandinia binotata,African Palm Civet,Nandiniidae,Cote d'Ivoire,Lôh-Djiboua,Gôh-Djiboua,5.52,-5.25,Male,2000,960,500,85,40
+USNM,481989,USNM481989,Nandinia binotata,African Palm Civet,Nandiniidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,870,737,405,78,34
+USNM,481990,USNM481990,Nandinia binotata,African Palm Civet,Nandiniidae,Liberia,Grand Gedeh,,6.22,-8.13,Male,1800,940,515,83,40
+USNM,481991,USNM481991,Nandinia binotata,African Palm Civet,Nandiniidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,1600,945,495,84,40
+USNM,481992,USNM481992,Nandinia binotata,African Palm Civet,Nandiniidae,Liberia,Grand Gedeh,,6.22,-8.13,Female,1900,925,471,82,40
+USNM,537889,USNM537889,Nandinia binotata,African Palm Civet,Nandiniidae,"Congo, Democratic Rep. Of",Equateur,Bumba Zone,2.58,21.85,Female,370,580,315,61,31
+USNM,337939,USNM337939,Neovison vison,American Mink,Mustelidae,United States,Alaska,,,,Female,505,470,140,56,19
+USNM,514830,USNM514830,Neovison vison,American Mink,Mustelidae,United States,Florida,Collier County,,,Female,445,441,137,48,
+USNM,570526,USNM570526,Neovison vison,American Mink,Mustelidae,United States,Maryland,Charles County,,,Male,1035,570,200,68,24
+USNM,570527,USNM570527,Neovison vison,American Mink,Mustelidae,United States,Maryland,Charles County,,,Male,1425,685,242,77,25
+USNM,603177,USNM603177,Neovison vison,American Mink,Mustelidae,United States,New Hampshire,Carroll County,44.059,-71.3088,Female,329,436,131,53,15
+USNM,550408,USNM550408,Odobenus rosmarus,Walrus,Odobenidae,,,,65.42,-169.97,Female,310000,2060,,,
+USNM,550409,USNM550409,Odobenus rosmarus,Walrus,Odobenidae,,,,65.35,-169.82,Male,310000,2010,,,
+USNM,550410,USNM550410,Odobenus rosmarus,Walrus,Odobenidae,,,,64.15,-172.68,Male,1140000,3270,,,
+USNM,550413,USNM550413,Odobenus rosmarus,Walrus,Odobenidae,,,,64.8597,-171.154,Female,580000,2580,,,
+USNM,287992,USNM287992,Odobenus rosmarus,Walrus,Odobenidae,United States,Alaska,,,,Male,1557000,3120,,,
+USNM,287993,USNM287993,Odobenus rosmarus,Walrus,Odobenidae,United States,Alaska,,,,Male,1453000,3180,,,
+USNM,287994,USNM287994,Odobenus rosmarus,Walrus,Odobenidae,United States,Alaska,,,,Male,1313000,3150,,,
+USNM,550040,USNM550040,Odobenus rosmarus,Walrus,Odobenidae,United States,Alaska,,58.77,-164.28,Female,1050000,2930,,,
+USNM,469837,USNM469837,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Eastern Cape,Jansenville District,-32.83,24.72,Female,3175,750,261,129,122
+USNM,469838,USNM469838,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Eastern Cape,Graaff-Reinet District,-32.48,24.23,Male,2608,700,281,137,128
+USNM,469839,USNM469839,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,,-29.2,23.77,Female,3402,725,237,130,113
+USNM,469840,USNM469840,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Female,2948,740,255,137,120
+USNM,469841,USNM469841,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,Kenhardt District,-29.12,21.15,Male,2722,750,280,131,120
+USNM,469842,USNM469842,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,,-30.45,20.48,Male,3515,754,253,135,124
+USNM,469843,USNM469843,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,,-30.45,20.48,Female,2835,668,281,127,124
+USNM,469844,USNM469844,Otocyon megalotis,Bat-eared Fox,Canidae,South Africa,Northern Cape,Calvinia District,-31.47,19.9,Female,2268,695,262,125,123
+USNM,470145,USNM470145,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-18.53,21.07,Male,3912,760,265,152,127
+USNM,470146,USNM470146,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-18.53,21.07,Female,4536,840,310,152,127
+USNM,470147,USNM470147,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-18.53,21.07,Male,4819,800,265,150,125
+USNM,470148,USNM470148,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-18.53,21.07,Female,4876,875,320,148,125
+USNM,470149,USNM470149,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-19.42,22.27,Male,4082,775,275,147,128
+USNM,470150,USNM470150,Otocyon megalotis,Bat-eared Fox,Canidae,Botswana,,,-19.42,22.27,Female,4649,890,325,154,130
+USNM,489405,USNM489405,Paguma larvata,Masked Palm Civet,Viverridae,Malaysia,Pahang,Bentong District,3.33,101.87,Male,1831,930,435,83,47
+USNM,574375,USNM574375,Paguma larvata,Masked Palm Civet,Viverridae,China,Sichuan,Shimian County,29.23,102.45,Female,4600,1325,520,105,60
+USNM,86796,USNM86796,Paguma larvata,Masked Palm Civet,Viverridae,Thailand,Trang,,,,Female,6000,1255,602,653,
+USNM,536099,USNM536099,Panthera tigris,Tiger,Felidae,,,,,,Male,118000,2490,930,36,130
+USNM,536895,USNM536895,Panthera tigris,Tiger,Felidae,,,,,,Female,121000,2185,1000,345,115
+USNM,395727,USNM395727,Panthera tigris,Tiger,Felidae,India,Uttar Pradesh,,,,Male,389000,3200,3400,,
+USNM,470159,USNM470159,Paracynictis selousi,Selous's Mongoose,Herpestidae,Botswana,,,-19.42,22.27,Male,1588,770,340,116,48
+USNM,470160,USNM470160,Paracynictis selousi,Selous's Mongoose,Herpestidae,Botswana,,,-19.42,22.27,Female,1814,735,325,110,47
+USNM,470161,USNM470161,Paracynictis selousi,Selous's Mongoose,Herpestidae,Botswana,,,-19.42,22.27,Female,1701,765,325,117,48
+USNM,470530,USNM470530,Paracynictis selousi,Selous's Mongoose,Herpestidae,Zimbabwe,Matabeleland,,-20.3,28.93,Female,5443,745,325,108,44
+USNM,489399,USNM489399,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Malaysia,Terengganu,Hulu Terengganu District,5.22,103.03,Female,4001,940,435,82,43
+USNM,489400,USNM489400,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Malaysia,Perak,Krian District,5.08,100.47,Female,1681,910,420,75,40
+USNM,533344,USNM533344,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,,,3.2,99.88,Male,3700,1078,530,,
+USNM,533345,USNM533345,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,,,3.2,99.88,Female,1000,748,375,,
+USNM,536031,USNM536031,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,,,4.12,98.22,Female,4000,1065,490,,
+USNM,124943,USNM124943,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Kepulauan Bangka Belitung,,-2.90581,107.55,Male,2000,895,385,78,
+USNM,123976,USNM123976,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Thailand,Satun,,6.61076,99.6516,Female,2000,950,440,70,39
+USNM,141026,USNM141026,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Bengkulu,,-5.40923,102.332,Female,2000,905,410,72,40
+USNM,121645,USNM121645,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Sumatera Barat,Mentawai Islands Regency,-2.78608,100.164,Male,2500,845,360,73,35
+USNM,124075,USNM124075,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,10.4924,98.2143,Female,2500,870,370,75,35
+USNM,122886,USNM122886,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Riau,,0.66405,103.466,Male,3000,1004,450,52,32
+USNM,143614,USNM143614,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Riau,,1.39871,102.272,Male,3520,998,442,87,45
+USNM,124201,USNM124201,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,11.5766,98.4539,Female,2610,963,425,76,40
+USNM,114175,USNM114175,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Aceh,,,,Male,2000,875,390,90,50
+USNM,124100,USNM124100,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,10.7427,98.24,Female,2000,940,420,,
+USNM,124142,USNM124142,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,10.8713,97.911,Female,2150,945,460,,
+USNM,124032,USNM124032,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Myanmar,Tanintharyi,Mergui Archipelago,10.0302,98.2323,Female,2500,907,417,,
+USNM,124902,USNM124902,Paradoxurus hermaphroditus,Asian Palm Civet,Viverridae,Indonesia,Kepulauan Bangka Belitung,,-1.58291,105.605,Male,2830,990,450,,
+USNM,571705,USNM571705,Phoca vitulina,Harbor Seal,Phocidae,United States,Virginia,Accomack County,37.8583,-75.3694,Male,18800,1070,,,
+USNM,484527,USNM484527,Phoca vitulina,Harbor Seal,Phocidae,United States,New Jersey,Ocean County,,,Male,11600,1010,,,
+USNM,484528,USNM484528,Phoca vitulina,Harbor Seal,Phocidae,United States,New Jersey,Ocean County,,,Male,24000,1080,,,
+USNM,504083,USNM504083,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Plymouth County,,,Female,16000,1031,,,
+USNM,504108,USNM504108,Phoca vitulina,Harbor Seal,Phocidae,United States,Maine,Cumberland County,,,Male,8800,720,,,
+USNM,504109,USNM504109,Phoca vitulina,Harbor Seal,Phocidae,United States,Maine,York County,,,Male,7000,700,,,
+USNM,504526,USNM504526,Phoca vitulina,Harbor Seal,Phocidae,United States,Maine,Cumberland County,,,Male,63000,1540,,,
+USNM,550045,USNM550045,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,16000,1030,,,
+USNM,550046,USNM550046,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,18000,1120,,,
+USNM,550049,USNM550049,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,25000,1100,,,
+USNM,550051,USNM550051,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,16000,900,,,
+USNM,550052,USNM550052,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,21000,1090,,,
+USNM,550053,USNM550053,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,14000,860,,,
+USNM,550054,USNM550054,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,17000,920,,,
+USNM,550055,USNM550055,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Plymouth County,,,,24000,1080,,,
+USNM,550056,USNM550056,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,20000,1000,,,
+USNM,550057,USNM550057,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,14000,880,,,
+USNM,550058,USNM550058,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,17000,950,,,
+USNM,550059,USNM550059,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,15000,900,,,
+USNM,550060,USNM550060,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Barnstable County,,,,57000,1540,,,
+USNM,550061,USNM550061,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Plymouth County,,,,14000,940,,,
+USNM,550062,USNM550062,Phoca vitulina,Harbor Seal,Phocidae,United States,Massachusetts,Plymouth County,,,,7000,720,,,
+USNM,550330,USNM550330,Phoca vitulina,Harbor Seal,Phocidae,United States,Maine,Cumberland County,,,Male,63000,1540,,,
+USNM,276060,USNM276060,Phoca vitulina,Harbor Seal,Phocidae,United States,Washington,King County,,,Male,59000,1590,,,
+USNM,276362,USNM276362,Phoca vitulina,Harbor Seal,Phocidae,United States,Alaska,Pribilof Islands,,,Female,69000,1490,,,
+USNM,276363,USNM276363,Phoca vitulina,Harbor Seal,Phocidae,United States,Alaska,Pribilof Islands,,,Female,38000,1250,,,
+USNM,276365,USNM276365,Phoca vitulina,Harbor Seal,Phocidae,United States,Alaska,Pribilof Islands,,,Female,106000,1610,,,
+USNM,372856,USNM372856,Potos flavus,Kinkajou,Procyonidae,Venezuela,Distrito Federal,,10.45,-67.17,Male,2730,920,465,90,52
+USNM,372857,USNM372857,Potos flavus,Kinkajou,Procyonidae,Venezuela,Distrito Federal,,10.45,-67.17,Female,3180,979,450,95,45
+USNM,372858,USNM372858,Potos flavus,Kinkajou,Procyonidae,Venezuela,Distrito Federal,,10.45,-67.17,Male,3640,985,493,100,45
+USNM,374841,USNM374841,Potos flavus,Kinkajou,Procyonidae,Venezuela,Bolivar,,7,-62.25,Female,1467,850,435,82,40
+USNM,406525,USNM406525,Potos flavus,Kinkajou,Procyonidae,Venezuela,Amazonas,,2.45,-65.23,Female,1900,850,460,85,36
+USNM,406827,USNM406827,Potos flavus,Kinkajou,Procyonidae,Venezuela,Sucre,,10.62,-63.02,Male,2730,913,466,108,44
+USNM,406829,USNM406829,Potos flavus,Kinkajou,Procyonidae,Venezuela,Sucre,,10.62,-63.02,Female,3200,970,500,102,43
+USNM,406833,USNM406833,Potos flavus,Kinkajou,Procyonidae,Venezuela,Amazonas,,5.4,-67.65,Female,2320,910,460,90,42
+USNM,406836,USNM406836,Potos flavus,Kinkajou,Procyonidae,Venezuela,Amazonas,,5.4,-67.65,Female,2277,870,420,87,36
+USNM,575698,USNM575698,Potos flavus,Kinkajou,Procyonidae,Panama,Veraguas,Montijo,,,Female,2600,980,,,
+USNM,442892,USNM442892,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,2730,1010,500,100,42
+USNM,442893,USNM442893,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,2730,1030,505,105,40
+USNM,442894,USNM442894,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,915,430,90,40
+USNM,443269,USNM443269,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,10.85,-72.25,Male,2400,947,503,97,39
+USNM,443270,USNM443270,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,10.85,-72.25,Female,1650,859,419,86,42
+USNM,443273,USNM443273,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,1590,870,435,97,41
+USNM,443276,USNM443276,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,1590,855,430,93,39
+USNM,443277,USNM443277,Potos flavus,Kinkajou,Procyonidae,Venezuela,Bolivar,,4.4,-61.63,Male,2450,1015,480,102,40
+USNM,443461,USNM443461,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,2730,1005,460,97,45
+USNM,443463,USNM443463,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2270,900,400,90,43
+USNM,443465,USNM443465,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2045,950,467,98,42
+USNM,443466,USNM443466,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2500,910,420,90,39
+USNM,443467,USNM443467,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2270,930,442,95,42
+USNM,443468,USNM443468,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2770,960,445,98,44
+USNM,443473,USNM443473,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2730,970,460,94,41
+USNM,443474,USNM443474,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,2270,960,460,93,43
+USNM,443475,USNM443475,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,970,490,97,42
+USNM,443476,USNM443476,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,940,420,95,37
+USNM,443477,USNM443477,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,1820,850,400,86,42
+USNM,443478,USNM443478,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,900,440,100,39
+USNM,443479,USNM443479,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2730,960,408,93,44
+USNM,443480,USNM443480,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,1730,780,395,92,39
+USNM,443481,USNM443481,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2270,940,450,93,43
+USNM,443482,USNM443482,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2270,930,440,97,40
+USNM,443529,USNM443529,Potos flavus,Kinkajou,Procyonidae,Venezuela,Falcon,,10.47,-70.8,Male,2600,841,408,95,49
+USNM,443530,USNM443530,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,2500,950,476,105,42
+USNM,443532,USNM443532,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Female,2270,1070,500,98,47
+USNM,443534,USNM443534,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Female,1590,900,440,92,42
+USNM,443535,USNM443535,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,2720,1095,480,90,40
+USNM,443536,USNM443536,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Female,3640,970,465,70,40
+USNM,443537,USNM443537,Potos flavus,Kinkajou,Procyonidae,Venezuela,Apure,,7.32,-71.95,Male,3180,1005,495,100,41
+USNM,443538,USNM443538,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,1360,915,420,92,46
+USNM,443539,USNM443539,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2500,980,445,91,41
+USNM,443540,USNM443540,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,970,430,100,41
+USNM,443541,USNM443541,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2500,950,440,102,43
+USNM,443542,USNM443542,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2270,930,450,95,40
+USNM,443543,USNM443543,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2050,880,420,95,42
+USNM,443544,USNM443544,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2270,900,410,92,41
+USNM,443545,USNM443545,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2050,890,435,95,42
+USNM,443546,USNM443546,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,3860,960,403,95,42
+USNM,443547,USNM443547,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,1820,865,400,91,27
+USNM,443548,USNM443548,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2050,850,385,90,43
+USNM,443549,USNM443549,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2050,925,430,90,42
+USNM,443550,USNM443550,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,2050,950,440,89,42
+USNM,443551,USNM443551,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,1820,950,415,91,45
+USNM,443552,USNM443552,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2270,960,435,102,42
+USNM,443553,USNM443553,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,2050,910,425,94,40
+USNM,443554,USNM443554,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2050,890,400,94,42
+USNM,443555,USNM443555,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,1820,880,420,92,41
+USNM,443559,USNM443559,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2730,960,460,100,45
+USNM,443560,USNM443560,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2270,900,420,92,41
+USNM,443561,USNM443561,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,1820,870,425,88,41
+USNM,443562,USNM443562,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Female,2045,845,400,86,38
+USNM,443563,USNM443563,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2730,905,420,91,43
+USNM,443564,USNM443564,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2270,920,450,90,42
+USNM,443566,USNM443566,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2270,880,415,86,38
+USNM,443568,USNM443568,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2270,880,430,89,38
+USNM,443569,USNM443569,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.18,-72.7,Male,2410,955,440,100,42
+USNM,443570,USNM443570,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2500,930,430,98,40
+USNM,443571,USNM443571,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,2500,940,430,98,44
+USNM,443572,USNM443572,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Male,2730,890,430,96,38
+USNM,443573,USNM443573,Potos flavus,Kinkajou,Procyonidae,Venezuela,Zulia,,9.2,-72.63,Female,1590,910,450,95,40
+USNM,443716,USNM443716,Potos flavus,Kinkajou,Procyonidae,Venezuela,Carabobo,,10.28,-68.35,Male,2050,960,460,96,41
+USNM,517723,USNM517723,Potos flavus,Kinkajou,Procyonidae,Venezuela,Aragua,,10.28,-67.6,Male,3400,990,495,102,50
+USNM,535047,USNM535047,Potos flavus,Kinkajou,Procyonidae,,,,,,Female,1420,747,375,89,38
+USNM,535247,USNM535247,Potos flavus,Kinkajou,Procyonidae,,,,,,Male,1875,884,428,99,37
+USNM,124670,USNM124670,Potos flavus,Kinkajou,Procyonidae,,,,,,Male,1863,810,,,
+USNM,503823,USNM503823,Potos flavus,Kinkajou,Procyonidae,Panama,Canal Zone,,,,Female,2900,890,450,95,32
+USNM,144325,USNM144325,Prionailurus bengalensis,Leopard Cat,Felidae,Indonesia,Riau,,0.878472,102.935,Female,2000,770,185,108,485
+USNM,489420,USNM489420,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Pahang,Pekan District,2.8917,103.28,Male,851,440,105,90,35
+USNM,489421,USNM489421,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.17,101.58,Male,1599,613,128,100,39
+USNM,489422,USNM489422,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.17,101.58,Male,2250,645,135,110,40
+USNM,489423,USNM489423,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,1656,555,125,98,38
+USNM,489424,USNM489424,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,2146,583,120,93,39
+USNM,489425,USNM489425,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,2608,625,130,98,37
+USNM,489426,USNM489426,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,2250,593,138,100,34
+USNM,489427,USNM489427,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Male,2392,642,146,40,39
+USNM,489428,USNM489428,Prionailurus planiceps,Flat-headed Cat,Felidae,Malaysia,Selangor,Klang District,2.92,101.57,Female,2030,570,125,93,36
+USNM,481274,USNM481274,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Terengganu,,5.83,102.57,Male,590,353,67,28,379
+USNM,481275,USNM481275,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Selangor,,3.18,101.6,Female,710,331,62,29,412
+USNM,481276,USNM481276,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Selangor,,3.18,101.6,Female,791,345,64,27,410
+USNM,489389,USNM489389,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Wilayah Persekutuan,Kuala Lumpur,3.23,101.63,Female,608,740,330,28,410
+USNM,489390,USNM489390,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Selangor,Klang District,2.92,101.57,Female,424,705,325,62,30
+USNM,489391,USNM489391,Prionodon linsang,Banded Linsang,Viverridae,Malaysia,Sabah,,6.13,116.87,Female,795,773,362,62,32
+USNM,517720,USNM517720,Procyon cancrivorus,Crab-eating Raccoon,Procyonidae,Venezuela,Aragua,,10.4,-67.77,Male,7500,934,312,139,60
+USNM,517721,USNM517721,Procyon cancrivorus,Crab-eating Raccoon,Procyonidae,Venezuela,Aragua,,10.4,-67.77,Male,6410,879,300,138,57
+USNM,372851,USNM372851,Procyon cancrivorus,Crab-eating Raccoon,Procyonidae,Venezuela,Miranda,,10.17,-65.85,Female,7400,858,723,139,61
+USNM,123351,USNM123351,Procyon cancrivorus,Crab-eating Raccoon,Procyonidae,,,,,,Female,4800,818,557,,
+USNM,122619,USNM122619,Procyon lotor,Raccoon,Procyonidae,United States,Maryland,,,,Female,1902,722,487,,
+USNM,255080,USNM255080,Procyon lotor,Raccoon,Procyonidae,United States,Florida,Monroe County,,,Male,2500,644,214,99,
+USNM,552695,USNM552695,Procyon lotor,Raccoon,Procyonidae,United States,Texas,Cameron County,,,Male,6000,870,250,125,65
+USNM,266209,USNM266209,Procyon lotor,Raccoon,Procyonidae,United States,South Carolina,,,,,6200,1030,257,175,
+USNM,568664,USNM568664,Procyon lotor,Raccoon,Procyonidae,United States,Virginia,Spotsylvania County,,,Male,5251,765,230,108,59
+USNM,569082,USNM569082,Procyon lotor,Raccoon,Procyonidae,United States,Virginia,Spotsylvania County,,,Female,3025,675,225,102,56
+USNM,570161,USNM570161,Procyon lotor,Raccoon,Procyonidae,United States,Virginia,Spotsylvania County,,,Male,5685,822,250,108,61
+USNM,275290,USNM275290,Procyon lotor,Raccoon,Procyonidae,United States,Maryland,Dorchester County,,,Female,5100,216,210,102,
+USNM,167389,USNM167389,Procyon lotor,Raccoon,Procyonidae,United States,Utah,Washington County,37.0942,-113.514,Female,4300,822,300,130,
+USNM,469885,USNM469885,Proteles cristata,Aardwolf,Hyaenidae,South Africa,Free State,,-30.63,25.55,Female,7598,901,228,147,95
+USNM,469886,USNM469886,Proteles cristata,Aardwolf,Hyaenidae,South Africa,Northern Cape,,-29.2,23.77,Female,4082,820,207,140,92
+USNM,469887,USNM469887,Proteles cristata,Aardwolf,Hyaenidae,South Africa,Free State,Harrismith District,-28.45,29.13,Male,3742,763,162,127,90
+USNM,470162,USNM470162,Proteles cristata,Aardwolf,Hyaenidae,Botswana,,,-19.42,22.27,Female,9979,1015,290,163,106
+USNM,470163,USNM470163,Proteles cristata,Aardwolf,Hyaenidae,Botswana,,,-19.42,22.27,Male,5103,940,235,157,109
+USNM,108681,USNM108681,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Male,103000,2000,,,
+USNM,108682,USNM108682,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Male,74400,2340,,,
+USNM,108683,USNM108683,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Male,72600,2290,,,
+USNM,108684,USNM108684,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Rio Blanco County,40.1676,-108.114,Female,60300,2000,,,
+USNM,108685,USNM108685,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Rio Blanco County,40.1676,-108.114,Female,56200,2060,,,
+USNM,108686,USNM108686,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Rio Blanco County,40.1676,-108.114,Female,54400,2010,,,
+USNM,108687,USNM108687,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Female,5350,2010,,,
+USNM,108688,USNM108688,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Female,48500,1960,,,
+USNM,108690,USNM108690,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Female,46300,1930,,,
+USNM,108691,USNM108691,Puma concolor,Mountain Lion,Felidae,United States,Colorado,Moffat County,40.2622,-108.151,Female,36300,1830,,,
+USNM,124338,USNM124338,Puma concolor,Mountain Lion,Felidae,,,,,,Male,54000,1833,,,
+USNM,271676,USNM271676,Puma concolor,Mountain Lion,Felidae,United States,Texas,,,,Male,39000,1850,740,292,89
+USNM,271857,USNM271857,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Female,36000,1780,698,189,80
+USNM,271858,USNM271858,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Male,50000,2130,876,130,114
+USNM,272085,USNM272085,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Female,41000,1830,760,165,89
+USNM,272311,USNM272311,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Female,41000,2080,760,165,89
+USNM,272334,USNM272334,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Male,39000,2110,790,140,83
+USNM,272335,USNM272335,Puma concolor,Mountain Lion,Felidae,United States,Texas,Hudspeth County,,,Female,43000,2080,760,150,89
+USNM,575377,USNM575377,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,Namakwa,-30.4,17.5167,Female,600,487,217,68,18
+USNM,469861,USNM469861,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.45,20.48,Male,794,486,190,75,23
+USNM,469862,USNM469862,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.45,20.48,Male,488,456,190,72,21
+USNM,469863,USNM469863,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.37,17.52,Male,567,489,184,64,19
+USNM,469864,USNM469864,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.37,17.52,Female,420,455,191,66,18
+USNM,469865,USNM469865,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.37,17.52,Male,518,450,86,68,20
+USNM,469866,USNM469866,Suricata suricatta,Meerkat,Herpestidae,South Africa,Northern Cape,,-30.37,17.52,Female,510,475,198,69,18
+USNM,544808,USNM544808,Taxidea taxus,American Badger,Mustelidae,Canada,Alberta,,,,Male,6860,767,151,129,56
+USNM,275196,USNM275196,Taxidea taxus,American Badger,Mustelidae,United States,Arizona,Yuma County,,,Male,4000,629,114,89,44
+USNM,525882,USNM525882,Taxidea taxus,American Badger,Mustelidae,United States,Arizona,Yuma County,,,Female,3000,600,85,92,44
+USNM,117315,USNM117315,Taxidea taxus,American Badger,Mustelidae,United States,Wisconsin,Rock County,,,Male,10630,765,132,103,
+USNM,177388,USNM177388,Taxidea taxus,American Badger,Mustelidae,United States,Montana,Ravalli County,46.6323,-114.083,Female,7700,815,169,125,
+USNM,275169,USNM275169,Taxidea taxus,American Badger,Mustelidae,United States,Iowa,Wright County,,,Male,7500,787,152,114,
+USNM,443675,USNM443675,Urocyon cinereoargenteus,Gray Fox,Canidae,Venezuela,Lara,,9.88,-69.78,Female,2270,880,310,114,64
+USNM,570017,USNM570017,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Virginia,Spotsylvania County,,,Male,3858,853,270,139,65
+USNM,570472,USNM570472,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Virginia,Spotsylvania County,,,Female,2740,880,330,153,87
+USNM,570525,USNM570525,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Virginia,Warren County,,,Male,4290,981,34,133,74
+USNM,158970,USNM158970,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,New Mexico,San Juan County,36.7233,-107.829,Female,3600,960,412,132,
+USNM,158971,USNM158971,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,New Mexico,San Juan County,36.7233,-107.829,Female,3600,950,409,132,
+USNM,158972,USNM158972,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,New Mexico,San Juan County,36.7233,-107.829,Female,5400,1135,455,137,
+USNM,167384,USNM167384,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Utah,Washington County,37.3583,-113.657,Male,3200,1000,413,140,
+USNM,167385,USNM167385,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Utah,Washington County,37.3583,-113.657,Male,4100,1014,427,140,
+USNM,167386,USNM167386,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Utah,Washington County,37.3583,-113.657,Female,3200,975,400,135,
+USNM,167387,USNM167387,Urocyon cinereoargenteus,Gray Fox,Canidae,United States,Utah,Washington County,37.0942,-113.514,Male,4300,985,400,143,
+USNM,600837,USNM600837,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1495,641,242,98,55
+USNM,600838,USNM600838,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1630,658,255,97,63
+USNM,600839,USNM600839,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,2100,700,260,105,57
+USNM,600840,USNM600840,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1580,650,205,115,53
+USNM,600841,USNM600841,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2180,760,275,118,66
+USNM,600842,USNM600842,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1895,727,266,107,60
+USNM,600844,USNM600844,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1185,713,270,105,48
+USNM,600845,USNM600845,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1785,683,247,98,65
+USNM,600846,USNM600846,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1510,755,268,98,63
+USNM,600847,USNM600847,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,910,660,255,100,52
+USNM,600848,USNM600848,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2095,755,285,113,63
+USNM,600849,USNM600849,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2265,710,278,112,59
+USNM,600851,USNM600851,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1695,695,255,106,60
+USNM,600852,USNM600852,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1070,720,250,102,58
+USNM,600853,USNM600853,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1055,677,250,98,50
+USNM,600854,USNM600854,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1585,646,271,101,52
+USNM,600855,USNM600855,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2030,715,245,110,54
+USNM,600856,USNM600856,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1210,630,226,93,55
+USNM,600857,USNM600857,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1255,760,270,113,62
+USNM,600858,USNM600858,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1410,773,290,111,54
+USNM,600859,USNM600859,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1875,760,265,102,56
+USNM,600860,USNM600860,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,865,535,200,103,53
+USNM,600861,USNM600861,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1160,722,260,112,55
+USNM,600862,USNM600862,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1435,776,295,111,61
+USNM,600863,USNM600863,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1775,670,250,103,59
+USNM,600864,USNM600864,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2375,738,267,115,62
+USNM,600865,USNM600865,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,840,570,197,99,57
+USNM,600866,USNM600866,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,1840,766,280,110,62
+USNM,600867,USNM600867,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Male,2305,755,287,109,51
+USNM,600868,USNM600868,Urocyon littoralis,Island Fox,Canidae,United States,California,Ventura County,,,Female,1650,715,243,107,57
+USNM,567452,USNM567452,Ursus americanus,American Black Bear,Ursidae,United States,Virginia,Suffolk,,,Male,36000,1320,100,160,
+USNM,567458,USNM567458,Ursus americanus,American Black Bear,Ursidae,United States,Virginia,Suffolk,,,Male,45000,1413,,195,127
+USNM,122608,USNM122608,Ursus americanus,American Black Bear,Ursidae,,,,,,Male,70000,1575,,,
+USNM,569453,USNM569453,Ursus americanus,American Black Bear,Ursidae,United States,Maine,Hancock County,48.0083,-68.0842,Female,75000,1448,96,216,133
+USNM,592890,USNM592890,Ursus americanus,American Black Bear,Ursidae,United States,Minnesota,Wadena County,,,Female,45220,1350,,185,13
+USNM,592891,USNM592891,Ursus americanus,American Black Bear,Ursidae,United States,Minnesota,Wadena County,,,Male,44320,1180,,226,12
+USNM,384118,USNM384118,Vulpes chama,Cape Fox,Canidae,Botswana,,,,,Male,3062,970,425,145,93
+USNM,469831,USNM469831,Vulpes chama,Cape Fox,Canidae,South Africa,Free State,Philippolis District,-30.5,25.28,Male,2948,924,365,138,116
+USNM,469832,USNM469832,Vulpes chama,Cape Fox,Canidae,South Africa,Free State,Philippolis District,-30.5,25.28,Female,2835,848,330,134,105
+USNM,469833,USNM469833,Vulpes chama,Cape Fox,Canidae,South Africa,Northern Cape,,-29.2,23.77,Female,1701,781,304,125,84
+USNM,469834,USNM469834,Vulpes chama,Cape Fox,Canidae,South Africa,Mpumalanga,Belfast District,-25.57,30.07,Male,2495,948,366,144,98
+USNM,469835,USNM469835,Vulpes chama,Cape Fox,Canidae,South Africa,Mpumalanga,Ermelo District,-26.45,29.67,Female,2835,870,373,143,94
+USNM,469836,USNM469836,Vulpes chama,Cape Fox,Canidae,South Africa,Northern Cape,,-30.37,17.52,Female,2155,863,318,140,99
+USNM,470139,USNM470139,Vulpes chama,Cape Fox,Canidae,Botswana,,,-21.88,27.27,Female,4309,860,360,145,95
+USNM,470140,USNM470140,Vulpes chama,Cape Fox,Canidae,Botswana,,,-22,27.17,Male,3175,900,350,145,100
+USNM,470141,USNM470141,Vulpes chama,Cape Fox,Canidae,Botswana,,,-21.88,27.27,Male,3289,890,340,140,95
+USNM,476035,USNM476035,Vulpes rueppellii,Ruppell's Fox,Canidae,Morocco,Agadir,,28.48,-10.2,Female,2500,795,315,120,99
+USNM,476036,USNM476036,Vulpes rueppellii,Ruppell's Fox,Canidae,Morocco,Agadir,,28.48,-10.2,Male,2600,802,334,123,96
+USNM,476037,USNM476037,Vulpes rueppellii,Ruppell's Fox,Canidae,Morocco,Agadir,,28.48,-10.2,Male,2500,869,362,103,135
+USNM,601444,USNM601444,Vulpes rueppellii,Ruppell's Fox,Canidae,Djibouti,Arta Region,,11.52,43.07,Female,2700,915,390,138,103
+USNM,601445,USNM601445,Vulpes rueppellii,Ruppell's Fox,Canidae,Djibouti,Arta Region,,11.52,43.07,Female,1500,760,335,123,102
+USNM,601446,USNM601446,Vulpes rueppellii,Ruppell's Fox,Canidae,Djibouti,Djibouti Region,,11.5417,43.1667,Male,1700,830,345,125,110
+USNM,602619,USNM602619,Vulpes rueppellii,Ruppell's Fox,Canidae,Djibouti,Djibouti Region,,11.5422,43.1667,Male,2260,864,384,126,108
+USNM,602625,USNM602625,Vulpes rueppellii,Ruppell's Fox,Canidae,Djibouti,Arta Region,,11.5167,43.0667,Female,2300,840,370,130,110
+USNM,476038,USNM476038,Vulpes vulpes,Red Fox,Canidae,Morocco,Agadir,,30.33,-9.83,Female,2700,885,368,142,90
+USNM,476040,USNM476040,Vulpes vulpes,Red Fox,Canidae,Morocco,Meknes,,33.4,-5.17,Female,3000,852,360,145,90
+USNM,476041,USNM476041,Vulpes vulpes,Red Fox,Canidae,Morocco,Ouarzazate,,30.92,-6.92,Female,3400,902,380,138,90
+USNM,476042,USNM476042,Vulpes vulpes,Red Fox,Canidae,Morocco,Fes,,34.48,-4.8,Female,2700,859,327,132,83
+USNM,476044,USNM476044,Vulpes vulpes,Red Fox,Canidae,Morocco,Marrakech,,31.38,-8.8,Male,1000,582,216,103,76
+USNM,476045,USNM476045,Vulpes vulpes,Red Fox,Canidae,Morocco,Fes,,34.48,-4.8,Female,3300,862,347,127,95
+USNM,476046,USNM476046,Vulpes vulpes,Red Fox,Canidae,Morocco,Fes,,33.13,-3.98,Male,3200,981,401,150,92
+USNM,476047,USNM476047,Vulpes vulpes,Red Fox,Canidae,Morocco,Er Rachidia,,32.68,-3.08,Male,1500,740,296,133,92
+USNM,476048,USNM476048,Vulpes vulpes,Red Fox,Canidae,Morocco,Fes,,34.48,-4.8,Male,3800,969,378,138,92

@@ -1,0 +1,8 @@
+---
+name: Tutorials OnDemand
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: "This app will launch Tutorials OnDemand on the [ACES cluster].\r\n\r\n[ACES
+  cluster]: https://hprc.tamu.edu/kb/User-Guides/ACES\r\n"
+icon: ''

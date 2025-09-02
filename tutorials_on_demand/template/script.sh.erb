@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+echo SLURM_JOBID: $SLURM_JOBID
+
+# Benchmark info
+echo "TIMING - Starting main script at: $(date)"
+
+# Capture current directory and set working directory to scratch directory
+ood_dir="'$(pwd)'"
+
+
+################## Tutorial-dependent commands #####################
+
+## Fundamentals of R Tutorial
+<%- if context.tutorial== "Fundamentals of R" -%>
+    # Purge the module environment to avoid conflicts
+    module purge
+    module load GCC/12.2.0 OpenMPI/4.1.4 R_tamu/4.2.2 Pandoc
+
+    module list
+
+    # Benchmark info
+    echo "TIMING - Starting Tutorials OnDemand at: $(date)"
+    echo "Fundamentals of R"
+    # Launch Fundamentals of R tutorial
+    set -x
+    R -e "rmarkdown::run(file.path($ood_dir,'TutorialsOnDemand_R.Rmd'),shiny_args=list(port=$port,host='0.0.0.0'))"
+
+## Data Science in R Tutorial
+<%- elsif context.tutorial== "Data Science in R" -%>
+    # Purge the module environment to avoid conflicts
+    module purge
+    module load GCC/12.2.0 OpenMPI/4.1.4 R_tamu/4.2.2 Pandoc
+
+    module list
+
+    # Benchmark info
+    echo "TIMING - Starting Tutorials OnDemand at: $(date)"
+    echo "Introduction to R"
+    # Launch Introduction to R tutorial
+    set -x
+    R -e "rmarkdown::run(file.path($ood_dir,'DataScienceInR.Rmd'),shiny_args=list(port=$port,host='0.0.0.0'))"
+
+
+## Introduction to Python Tutorial
+<%- elsif context.tutorial== "Introduction to Python" -%>
+    tutorial_doc="Intro_Python.ipynb"
+    module purge
+    module load foss/2022b Python/3.10.8 jupyter-server/2.7.0 JupyterNotebook/7.0.3 SciPy-bundle/2023.02 matplotlib/3.7.0 
+    
+    # Benchmark info
+    echo "TIMING - Starting Tutorials OnDemand at: $(date)"
+    echo "Introduction to Python"
+    # Launch Introduction to Python tutorial
+    set -x
+    jupyter notebook --config="${CONFIG_FILE}" $tutorial_doc
+
+## Introduction to Julia Tutorial
+<%- elsif context.tutorial== "Introduction to Julia" -%>
+    tutorial_doc="IntroductionToJulia.ipynb"
+    module purge
+    module load foss/2022b jupyter-server/2.7.0 JupyterNotebook/7.0.3 nodejs/18.12.1 Julia/1.11.4 WebProxy 
+    
+    # Benchmark info
+    echo "TIMING - Starting Tutorials OnDemand at: $(date)"
+    echo "Introduction to Julia"
+    # Launch Introduction to Julia tutorial
+    set -x
+    jupyter notebook --config="${JULIA_CONFIG}" $tutorial_doc
+<%- end -%>

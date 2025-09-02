@@ -1,0 +1,60 @@
+<%- if usertutorial== "Fundamentals of R" -%>
+    <%- user_tutorial = "#{usertutorial}" 
+        form_id = " "
+        form_args = "/rnode/#{host}/#{port}/"
+        method = "get"
+        target = "_blank"
+        onsubmit = " "
+    -%>
+
+<%- elsif usertutorial== "Data Science in R" -%>
+    <%- user_tutorial = "#{usertutorial}" 
+        form_id = " "
+        form_args = "/rnode/#{host}/#{port}/"
+        method = "get"
+        target = "_blank"
+        onsubmit = " "
+    -%>
+
+<%- elsif usertutorial== "Introduction to Python" -%>
+    <%- user_tutorial = "#{usertutorial}" 
+        base_url  = "/node/#{host}/#{port}"
+        login_url = "#{base_url}/login"
+        next_url  = "#{base_url}/notebooks/Intro_Python.ipynb"
+        form_args = "#{login_url}?next=#{next_url}"
+        form_id = "juypyter_form#{login_url.gsub('/', '_')}"
+        method = "post"
+        target = "_blank"
+        onsubmit = "changeTarget()"
+    -%>
+    
+<%- elsif usertutorial== "Introduction to Julia" -%>
+    <%- user_tutorial = "#{usertutorial}" 
+        base_url  = "/node/#{host}/#{port}"
+        login_url = "#{base_url}/login"
+        next_url  = "#{base_url}/notebooks/IntroductionToJulia.ipynb"
+        form_args = "#{login_url}?next=#{next_url}"
+        form_id = "juypyter_form#{login_url.gsub('/', '_')}"
+        method = "post"
+        target = "_blank"
+        onsubmit = "changeTarget()"
+    -%>
+    
+<%- end -%>
+
+<!-- Zoom on iPad doesn't like opening in a new tab. It won't foward the form parameters. -->
+<script type="text/javascript">
+  function changeTarget() {
+    const agent = navigator.userAgent;
+    if (/Mozilla\/5\.0 \(Macintosh; Intel Mac OS X \d+_\d+_\d+\) AppleWebKit\/\d+\.\d+\.\d+ \(KHTML, like Gecko\)/.test(agent)) {
+      document.getElementById("<%= form_id %>").target = "_self";
+    }
+  }
+</script>
+
+<form id="<%= form_id %>" action="<%= form_args %>" method="<%= method %>" target="<%= target %>" onsubmit="<%= onsubmit %>">
+    <input type="hidden" name="password" value="<%= password %>">
+    <button class="btn btn-primary" type="submit">
+    <i class="fa fa-eye"></i> Connect to Tutorials OnDemand: <%= user_tutorial %>
+    </button>
+</form>
