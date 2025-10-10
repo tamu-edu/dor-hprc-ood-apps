@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+
+module purge
+# loading the CryoSPARC module is not required to run CryoSPARC, it is only to monitor app usage
+module load CryoSPARC/<%= context.version %>
+# WebProxy provides the $https_proxy variable
+module load WebProxy
+
+echo "=== SLURM_JOB_ID: [$SLURM_JOB_ID]"
+# SLURM_JOB_GPUS=0 if job lands on first GPU, and SLURM_JOB_GPUS=1 if job lands on second GPU. (both SLURM_STEP_GPUS=0,1)
+echo "=== SLURM_JOB_GPUS [$SLURM_JOB_GPUS]"
+
+# TODO edit these variables as needed
+proxy=$https_proxy
+singularity_image="/sw/hprc/sw/bio/CryoSPARC/images/cryosparc-v<%= context.version %>.sif"
+export SINGULARITYENV_http_proxy=$proxy
+export SINGULARITYENV_https_proxy=$proxy
+export SINGULARITYENV_MPLCONFIGDIR="$TMPDIR"
+export SINGULARITYENV_CRYOSPARC_IO_URING=false
+
+# these do not require editing
+export SINGULARITYENV_CRYOSPARC_LICENSE_ID=<%= context.cryosparc_license_id %>
+export SINGULARITYENV_CRYOSPARC_MASTER_HOSTNAME="localhost"
+export SINGULARITYENV_CRYOSPARC_HOSTNAME_CHECK="localhost"
+export SINGULARITYENV_CRYOSPARC_HEARTBEAT_SECONDS=600
+export SINGULARITYENV_CRYOSPARC_FORCE_HOSTNAME="true"
+
+# database and log files are saved in .cryosparc-major.minor/ since not sure if major.minor version updgrade will affect database
+user_cryosparc_directory="$SCRATCH/.cryosparc-v<%= context.version.rpartition('.')[0..1].join.chop %>"
+
+if [ ! -d "$user_cryosparc_directory" ]; then
+    first_launch=true
+    mkdir "$user_cryosparc_directory"
+    mkdir "$user_cryosparc_directory/cryosparc_license"
+    mkdir "$user_cryosparc_directory/cryosparc_cache"
+    mkdir "$user_cryosparc_directory/cryosparc_database"
+    singularity exec $singularity_image tar xzf /cryosparc_master_run_init_files-v<%= context.version %>.tar.gz -C $user_cryosparc_directory
+fi
+
+echo <%= context.cryosparc_license_id %> > $user_cryosparc_directory/cryosparc_license/license_id
+
+################################################################################
+# TODO this ssdquota section is specific to HPRC, update as needed
+ssdpath="$TMPDIR"
+# use a max of 1.4TB for quota which is the size of the $TMPDIR
+ssdquota=1400000
+quotamax=1400000
+if [ $ssdquota -gt $quotamax ]; then
+    ssdquota=$quotamax
+fi
+echo "=== Using ssdpath: $ssdpath with max quota (MB) $ssdquota"
+################################################################################
+
+# Start CryoSPARC Server
+echo "=== Starting CryoSPARC"
+set -x
+
+# select a random number between 39100 and 39990
+cryo_port=39$(shuf -i 10-99 -n 1)0
+export SINGULARITYENV_CRYOSPARC_BASE_PORT=$cryo_port
+
+<%- if context.node_type.eql? "CPU" -%>
+    usegpu="--nogpu"
+<%- else -%>
+  nvidia-smi
+  nvidia='--nv'
+  usegpu="--gpus $CUDA_VISIBLE_DEVICES"
+  echo "=== CUDA_VISIBLE_DEVICES: $CUDA_VISIBLE_DEVICES"
+  echo "=== SLURM_JOB_GPUS: $SLURM_JOB_GPUS"
+<%- end -%>
+
+# define the base command used to run cryosparcm commands
+cryosparc_singularity_command="singularity exec $nvidia -B $user_cryosparc_directory/cryosparc_master/run:/cryosparc_master/run \
+  -B $TMPDIR:/tmp -B /scratch \
+  -B $user_cryosparc_directory/cryosparc_database:/cryosparc_database \
+  -B $user_cryosparc_directory/cryosparc_cache:/cryosparc_cache \
+  -B $user_cryosparc_directory/cryosparc_license:/cryosparc_license \
+  $singularity_image"
+
+if [ -v first_launch ]; then
+    # first launch order of commands
+    echo "=== initializing first launch"
+    $cryosparc_singularity_command cryosparcm start
+    sleep 5
+    $cryosparc_singularity_command cryosparcm checkdb
+    $cryosparc_singularity_command cryosparcm createuser \
+      --email "admin@cryo.edu" \
+      --password "admin" \
+      --username "admin" \
+      --firstname "admin" \
+      --lastname "admin"
+else
+    $cryosparc_singularity_command cryosparcm start database
+    sleep 5
+    $cryosparc_singularity_command cryosparcm fixdbport
+    $cryosparc_singularity_command cryosparcm restart
+    sleep 5
+    # clear previous worker node
+    $cryosparc_singularity_command remove_hosts.sh
+    $cryosparc_singularity_command cryosparcm status
+fi
+
+# connect current compute node
+$cryosparc_singularity_command cryosparcw connect \
+    --worker localhost \
+    --master localhost \
+    --port $cryo_port \
+    --ssdpath /tmp \
+    --cpus $SLURM_NTASKS_PER_NODE \
+    --lane default \
+    --newlane \
+    $usegpu
+
+# scancel current job if cryosparc is already running in another job since it will fail to start since the db recognizes it is already running
+if [ $? != "0" ]; then
+   echo "=== cryosparcm start failed. Is CryoSPARC currently running in another job?"
+   squeue -u $USER
+   scancel $SLURM_JOB_ID
+   exit
+fi
+
+# update worker node with ssdquota since it doesn't work with the first connection command (maybe it does in newer versions)
+$cryosparc_singularity_command cryosparcw connect \
+    --cpus $SLURM_NTASKS_PER_NODE \
+    --port $cryo_port \
+    --worker localhost \
+    --master localhost \
+    --update --ssdquota $ssdquota
+
+# Display cryosparc environment variables
+#$cryosparc_singularity_command cryosparcm env
+
+# enable xfce windows manager
+export SEND_256_COLORS_TO_REMOTE=1
+export XDG_CACHE_HOME="$(mktemp -d)"
+module restore
+set -x
+xfwm4 --sm-client-disable &
+xsetroot -solid "#D3D3D3"
+xfsettingsd --daemon --sm-client-disable
+xfce4-panel --sm-client-disable &
+sleep 1
+xfdesktop &
+
+module load Firefox
+firefox --private-window localhost:$cryo_port

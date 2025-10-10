@@ -1,0 +1,124 @@
+---
+<%- 
+  reservation_file = "/sw/hprc/sw/ood/apps/reservations"
+-%>
+cluster: launch
+title: CryoSPARC
+form:
+  - version
+  - cryosparc_license_id
+  - node_type
+  - num_gpus
+  - num_hours
+  - num_cores
+  - mem_per_node
+  - optional_account
+  - account
+  - email_on_started
+  - email
+  - enable_advanced_options
+  - reservation_name
+  - node_name
+attributes:
+  version:
+    widget: 'select'
+    label: "Version"
+    display: True
+    options:
+      - [ "4.7.1" ]
+  cryosparc_license_id:
+    widget: 'text_field'
+    label:  "CryoSPARC License ID (required)"
+    required: true
+    pattern: "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
+    value:  ""
+    help: |
+      - You must get an individual academic license id from <a href='https://cryosparc.com/download' target='_blank'>cryosparc.com/download</a>
+      - After you click the blue Launch button below, it may take up to 5 minutes before CryoSPARC is available
+      - You can only launch one CryoSPARC portal app job but you can run multiple computational jobs within CryoSPARC
+  node_type:
+    widget: 'select'
+    label: "Node type"
+    options:
+      - [
+            "CPU only", "CPU",
+           data-hide-num-gpus: true,
+           data-label-mem-per-node: 'Total GB memory (max 371)',
+        ]
+      - [
+            "A30 GPU", "a30",
+           data-label-num-gpus: 'Num GPUs (max 2)',
+           data-max-num-gpus: 2,
+           data-label-mem-per-node: 'Total GB memory (max 742)',
+        ]
+    help: |
+      - check the current status of compute node availability: <a href="/pun/sys/cpuavail" target="_blank">cpuavail</a> <a href="/pun/sys/gpuavail" target="_blank">gpuavail</a>
+  num_gpus:
+    widget: 'number_field'
+    value: 1
+    min: 1
+    max: 2
+    help: |
+      - Seleting 1 GPU will set max cores 96 and max memory 371GB
+  num_hours:
+    widget: 'number_field'
+    label: "Number of hours (max 48)"
+    value: 1
+    min: 1
+    max: 48
+  num_cores:
+    widget: 'number_field'
+    label: "Number of cores (max 192)"
+    value: 1
+    min: 1
+    max: 192
+  mem_per_node:
+    # minimum is 32GB x #GPUs
+    widget: 'number_field'
+    value: 64
+    min: 64
+    max: 742
+  optional_account:
+    widget: 'check_box'
+    label: 'I would like to use an account other than my default'
+    checked: false
+    checked_value: 'yes'
+    unchecked_value: 'no'
+    html_options:
+      data:
+        hide-account-when-un-checked: true
+  account:
+    widget: 'text_field'
+  email_on_started:
+    widget: 'check_box'
+    label: 'I would like to receive an email when the session starts'
+    checked: false
+    checked_value: 'yes'
+    unchecked_value: 'no'
+    html_options:
+      data:
+        hide-email-when-un-checked: true
+  email:
+    widget: 'text_field'
+  enable_advanced_options:
+    widget: 'check_box'
+    label: "Advanced Options"
+    checked: false
+    checked_value: 'yes'
+    unchecked_value: 'no'
+    html_options:
+      data:
+        hide-reservation-name-when-un-checked: true
+        hide-node-name-when-un-checked: true
+  reservation_name:
+    widget: 'select'
+    label: "Reservation Name"
+    options:
+      - [ '' ]
+      <% IO.foreach(reservation_file) do |line| %>
+      - <%= line %>
+      <% end %>
+  node_name:
+    widget: 'text_field'
+    label: "Node Name"
+

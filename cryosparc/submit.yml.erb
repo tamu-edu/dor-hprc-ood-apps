@@ -1,0 +1,39 @@
+---
+batch_connect:
+  template: "vnc"
+script:
+  native:
+    - "--nodes=1"
+    - "--time=<%= num_hours.to_i %>:00:00"
+    <%- if node_type.eql? "CPU" -%>
+    - "--mem=<%= mem_per_node.to_i %>G"
+    - "--ntasks-per-node=<%= num_cores.to_i %>"
+    <%- else -%>
+    - "--partition=gpu"
+    - "--gres=gpu:<%= node_type %>:<%= num_gpus.to_i %>"
+        <%- if num_gpus.to_i.eql? 1 -%>
+    - "--ntasks-per-node=96"
+    - "--mem=371G"
+        <%- else -%>
+    - "--ntasks-per-node=192"
+    - "--mem=742G"
+         <%- end -%>
+    <%- end -%>
+
+    <%- if enable_advanced_options.eql? 'yes' -%>
+         <%- unless reservation_name.blank? -%>
+    - "--reservation=<%= reservation_name %>"
+         <%- end -%>
+         <%- unless node_name.blank? -%>
+    - "--nodelist=<%= node_name %>"
+         <%- end -%>
+    <%- end -%>
+
+    <%- unless account.blank? or optional_account.eql? 'no' -%>
+    - "--account=<%= account %>"
+    <%- end -%>
+
+    <%- unless email.blank? or email_on_started.eql? 'no' -%>
+    - "--mail-user=<%= email %>"
+    - "--mail-type=BEGIN"
+    <%- end -%>
