@@ -174,8 +174,14 @@ From: nvidia/cuda:11.8.0-devel-ubuntu22.04
   nvcc -V
   nvcc --list-gpu-code
 
+  # install topaz-em in /usr/local/bin/topaz
+  apt-get install -y python3 python3-pip
+  pip3 install  topaz-em
+
   bash /mnt/install_cryosparc4ood_${cryosparc_version}.sh
 
+  which topaz
+  topaz --version
 EOF
 
 SINGULARITY_CACHEDIR=$TMPDIR SREGISTRY_DATABASE=$TMPDIR SINGULARITYENV_license_id=$license_id SINGULARITYENV_cryosparc_version=$cryosparc_version SINGULARITYENV_no_proxy="localhost,127.0.0.0/8" singularity build --nv --fakeroot -B $PWD/src/:/mnt cryosparc-${cryosparc_version}.sif  cryosparc4ood.def
