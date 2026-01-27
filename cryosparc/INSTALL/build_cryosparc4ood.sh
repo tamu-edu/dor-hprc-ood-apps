@@ -10,6 +10,7 @@ function help {
     echo "Synopsys:"
     echo "    This script will generate a Singulairty definition file and an install script (cryosparc4ood.def)"
     echo "    and an install script (src/install_cryosparc4ood_v4.7.1.sh) which are used in the Singularity image build process"
+    echo "    Use the path /opt/topaz when prompted in your CryoSPARC analysis"
     echo
     echo "Usage: $(basename $0) -l license_id"
     echo
@@ -18,6 +19,7 @@ function help {
     echo
     echo "    Example command: (on a GPU node)"
     echo "      A GPU and the singularity command are required for the install. If you do not have these on a login node, use a compute node"
+    echo "          srun --nodes=1 --time=1-00:00:00 --ntasks-per-node=1 --cpus-per-task=48 --mem=360G  --gres=gpu:a30:2 --pty bash"
     echo
     echo "          ./build_cryosparc4ood.sh -l \$LICENSE_ID"
     echo
@@ -79,6 +81,27 @@ if [[ ! -f src/cryosparc_master.tar.gz || ! -f src/cryosparc_worker.tar.gz ]]; t
 fi
 
 cryosparc_version=$(tar -Oxf src/cryosparc_master.tar.gz cryosparc_master/version)
+
+# Install topaz: 
+# https://guide.cryosparc.com/processing-data/all-job-types-in-cryosparc/deep-picking/topaz#optional-create-a-topaz.sh-wrapper-script
+cat > src/topaz <<'EOF'
+#!/usr/bin/env bash
+if command -v conda > /dev/null 2>&1; then
+    conda deactivate > /dev/null 2>&1 || true  # ignore any errors
+fi
+unset _CE_CONDA
+unset CONDA_DEFAULT_ENV
+unset CONDA_EXE
+unset CONDA_PREFIX
+unset CONDA_PROMPT_MODIFIER
+unset CONDA_PYTHON_EXE
+unset CONDA_SHLVL
+unset PYTHONPATH
+unset LD_PRELOAD
+unset LD_LIBRARY_PATH
+
+/cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env exec topaz $@
+EOF
 
 cat > src/install_cryosparc4ood_${cryosparc_version}.sh <<EOF
 # $cryosparc_version
@@ -155,13 +178,15 @@ From: nvidia/cuda:11.8.0-devel-ubuntu22.04
   export no_proxy=localhost,127.0.0.0/8
   export PATH=/cryosparc_master/bin:\$PATH
   export PATH=/cryosparc_worker/bin:\$PATH
+  export PATH=/opt/topaz_env/bin:\$PATH
+##  export PYTHONPATH=/opt:\$PYTHONPATH
 
 %post
   apt-get update
   apt-get upgrade -y
   ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
   apt-get install -y --no-install-recommends tzdata locales language-pack-en gnupg2 openssh-server openssh-client ssh-askpass lbzip2 zip
-  apt-get install -y software-properties-common wget curl less jq iputils-ping
+  apt-get install -y software-properties-common wget curl less jq iputils-ping git
 
   #apt-get install -y nvidia-driver-545 nvidia-dkms-545
   #apt-get install -y nvidia-driver-550 nvidia-dkms-550
@@ -174,14 +199,26 @@ From: nvidia/cuda:11.8.0-devel-ubuntu22.04
   nvcc -V
   nvcc --list-gpu-code
 
-  # install topaz-em in /usr/local/bin/topaz
   apt-get install -y python3 python3-pip
-  pip3 install  topaz-em
 
   bash /mnt/install_cryosparc4ood_${cryosparc_version}.sh
+  cp /mnt/topaz /opt
+  chmod 755 /opt/topaz
 
-  which topaz
-  topaz --version
+  # install cs2star https://github.com/brisvag/cs2star 
+  # install topaz-em and cs3star: /opt/bin/topaz  /opt/bin/cs2star
+  # pip3 install git+https://github.com/brisvag/pyem.git --target=/opt
+  # pip3 install topaz cs2star --target=/opt
+
+  /cryosparc_master/deps/anaconda/bin/conda create --prefix /opt/topaz_env python=3.6
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install numpy pandas scikit-learn h5py tqdm
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install -c pytorch pytorch torchvision
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env pip3 install git+https://github.com/brisvag/pyem.git
+  # /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env pip3 install cs2star==0.7.0
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install topaz=0.2.5 mkl=2024.0.0 -c tbepler -c pytorch -c conda-forge
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env topaz --version
+  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env which topaz
+
 EOF
 
 SINGULARITY_CACHEDIR=$TMPDIR SREGISTRY_DATABASE=$TMPDIR SINGULARITYENV_license_id=$license_id SINGULARITYENV_cryosparc_version=$cryosparc_version SINGULARITYENV_no_proxy="localhost,127.0.0.0/8" singularity build --nv --fakeroot -B $PWD/src/:/mnt cryosparc-${cryosparc_version}.sif  cryosparc4ood.def
