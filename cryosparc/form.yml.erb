@@ -6,6 +6,7 @@ cluster: launch
 title: CryoSPARC
 form:
   - version
+  - login_email
   - cryosparc_license_id
   - node_type
   - num_gpus
@@ -26,9 +27,13 @@ attributes:
     display: true
     options:
       - [ "4.7.1" ]
-  cryosparc_license_id:
+  login_email:
+    label:  "Email (for CryoSPARC login)"
     widget: 'text_field'
-    label:  "CryoSPARC License ID (required)"
+    required: true
+  cryosparc_license_id:
+    widget: 'password_field'
+    label:  "CryoSPARC License ID"
     required: true
     pattern: "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
     value:  ""

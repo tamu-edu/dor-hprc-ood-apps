@@ -1,4 +1,8 @@
 ---
+<%- if login_email !~ URI::MailTo::EMAIL_REGEXP
+        raise "ERROR: email not in correct format!"
+    end
+-%>
 batch_connect:
   template: "vnc"
 script:

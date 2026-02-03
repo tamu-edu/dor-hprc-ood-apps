@@ -32,6 +32,7 @@ if [ ! -d "$user_cryosparc_directory" ]; then
     first_launch=true
     mkdir "$user_cryosparc_directory"
     mkdir "$user_cryosparc_directory/cryosparc_license"
+    echo <%= context.login_email %> > $user_cryosparc_directory/cryosparc_license/email
     mkdir "$user_cryosparc_directory/cryosparc_cache"
     mkdir "$user_cryosparc_directory/cryosparc_database"
     singularity exec $singularity_image tar xzf /cryosparc_master_run_init_files-v<%= context.version %>.tar.gz -C $user_cryosparc_directory
@@ -84,7 +85,7 @@ if [ -v first_launch ]; then
     sleep 5
     $cryosparc_singularity_command cryosparcm checkdb
     $cryosparc_singularity_command cryosparcm createuser \
-      --email "admin@cryo.edu" \
+      --email "<%= context.login_email %>" \
       --password "<%= context.cryosparc_license_id %>" \
       --username "admin" \
       --firstname "admin" \
