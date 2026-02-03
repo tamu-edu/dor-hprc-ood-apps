@@ -85,7 +85,7 @@ if [ -v first_launch ]; then
     $cryosparc_singularity_command cryosparcm checkdb
     $cryosparc_singularity_command cryosparcm createuser \
       --email "admin@cryo.edu" \
-      --password "admin" \
+      --password "<%= context.cryosparc_license_id %>" \
       --username "admin" \
       --firstname "admin" \
       --lastname "admin"

@@ -23,7 +23,7 @@ attributes:
   version:
     widget: 'select'
     label: "Version"
-    display: True
+    display: true
     options:
       - [ "4.7.1" ]
   cryosparc_license_id:
@@ -73,14 +73,14 @@ attributes:
     min: 1
     max: 192
   mem_per_node:
-    # minimum is 32GB x #GPUs
+    # recommended minimum is 32GB x #GPUs
     widget: 'number_field'
     value: 64
     min: 64
     max: 742
   optional_account:
     widget: 'check_box'
-    label: 'I would like to use an account other than my default'
+    label: "I would like to use an account other than my default"
     checked: false
     checked_value: 'yes'
     unchecked_value: 'no'
@@ -91,7 +91,7 @@ attributes:
     widget: 'text_field'
   email_on_started:
     widget: 'check_box'
-    label: 'I would like to receive an email when the session starts'
+    label: "I would like to receive an email when the session starts"
     checked: false
     checked_value: 'yes'
     unchecked_value: 'no'
