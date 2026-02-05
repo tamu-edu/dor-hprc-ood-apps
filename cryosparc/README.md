@@ -20,7 +20,6 @@ You will need to review and update any of the following as needed
    3. Update the user_cryosparc_directory variable if your cluster does not use $SCRATCH
    4. the $TMPDIR is used on the compute node to write the .lock files where are automatically removed when the $TMPDIR is deleted after a job ends
    5. configure the ssdquota and quotamax variables
-   6. set a unique email/password for each user if desired
 2. In the INSTALL/build_cryosparc4ood.sh script
    1. update nvidia/cuda version if needed
    2. update the nvidia-driver and nvidia-dkms package versions if needed
