@@ -11,6 +11,8 @@ More information
  - You will need to apply for an individual academic License ID at https://cryosparc.com/download
  - This module is not needed to run CryoSPARC but does need to be reloaded in a terminal in a CryoSPARC session to use the CLI commands
  - Example CLI commands (quotes and backslashes are required)
+     cryosparcm status
+     cryosparcm env
      cryosparcm "cli 'get_system_info()'"
      cryosparcm "cli 'get_id_by_email(\"userid@institution.edu\")'"
 
