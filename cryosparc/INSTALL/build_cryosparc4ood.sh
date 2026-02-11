@@ -119,7 +119,7 @@ echo "DONE: extracting install packages"
 sed -i '/ping -c/ { N; N; N; s/^/#/; s/\n/&#/g }' /cryosparc_master/install.sh
 
 cd /cryosparc_master && ./install.sh --standalone --yes \
-              --hostname localhost \
+              --hostname 127.0.0.1 \
               --license $license_id \
               --worker_path /cryosparc_worker \
               --port 39000 \
@@ -129,6 +129,7 @@ cd /cryosparc_master && ./install.sh --standalone --yes \
               --initial_username "admin" \
               --initial_firstname "admin" \
               --initial_lastname "admin"
+
 
 # add a new user (optional)
 # cryosparcm createuser --email "user@organization" --password "init-password" --username "myuser" --firstname "John" --lastname "Doe"
@@ -153,16 +154,11 @@ sed -i 's,export CRYOSPARC_BASE_PORT=.\+,,' /cryosparc_master/config.sh
 sed -i 's,export CRYOSPARC_MASTER_HOSTNAME=.\+,,' /cryosparc_master/config.sh
 sed -i 's,source config.sh,source /cryosparc_master/config.sh,' /cryosparc_master/bin/cryosparcm
 
-echo "export CRYOSPARC_HOSTNAME_CHECK=localhost" >> /cryosparc_worker/config.sh
-echo "export CRYOSPARC_MASTER_HOSTNAME=localhost" >> /cryosparc_worker/config.sh
 echo "export CRYOSPARC_FORCE_USER=true" >> /cryosparc_worker/config.sh
 echo "export CRYOSPARC_FORCE_HOSTNAME=true" >> /cryosparc_worker/config.sh
 
-echo "export CRYOSPARC_HOSTNAME_CHECK=localhost" >> /cryosparc_master/config.sh
-echo "export CRYOSPARC_MASTER_HOSTNAME=localhost" >> /cryosparc_master/config.sh
 echo "export CRYOSPARC_FORCE_USER=true" >> /cryosparc_master/config.sh
 echo "export CRYOSPARC_FORCE_HOSTNAME=true" >> /cryosparc_master/config.sh
-echo "export no_proxy=localhost,127.0.0.0/8" >> /cryosparc_master/config.sh
 
 mv /cryosparc_master/config.sh /cryosparc_master/run/
 ln -s /cryosparc_master/run/config.sh /cryosparc_master/config.sh
@@ -175,11 +171,9 @@ BootStrap: docker
 From: nvidia/cuda:11.8.0-devel-ubuntu22.04
 
 %environment
-  export no_proxy=localhost,127.0.0.0/8
   export PATH=/cryosparc_master/bin:\$PATH
   export PATH=/cryosparc_worker/bin:\$PATH
   export PATH=/opt/topaz_env/bin:\$PATH
-##  export PYTHONPATH=/opt:\$PYTHONPATH
 
 %post
   apt-get update
@@ -206,14 +200,14 @@ From: nvidia/cuda:11.8.0-devel-ubuntu22.04
   chmod 755 /opt/topaz
 
   # install cs2star https://github.com/brisvag/cs2star 
-  # install topaz-em and cs3star: /opt/bin/topaz  /opt/bin/cs2star
+  # install cs2star: /opt/bin/cs2star
   # pip3 install git+https://github.com/brisvag/pyem.git --target=/opt
-  # pip3 install topaz cs2star --target=/opt
+  # pip3 install cs2star --target=/opt
 
   /cryosparc_master/deps/anaconda/bin/conda create --prefix /opt/topaz_env python=3.6
   /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install numpy pandas scikit-learn h5py tqdm
   /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install -c pytorch pytorch torchvision
-  /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env pip3 install git+https://github.com/brisvag/pyem.git
+  #/cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env pip3 install git+https://github.com/brisvag/pyem.git
   # /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env pip3 install cs2star==0.7.0
   /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env conda install topaz=0.2.5 mkl=2024.0.0 -c tbepler -c pytorch -c conda-forge
   /cryosparc_master/deps/anaconda/bin/conda run --prefix /opt/topaz_env topaz --version
@@ -221,4 +215,4 @@ From: nvidia/cuda:11.8.0-devel-ubuntu22.04
 
 EOF
 
-SINGULARITY_CACHEDIR=$TMPDIR SREGISTRY_DATABASE=$TMPDIR SINGULARITYENV_license_id=$license_id SINGULARITYENV_cryosparc_version=$cryosparc_version SINGULARITYENV_no_proxy="localhost,127.0.0.0/8" singularity build --nv --fakeroot -B $PWD/src/:/mnt cryosparc-${cryosparc_version}.sif  cryosparc4ood.def
+SINGULARITY_CACHEDIR=$TMPDIR SREGISTRY_DATABASE=$TMPDIR SINGULARITYENV_license_id=$license_id SINGULARITYENV_cryosparc_version=$cryosparc_version SINGULARITYENV_no_proxy="127.0.0.1,127.0.0.0/8" singularity build --nv --fakeroot -B $PWD/src/:/mnt cryosparc-${cryosparc_version}.sif  cryosparc4ood.def
