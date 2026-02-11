@@ -20,8 +20,8 @@ export SINGULARITYENV_CRYOSPARC_IO_URING=false
 
 # these do not require editing
 export SINGULARITYENV_CRYOSPARC_LICENSE_ID=<%= context.cryosparc_license_id %>
-export SINGULARITYENV_CRYOSPARC_MASTER_HOSTNAME="localhost"
-export SINGULARITYENV_CRYOSPARC_HOSTNAME_CHECK="localhost"
+export SINGULARITYENV_CRYOSPARC_MASTER_HOSTNAME=127.0.0.1
+export SINGULARITYENV_CRYOSPARC_HOSTNAME_CHECK=127.0.0.1
 export SINGULARITYENV_CRYOSPARC_HEARTBEAT_SECONDS=600
 export SINGULARITYENV_CRYOSPARC_FORCE_HOSTNAME="true"
 
@@ -103,8 +103,8 @@ fi
 
 # connect current compute node
 $cryosparc_singularity_command cryosparcw connect \
-    --worker localhost \
-    --master localhost \
+    --worker 127.0.0.1 \
+    --master 127.0.0.1 \
     --port $cryo_port \
     --ssdpath /tmp \
     --cpus $SLURM_NTASKS_PER_NODE \
@@ -124,8 +124,8 @@ fi
 $cryosparc_singularity_command cryosparcw connect \
     --cpus $SLURM_NTASKS_PER_NODE \
     --port $cryo_port \
-    --worker localhost \
-    --master localhost \
+    --worker 127.0.0.1 \
+    --master 127.0.0.1 \
     --update --ssdquota $ssdquota
 
 # Display cryosparc environment variables
@@ -144,4 +144,4 @@ sleep 1
 xfdesktop &
 
 module load Firefox
-firefox --private-window localhost:$cryo_port
+firefox --private-window 127.0.0.1:$cryo_port
