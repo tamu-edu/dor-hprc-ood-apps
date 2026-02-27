@@ -24,6 +24,7 @@ export SINGULARITYENV_CRYOSPARC_MASTER_HOSTNAME=127.0.0.1
 export SINGULARITYENV_CRYOSPARC_HOSTNAME_CHECK=127.0.0.1
 export SINGULARITYENV_CRYOSPARC_HEARTBEAT_SECONDS=600
 export SINGULARITYENV_CRYOSPARC_FORCE_HOSTNAME="true"
+export SINGULARITYENV_no_proxy="127.0.0.1,localhost"
 
 # database and log files are saved in .cryosparc-major.minor/ since not sure if major.minor version updgrade will affect database
 user_cryosparc_directory="$SCRATCH/.cryosparc-v<%= context.version.rpartition('.')[0..1].join.chop %>"
