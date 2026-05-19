@@ -14,3 +14,8 @@ The gpuavail script can also be used as a command line utility.
 3. Update the url line in the manifest.yml file with your OOD instance.
 4. gpuavail app must first be launched by user who has write privileges to the /var/www/ood/apps/sys/gpuavail directory in order to generate the Gemfile.lock file which will be saved in the gpuavail directory.
 5. You may have to remove the Gemfile.lock file and regenerate it after updates are made to your system.
+6. Slurm scontrol show config must have the following:
+
+     SelectType              = select/cons_tres
+   
+     SelectTypeParameters    = CR_CPU_MEMORY
